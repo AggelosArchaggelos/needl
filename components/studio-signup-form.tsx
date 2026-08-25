@@ -133,7 +133,7 @@ export function StudioSignupForm() {
         <Label className="text-paper-dim">
           {f.city} <span className="text-paper-faint">({f.optional})</span>
         </Label>
-        <Select value={cityId} onValueChange={setCityId}>
+        <Select value={cityId} onValueChange={(value) => setCityId(value ?? "")}>
           <SelectTrigger className="w-full border-line-strong bg-transparent text-paper">
             <SelectValue placeholder={f.selectCity}>
               {(v: string) => (v === "other" ? f.notListed : cityName(v, locale))}

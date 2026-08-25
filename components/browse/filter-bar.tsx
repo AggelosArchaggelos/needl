@@ -172,9 +172,10 @@ export function FilterBar({
           min={4}
           max={5}
           step={0.1}
-          onValueChange={(v: number[]) =>
-            onChange({ ...filters, minRating: v[0] ?? defaultFilters.minRating })
-          }
+          onValueChange={(v) => {
+            const value = Array.isArray(v) ? v[0] : v;
+            onChange({ ...filters, minRating: value ?? defaultFilters.minRating });
+          }}
         />
       </div>
     </div>

@@ -119,7 +119,10 @@ export function BookingDialog({
                 {studio.artists.length > 1 && (
                   <div className="flex flex-col gap-1.5">
                     <Label className="text-paper-dim">{t.booking.artist}</Label>
-                    <Select value={artistChoice} onValueChange={setArtistChoice}>
+                    <Select
+                      value={artistChoice}
+                      onValueChange={(value) => setArtistChoice(value ?? "any")}
+                    >
                       <SelectTrigger className="w-full border-line-strong bg-transparent text-paper">
                         <SelectValue placeholder={t.booking.noPreference}>
                           {(v: string) =>
