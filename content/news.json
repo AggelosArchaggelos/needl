@@ -1,0 +1,82 @@
+[
+  {
+    "id": "needl-launches-athens",
+    "slug": "needl-launches-in-athens",
+    "title": {
+      "en": "Needl is live in Athens, Thessaloniki, Patras, and Heraklion",
+      "el": "Το Needl είναι ζωντανό στην Αθήνα, τη Θεσσαλονίκη, την Πάτρα και το Ηράκλειο"
+    },
+    "excerpt": {
+      "en": "Ten founding studios are on the directory today, with more joining every week. Here's what's live now, and what's coming next.",
+      "el": "Δέκα ιδρυτικά στούντιο βρίσκονται ήδη στον κατάλογο, με περισσότερα να προστίθενται κάθε εβδομάδα. Δείτε τι είναι διαθέσιμο τώρα και τι έρχεται."
+    },
+    "imageUrl": "https://picsum.photos/seed/needl-news-launch/1200/750",
+    "sourceName": "Needl",
+    "publishedAt": "2026-08-10",
+    "tags": ["announcements"]
+  },
+  {
+    "id": "how-we-rank-studios",
+    "slug": "how-we-rank-studios",
+    "title": {
+      "en": "How Needl ranks studios (and why it isn't for sale)",
+      "el": "Πώς το Needl κατατάσσει τα στούντιο (και γιατί δεν πωλείται η θέση)"
+    },
+    "excerpt": {
+      "en": "Rating and review volume decide default order — not who pays the most. Here's exactly how the recommended sort works, and where paid placement will and won't apply later.",
+      "el": "Η βαθμολογία και ο αριθμός κριτικών καθορίζουν την προεπιλεγμένη σειρά — όχι το ποιος πληρώνει περισσότερο. Δείτε ακριβώς πώς λειτουργεί η προτεινόμενη ταξινόμηση, και πού θα εφαρμόζεται αργότερα η πληρωμένη προβολή."
+    },
+    "imageUrl": "https://picsum.photos/seed/needl-news-ranking/1200/750",
+    "sourceName": "Needl",
+    "publishedAt": "2026-08-05",
+    "tags": ["how-it-works"]
+  },
+  {
+    "id": "first-tattoo-questions",
+    "slug": "five-questions-before-your-first-tattoo",
+    "title": {
+      "en": "Five questions worth asking before your first tattoo",
+      "el": "Πέντε ερωτήσεις που αξίζει να κάνετε πριν το πρώτο σας τατουάζ"
+    },
+    "excerpt": {
+      "en": "From needle types to healing timelines, a short checklist for a first consultation — the same questions our founding artists say most first-timers forget to ask.",
+      "el": "Από τύπους βελόνας μέχρι χρόνους επούλωσης, μια σύντομη λίστα ελέγχου για την πρώτη συνεννόηση — οι ίδιες ερωτήσεις που, όπως λένε οι ιδρυτικοί μας καλλιτέχνες, ξεχνούν συχνά όσοι κάνουν τατουάζ για πρώτη φορά."
+    },
+    "imageUrl": "https://picsum.photos/seed/needl-news-firsttattoo/1200/750",
+    "sourceName": "Needl",
+    "publishedAt": "2026-07-28",
+    "tags": ["guides"]
+  },
+  {
+    "id": "greek-fine-line-scene",
+    "slug": "athens-fine-line-scene",
+    "title": {
+      "en": "Inside Athens' fine-line scene, three studios in",
+      "el": "Μέσα στη σκηνή λεπτής γραμμής της Αθήνας, τρία στούντιο μετά"
+    },
+    "excerpt": {
+      "en": "A short look at how single-needle botanical and architectural work took hold in Psyrri and Exarchia over the last few years.",
+      "el": "Μια σύντομη ματιά στο πώς η μονόβελονη φυτική και αρχιτεκτονική δουλειά κέρδισε έδαφος στην Ψυρρή και τα Εξάρχεια τα τελευταία χρόνια."
+    },
+    "imageUrl": "https://picsum.photos/seed/needl-news-finelinescene/1200/750",
+    "sourceName": "Needl",
+    "publishedAt": "2026-07-15",
+    "tags": ["styles", "athens"]
+  },
+  {
+    "id": "for-studios-founding-rate",
+    "slug": "founding-rate-explained",
+    "title": {
+      "en": "What \"founding rate\" actually means for studios joining now",
+      "el": "Τι σημαίνει πραγματικά η «ιδρυτική τιμή» για τα στούντιο που εγγράφονται τώρα"
+    },
+    "excerpt": {
+      "en": "Every studio that lists during launch keeps that pricing locked in permanently, even after paid tiers go live. Here's the exact commitment, in writing.",
+      "el": "Κάθε στούντιο που εγγράφεται κατά την εκκίνηση κρατά αυτή την τιμή μόνιμα κλειδωμένη, ακόμα και μετά την ενεργοποίηση των πληρωμένων πακέτων. Δείτε τη δέσμευση γραπτώς."
+    },
+    "imageUrl": "https://picsum.photos/seed/needl-news-founding/1200/750",
+    "sourceName": "Needl",
+    "publishedAt": "2026-07-02",
+    "tags": ["for-studios"]
+  }
+]

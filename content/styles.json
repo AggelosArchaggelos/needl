@@ -1,0 +1,13 @@
+[
+  { "id": "fine-line", "name": { "en": "Fine Line", "el": "Λεπτή Γραμμή" } },
+  { "id": "blackwork", "name": { "en": "Blackwork", "el": "Μπλάκγουορκ" } },
+  { "id": "traditional", "name": { "en": "Traditional", "el": "Παραδοσιακό" } },
+  { "id": "neo-traditional", "name": { "en": "Neo-Traditional", "el": "Νεο-Παραδοσιακό" } },
+  { "id": "japanese", "name": { "en": "Japanese Irezumi", "el": "Ιαπωνικό Ιρεζούμι" } },
+  { "id": "realism", "name": { "en": "Realism", "el": "Ρεαλισμός" } },
+  { "id": "geometric", "name": { "en": "Geometric", "el": "Γεωμετρικό" } },
+  { "id": "watercolor", "name": { "en": "Watercolor", "el": "Υδατογραφία" } },
+  { "id": "lettering", "name": { "en": "Lettering & Script", "el": "Γραμματοσειρά & Καλλιγραφία" } },
+  { "id": "dotwork", "name": { "en": "Dotwork & Stippling", "el": "Τεχνική Κουκκίδων" } },
+  { "id": "tribal", "name": { "en": "Tribal & Polynesian", "el": "Φυλετικό & Πολυνησιακό" } }
+]

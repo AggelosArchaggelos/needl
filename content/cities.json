@@ -1,0 +1,6 @@
+[
+  { "id": "athens", "name": { "en": "Athens", "el": "Αθήνα" }, "region": { "en": "Attica", "el": "Αττική" } },
+  { "id": "thessaloniki", "name": { "en": "Thessaloniki", "el": "Θεσσαλονίκη" }, "region": { "en": "Central Macedonia", "el": "Κεντρική Μακεδονία" } },
+  { "id": "patras", "name": { "en": "Patras", "el": "Πάτρα" }, "region": { "en": "Western Greece", "el": "Δυτική Ελλάδα" } },
+  { "id": "heraklion", "name": { "en": "Heraklion", "el": "Ηράκλειο" }, "region": { "en": "Crete", "el": "Κρήτη" } }
+]
