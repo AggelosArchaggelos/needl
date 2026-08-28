@@ -12,7 +12,7 @@ export const translations = {
     },
     footer: {
       tagline:
-        "Every tattoo studio in Greece, in one place — browse by city, style, and price, then book directly with the artist.",
+        "Every tattoo studio in Greece, in one place — browse by city and style, then book directly with the artist.",
       explore: "Explore",
       forStudios: "For studios",
       cities: "Cities",
@@ -25,7 +25,7 @@ export const translations = {
       titleEm: "worth",
       titleSuffix: " the ink.",
       subhead:
-        "Every studio, every artist, every style — filtered by city and budget, booked straight from the page.",
+        "Every studio, every artist, every style — filtered by city, booked straight from the page.",
       browseStudios: "Browse studios",
       topRatedEyebrow: "Top rated this week",
       topRatedTitle: "Where Greece is booking right now",
@@ -36,7 +36,7 @@ export const translations = {
       steps: [
         {
           title: "Browse & filter",
-          body: "Search every listed studio in Greece by city, tattoo style, and price — see real portfolios and Google-style ratings before you commit.",
+          body: "Search every listed studio in Greece by city and tattoo style — see real portfolios and Google-style ratings before you commit.",
         },
         {
           title: "Message the studio",
@@ -53,25 +53,17 @@ export const translations = {
     browse: {
       eyebrow: "Directory",
       title: "Every studio, one search",
-      description: "Filter by city, tattoo style, and budget. Sort by rating to see who Greece rates highest — or browse fresh, less-discovered shops.",
+      description: "Filter by city and tattoo style to find the right studio, fast.",
       studio: "studio",
       studios: "studios",
       emptyTitle: "No studios match yet",
-      emptyBody: "Try widening your filters — fewer styles selected, a lower rating floor, or a different city.",
+      emptyBody: "Try selecting fewer styles, or a different city.",
     },
     filters: {
       city: "City",
       allCities: "All cities",
-      price: "Price",
-      anyPrice: "Any price",
-      sortBy: "Sort by",
-      recommended: "Recommended",
-      topRated: "Top rated",
-      priceAsc: "Price: low to high",
-      priceDesc: "Price: high to low",
       clearFilters: "Clear filters",
       style: "Style",
-      minimumRating: "Minimum rating",
     },
     studio: {
       bookWith: "Book with",
@@ -114,11 +106,11 @@ export const translations = {
       steps: [
         {
           title: "Search by what actually matters",
-          body: "Start from a city, a style, or a budget — not a random Instagram algorithm. Every studio on Needl lists real prices, real hours, and a real address.",
+          body: "Start from a city or a style — not a random Instagram algorithm. Every studio on Needl lists real prices, real hours, and a real address.",
         },
         {
           title: "Filter down to a shortlist",
-          body: "Narrow by tattoo style — fine line, blackwork, Japanese, realism, and more — plus price band and minimum rating, sourced from each studio's public review count.",
+          body: "Narrow by tattoo style — fine line, blackwork, Japanese, realism, and more — within the city you're actually in.",
         },
         {
           title: "Send a booking request",
@@ -143,8 +135,8 @@ export const translations = {
           body: "One page per artist, organised by style and price — not buried three scrolls deep in an Instagram grid.",
         },
         {
-          title: "Ranked by rating, not ad spend",
-          body: "Studios are ordered by rating and review volume by default, so strong work gets found without buying placement.",
+          title: "Listed fairly, not ranked by ad spend",
+          body: "Studios show up alphabetically by default, so strong work isn't buried under whoever has the bigger budget. Featured placement is the only paid boost.",
         },
         {
           title: "Booking requests, organised",
@@ -193,7 +185,7 @@ export const translations = {
       title: "Finding a tattoo artist shouldn't mean forty open tabs",
       paragraphs: [
         "Every good tattoo starts the same way: scrolling. Instagram hashtags, saved geotags, a friend's recommendation typed into Google Maps next to a listing with three photos and a phone number that goes to voicemail. Greece has no shortage of exceptional tattoo artists — it just has no single place to actually find them.",
-        "Needl started as a simple idea: one directory, organised the way people actually search — by city, by style, by budget — with real portfolios attached to real artists, not just a studio's front door. Ratings surface the studios people keep going back to. Booking happens on the page, not across four different apps.",
+        "Needl started as a simple idea: one directory, organised the way people actually search — by city, by style — with real portfolios attached to real artists, not just a studio's front door. Booking happens on the page, not across four different apps.",
         "It launches free, for every studio willing to be listed. As it grows, studios will be able to promote themselves and unlock deeper tools — but the directory itself stays the point: help someone find the right artist, quickly, and get out of the way.",
       ],
       builtIn: "Built in Greece",
@@ -224,7 +216,7 @@ export const translations = {
     },
     footer: {
       tagline:
-        "Κάθε στούντιο τατουάζ στην Ελλάδα, σε ένα μέρος — αναζητήστε ανά πόλη, στιλ και τιμή, και κλείστε ραντεβού απευθείας με τον καλλιτέχνη.",
+        "Κάθε στούντιο τατουάζ στην Ελλάδα, σε ένα μέρος — αναζητήστε ανά πόλη και στιλ, και κλείστε ραντεβού απευθείας με τον καλλιτέχνη.",
       explore: "Πλοήγηση",
       forStudios: "Για στούντιο",
       cities: "Πόλεις",
@@ -237,7 +229,7 @@ export const translations = {
       titleEm: "αξίζει",
       titleSuffix: " το τατουάζ σου.",
       subhead:
-        "Κάθε στούντιο, κάθε καλλιτέχνης, κάθε στιλ — φιλτραρισμένα ανά πόλη και προϋπολογισμό, με κράτηση απευθείας από τη σελίδα.",
+        "Κάθε στούντιο, κάθε καλλιτέχνης, κάθε στιλ — φιλτραρισμένα ανά πόλη, με κράτηση απευθείας από τη σελίδα.",
       browseStudios: "Αναζήτηση στούντιο",
       topRatedEyebrow: "Κορυφαία αυτή την εβδομάδα",
       topRatedTitle: "Πού κλείνει ραντεβού η Ελλάδα αυτή τη στιγμή",
@@ -248,7 +240,7 @@ export const translations = {
       steps: [
         {
           title: "Αναζήτηση & φιλτράρισμα",
-          body: "Αναζητήστε κάθε καταχωρημένο στούντιο στην Ελλάδα ανά πόλη, στιλ τατουάζ και τιμή — δείτε αληθινά portfolio και βαθμολογίες τύπου Google πριν αποφασίσετε.",
+          body: "Αναζητήστε κάθε καταχωρημένο στούντιο στην Ελλάδα ανά πόλη και στιλ τατουάζ — δείτε αληθινά portfolio και βαθμολογίες τύπου Google πριν αποφασίσετε.",
         },
         {
           title: "Στείλτε μήνυμα στο στούντιο",
@@ -265,25 +257,17 @@ export const translations = {
     browse: {
       eyebrow: "Κατάλογος",
       title: "Όλα τα στούντιο, μία αναζήτηση",
-      description: "Φιλτράρετε ανά πόλη, στιλ τατουάζ και προϋπολογισμό. Ταξινομήστε βάσει βαθμολογίας για να δείτε ποιους εκτιμά περισσότερο η Ελλάδα — ή εξερευνήστε νέα, λιγότερο γνωστά μαγαζιά.",
+      description: "Φιλτράρετε ανά πόλη και στιλ τατουάζ για να βρείτε το κατάλληλο στούντιο, γρήγορα.",
       studio: "στούντιο",
       studios: "στούντιο",
       emptyTitle: "Κανένα στούντιο δεν ταιριάζει ακόμα",
-      emptyBody: "Δοκιμάστε να διευρύνετε τα φίλτρα σας — λιγότερα επιλεγμένα στιλ, χαμηλότερο κατώφλι βαθμολογίας, ή διαφορετική πόλη.",
+      emptyBody: "Δοκιμάστε λιγότερα επιλεγμένα στιλ, ή διαφορετική πόλη.",
     },
     filters: {
       city: "Πόλη",
       allCities: "Όλες οι πόλεις",
-      price: "Τιμή",
-      anyPrice: "Οποιαδήποτε τιμή",
-      sortBy: "Ταξινόμηση",
-      recommended: "Προτεινόμενα",
-      topRated: "Κορυφαία βαθμολογία",
-      priceAsc: "Τιμή: αύξουσα",
-      priceDesc: "Τιμή: φθίνουσα",
       clearFilters: "Καθαρισμός φίλτρων",
       style: "Στιλ",
-      minimumRating: "Ελάχιστη βαθμολογία",
     },
     studio: {
       bookWith: "Κλείστε ραντεβού με",
@@ -326,11 +310,11 @@ export const translations = {
       steps: [
         {
           title: "Αναζητήστε βάσει αυτού που πραγματικά έχει σημασία",
-          body: "Ξεκινήστε από μια πόλη, ένα στιλ ή έναν προϋπολογισμό — όχι από έναν τυχαίο αλγόριθμο του Instagram. Κάθε στούντιο στο Needl αναφέρει πραγματικές τιμές, πραγματικές ώρες λειτουργίας και πραγματική διεύθυνση.",
+          body: "Ξεκινήστε από μια πόλη ή ένα στιλ — όχι από έναν τυχαίο αλγόριθμο του Instagram. Κάθε στούντιο στο Needl αναφέρει πραγματικές τιμές, πραγματικές ώρες λειτουργίας και πραγματική διεύθυνση.",
         },
         {
           title: "Περιορίστε σε μια βραχεία λίστα",
-          body: "Φιλτράρετε ανά στιλ τατουάζ — λεπτή γραμμή, blackwork, ιαπωνικό, ρεαλισμό και άλλα — καθώς και ανά κατηγορία τιμής και ελάχιστη βαθμολογία, βάσει του αριθμού δημόσιων κριτικών κάθε στούντιο.",
+          body: "Φιλτράρετε ανά στιλ τατουάζ — λεπτή γραμμή, blackwork, ιαπωνικό, ρεαλισμό και άλλα — μέσα στην πόλη που πραγματικά βρίσκεστε.",
         },
         {
           title: "Στείλτε αίτημα κράτησης",
@@ -355,8 +339,8 @@ export const translations = {
           body: "Μία σελίδα ανά καλλιτέχνη, οργανωμένη ανά στιλ και τιμή — όχι θαμμένη τρία scroll μέσα σε ένα grid του Instagram.",
         },
         {
-          title: "Κατάταξη βάσει βαθμολογίας, όχι διαφημιστικού budget",
-          body: "Τα στούντιο ταξινομούνται εξ ορισμού βάσει βαθμολογίας και αριθμού κριτικών, ώστε η καλή δουλειά να βρίσκεται χωρίς να αγοράζετε θέση.",
+          title: "Δίκαιη καταχώριση, όχι κατάταξη βάσει διαφημιστικού budget",
+          body: "Τα στούντιο εμφανίζονται αλφαβητικά εξ ορισμού, ώστε η καλή δουλειά να μη χάνεται πίσω από όποιον έχει μεγαλύτερο budget. Η προβεβλημένη θέση είναι η μόνη πληρωμένη προτεραιότητα.",
         },
         {
           title: "Οργανωμένα αιτήματα κράτησης",
@@ -405,7 +389,7 @@ export const translations = {
       title: "Η αναζήτηση καλλιτέχνη τατουάζ δεν χρειάζεται σαράντα ανοιχτές καρτέλες",
       paragraphs: [
         "Κάθε καλό τατουάζ ξεκινά με τον ίδιο τρόπο: scrolling. Hashtags στο Instagram, αποθηκευμένα geotags, μια σύσταση φίλου γραμμένη στο Google Maps δίπλα σε μια καταχώριση με τρεις φωτογραφίες και ένα τηλέφωνο που πέφτει σε τηλεφωνητή. Η Ελλάδα δεν έχει έλλειψη εξαιρετικών καλλιτεχνών τατουάζ — απλώς δεν έχει ένα μέρος για να τους βρεις.",
-        "Το Needl ξεκίνησε ως μια απλή ιδέα: ένας κατάλογος, οργανωμένος με τον τρόπο που αναζητούν πραγματικά οι άνθρωποι — ανά πόλη, ανά στιλ, ανά προϋπολογισμό — με αληθινά portfolio συνδεδεμένα με πραγματικούς καλλιτέχνες, όχι απλώς την πόρτα ενός στούντιο. Οι βαθμολογίες αναδεικνύουν τα στούντιο στα οποία επιστρέφει ο κόσμος. Η κράτηση γίνεται στη σελίδα, όχι σε τέσσερις διαφορετικές εφαρμογές.",
+        "Το Needl ξεκίνησε ως μια απλή ιδέα: ένας κατάλογος, οργανωμένος με τον τρόπο που αναζητούν πραγματικά οι άνθρωποι — ανά πόλη, ανά στιλ — με αληθινά portfolio συνδεδεμένα με πραγματικούς καλλιτέχνες, όχι απλώς την πόρτα ενός στούντιο. Η κράτηση γίνεται στη σελίδα, όχι σε τέσσερις διαφορετικές εφαρμογές.",
         "Ξεκινά δωρεάν, για κάθε στούντιο που θέλει να καταχωριστεί. Καθώς μεγαλώνει, τα στούντιο θα μπορούν να προβάλλονται και να ξεκλειδώνουν πιο ολοκληρωμένα εργαλεία — αλλά ο ίδιος ο κατάλογος παραμένει ο στόχος: να βοηθήσει κάποιον να βρει τον κατάλληλο καλλιτέχνη, γρήγορα, χωρίς να μπαίνει εμπόδιο.",
       ],
       builtIn: "Φτιαγμένο στην Ελλάδα",

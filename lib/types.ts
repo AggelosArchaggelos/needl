@@ -65,9 +65,6 @@ export type Studio = {
 export type BrowseFilters = {
   cityId: string | "all";
   styleIds: string[];
-  priceBand: PriceBand | "all";
-  minRating: number;
-  sort: "recommended" | "rating" | "price-asc" | "price-desc";
 };
 
 export type NewsArticle = {

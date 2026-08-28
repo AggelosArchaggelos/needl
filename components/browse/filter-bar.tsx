@@ -2,7 +2,6 @@
 
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
 import {
   Select,
   SelectContent,
@@ -16,9 +15,7 @@ import { styles } from "@/lib/data/styles";
 import { defaultFilters } from "@/lib/filters";
 import { useLocale } from "@/lib/i18n/locale-context";
 import { localize } from "@/lib/i18n/localize";
-import type { BrowseFilters, PriceBand } from "@/lib/types";
-
-const priceBands: PriceBand[] = ["€", "€€", "€€€"];
+import type { BrowseFilters } from "@/lib/types";
 
 export function FilterBar({
   filters,
@@ -37,24 +34,13 @@ export function FilterBar({
     });
   }
 
-  const isDefault =
-    filters.cityId === "all" &&
-    filters.styleIds.length === 0 &&
-    filters.priceBand === "all" &&
-    filters.minRating === defaultFilters.minRating;
-
-  const sortLabels: Record<BrowseFilters["sort"], string> = {
-    recommended: t.filters.recommended,
-    rating: t.filters.topRated,
-    "price-asc": t.filters.priceAsc,
-    "price-desc": t.filters.priceDesc,
-  };
+  const isDefault = filters.cityId === "all" && filters.styleIds.length === 0;
 
   return (
     <div className="flex flex-col gap-6 rounded-lg border border-line bg-ink-2 p-5">
       <div className="flex flex-wrap items-end justify-between gap-4">
-        <div className="grid flex-1 grid-cols-2 gap-3 sm:flex sm:flex-1 sm:flex-wrap">
-          <div className="flex min-w-[9rem] flex-1 flex-col gap-1.5">
+        <div className="flex flex-1 flex-wrap gap-3">
+          <div className="flex min-w-[9rem] max-w-xs flex-1 flex-col gap-1.5">
             <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint">
               {t.filters.city}
             </span>
@@ -74,52 +60,6 @@ export function FilterBar({
                     {localize(c.name, locale)}
                   </SelectItem>
                 ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="flex min-w-[9rem] flex-1 flex-col gap-1.5">
-            <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint">
-              {t.filters.price}
-            </span>
-            <Select
-              value={filters.priceBand}
-              onValueChange={(v) =>
-                onChange({ ...filters, priceBand: v as BrowseFilters["priceBand"] })
-              }
-            >
-              <SelectTrigger className="w-full border-line-strong bg-transparent text-paper">
-                <SelectValue placeholder={t.filters.anyPrice}>
-                  {(v: string) => (v === "all" ? t.filters.anyPrice : v)}
-                </SelectValue>
-              </SelectTrigger>
-              <SelectContent className="border-line-strong bg-ink-2 text-paper">
-                <SelectItem value="all">{t.filters.anyPrice}</SelectItem>
-                {priceBands.map((p) => (
-                  <SelectItem key={p} value={p}>
-                    {p}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="flex min-w-[10rem] flex-1 flex-col gap-1.5">
-            <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint">
-              {t.filters.sortBy}
-            </span>
-            <Select
-              value={filters.sort}
-              onValueChange={(v) => onChange({ ...filters, sort: v as BrowseFilters["sort"] })}
-            >
-              <SelectTrigger className="w-full border-line-strong bg-transparent text-paper">
-                <SelectValue>{(v: BrowseFilters["sort"]) => sortLabels[v]}</SelectValue>
-              </SelectTrigger>
-              <SelectContent className="border-line-strong bg-ink-2 text-paper">
-                <SelectItem value="recommended">{t.filters.recommended}</SelectItem>
-                <SelectItem value="rating">{t.filters.topRated}</SelectItem>
-                <SelectItem value="price-asc">{t.filters.priceAsc}</SelectItem>
-                <SelectItem value="price-desc">{t.filters.priceDesc}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -161,22 +101,6 @@ export function FilterBar({
             );
           })}
         </div>
-      </div>
-
-      <div className="flex flex-col gap-3 sm:max-w-xs">
-        <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint">
-          {t.filters.minimumRating} — {(filters.minRating ?? defaultFilters.minRating).toFixed(1)}+
-        </span>
-        <Slider
-          value={[filters.minRating]}
-          min={4}
-          max={5}
-          step={0.1}
-          onValueChange={(v) => {
-            const value = Array.isArray(v) ? v[0] : v;
-            onChange({ ...filters, minRating: value ?? defaultFilters.minRating });
-          }}
-        />
       </div>
     </div>
   );
