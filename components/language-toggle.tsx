@@ -6,6 +6,10 @@ import { cn } from "@/lib/utils";
 export function LanguageToggle({ className }: { className?: string }) {
   const { locale, setLocale } = useLocale();
 
+  function toggle() {
+    setLocale(locale === "en" ? "el" : "en");
+  }
+
   return (
     <div
       className={cn(
@@ -15,7 +19,7 @@ export function LanguageToggle({ className }: { className?: string }) {
     >
       <button
         type="button"
-        onClick={() => setLocale("en")}
+        onClick={toggle}
         aria-pressed={locale === "en"}
         className={cn(
           "rounded-full px-2 py-1 transition-colors",
@@ -26,7 +30,7 @@ export function LanguageToggle({ className }: { className?: string }) {
       </button>
       <button
         type="button"
-        onClick={() => setLocale("el")}
+        onClick={toggle}
         aria-pressed={locale === "el"}
         className={cn(
           "rounded-full px-2 py-1 transition-colors",
