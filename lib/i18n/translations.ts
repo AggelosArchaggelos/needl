@@ -147,8 +147,8 @@ export const translations = {
           body: "Early studios shape what comes next — promoted placement, an owner dashboard, and eventually a native app.",
         },
       ],
-      freeDuringLaunch: "Free during launch",
-      freeDuringLaunchBody: "Every studio that joins now keeps its place at no cost through launch. Once Needl has real traffic, a paid plan covers unlimited artists and portfolio uploads — early studios lock in founding pricing.",
+      freeDuringLaunch: "Free for your first month",
+      freeDuringLaunchBody: "After that, plans start around €45–50/mo — exact pricing gets confirmed when we follow up with you.",
       seePricing: "See pricing",
       form: {
         studioName: "Studio name",
@@ -177,8 +177,8 @@ export const translations = {
     },
     pricing: {
       eyebrow: "Pricing",
-      title: "Free to join. Pay later, only if it's working.",
-      description: "Needl launches free for every studio. Paid tiers arrive once there's real traffic to justify them — nothing changes for studios already listed until then.",
+      title: "Free for your first month, then a simple monthly plan.",
+      description: "Every studio starts with a free first month. After that, pick Basic or Featured — exact pricing is confirmed when we follow up with you directly.",
     },
     about: {
       eyebrow: "About Needl",
@@ -351,8 +351,8 @@ export const translations = {
           body: "Τα πρώτα στούντιο διαμορφώνουν τι ακολουθεί — προβεβλημένη τοποθέτηση, πίνακα διαχείρισης ιδιοκτήτη, και τελικά μια εφαρμογή.",
         },
       ],
-      freeDuringLaunch: "Δωρεάν κατά την εκκίνηση",
-      freeDuringLaunchBody: "Κάθε στούντιο που εγγράφεται τώρα κρατά τη θέση του χωρίς κόστος μέχρι την εκκίνηση. Μόλις το Needl αποκτήσει πραγματική επισκεψιμότητα, ένα πληρωμένο πλάνο θα καλύπτει απεριόριστους καλλιτέχνες και ανεβάσματα portfolio — τα πρώτα στούντιο κλειδώνουν την ιδρυτική τιμή.",
+      freeDuringLaunch: "Δωρεάν τον πρώτο μήνα",
+      freeDuringLaunchBody: "Στη συνέχεια, τα πλάνα ξεκινούν περίπου από €45–50/μήνα — η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας.",
       seePricing: "Δείτε τις τιμές",
       form: {
         studioName: "Όνομα στούντιο",
@@ -381,8 +381,8 @@ export const translations = {
     },
     pricing: {
       eyebrow: "Τιμές",
-      title: "Δωρεάν εγγραφή. Πληρώνετε αργότερα, μόνο αν αποδίδει.",
-      description: "Το Needl ξεκινά δωρεάν για κάθε στούντιο. Τα πληρωμένα πακέτα έρχονται μόλις υπάρξει πραγματική επισκεψιμότητα που να τα δικαιολογεί — τίποτα δεν αλλάζει για τα ήδη καταχωρημένα στούντιο μέχρι τότε.",
+      title: "Δωρεάν τον πρώτο μήνα, μετά ένα απλό μηνιαίο πλάνο.",
+      description: "Κάθε στούντιο ξεκινά με έναν δωρεάν πρώτο μήνα. Στη συνέχεια επιλέγετε Basic ή Προβεβλημένο — η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας.",
     },
     about: {
       eyebrow: "Σχετικά με το Needl",

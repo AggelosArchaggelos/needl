@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -68,6 +69,16 @@ export function StudioSignupForm() {
         <CheckCircle2 className="text-brass-bright" size={36} strokeWidth={1.5} />
         <h3 className="mt-4 font-display text-2xl text-paper">{f.successTitle}</h3>
         <p className="mt-2 max-w-sm text-sm leading-relaxed text-paper-dim">{f.successBody}</p>
+        <div className="mt-8 w-full max-w-sm border-t border-line pt-6">
+          <p className="font-display text-lg text-paper">{t.forStudios.freeDuringLaunch}</p>
+          <p className="mt-1.5 text-sm leading-relaxed text-paper-dim">{t.forStudios.freeDuringLaunchBody}</p>
+          <Link
+            href="/pricing"
+            className="mt-4 inline-block text-sm font-medium text-brass-bright transition-colors hover:text-brass"
+          >
+            {t.forStudios.seePricing} →
+          </Link>
+        </div>
       </div>
     );
   }

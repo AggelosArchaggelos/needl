@@ -8,52 +8,35 @@
   },
   "pricingTiers": [
     {
-      "name": { "en": "Founding", "el": "Ιδρυτικό" },
+      "name": { "en": "Basic", "el": "Basic" },
       "price": { "en": "Free", "el": "Δωρεάν" },
-      "period": { "en": "during launch", "el": "κατά την εκκίνηση" },
+      "period": { "en": "for your first month, then ~€45–50/mo", "el": "τον πρώτο μήνα, μετά ~€45–50/μήνα" },
       "highlight": false,
       "description": {
-        "en": "Everything a studio needs to get listed and start taking requests.",
-        "el": "Όλα όσα χρειάζεται ένα στούντιο για να καταχωριστεί και να αρχίσει να δέχεται αιτήματα."
+        "en": "Everything a studio needs to get listed and start taking booking requests. Exact pricing confirmed when we follow up with you.",
+        "el": "Όλα όσα χρειάζεται ένα στούντιο για να καταχωριστεί και να αρχίσει να δέχεται αιτήματα κράτησης. Η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας."
       },
       "features": [
         { "en": "Studio profile with gallery", "el": "Προφίλ στούντιο με γκαλερί" },
         { "en": "Unlimited artist profiles", "el": "Απεριόριστα προφίλ καλλιτεχνών" },
         { "en": "Portfolio uploads per artist", "el": "Ανέβασμα portfolio ανά καλλιτέχνη" },
-        { "en": "Booking requests to your inbox", "el": "Αιτήματα κράτησης απευθείας στο inbox σας" },
-        { "en": "Locked-in founding rate after launch", "el": "Κλειδωμένη ιδρυτική τιμή μετά το launch" }
-      ]
-    },
-    {
-      "name": { "en": "Pro", "el": "Pro" },
-      "price": { "en": "€—", "el": "€—" },
-      "period": { "en": "/ month, coming soon", "el": "/ μήνα, σύντομα" },
-      "highlight": true,
-      "description": {
-        "en": "For studios that want priority placement and deeper booking tools.",
-        "el": "Για στούντιο που θέλουν προτεραιότητα προβολής και πιο ολοκληρωμένα εργαλεία κρατήσεων."
-      },
-      "features": [
-        { "en": "Everything in Founding", "el": "Όλα όσα περιλαμβάνει το Ιδρυτικό" },
-        { "en": "Priority placement in city search", "el": "Προτεραιότητα στην αναζήτηση ανά πόλη" },
-        { "en": "Booking calendar & availability sync", "el": "Ημερολόγιο κρατήσεων & συγχρονισμός διαθεσιμότητας" },
-        { "en": "Studio analytics dashboard", "el": "Πίνακας στατιστικών στούντιο" },
-        { "en": "Verified badge on your profile", "el": "Επιβεβαιωμένο σήμα στο προφίλ σας" }
+        { "en": "Booking requests to your inbox", "el": "Αιτήματα κράτησης απευθείας στο inbox σας" }
       ]
     },
     {
       "name": { "en": "Featured", "el": "Προβεβλημένο" },
-      "price": { "en": "€—", "el": "€—" },
-      "period": { "en": "/ promotion slot, coming soon", "el": "/ θέση προβολής, σύντομα" },
-      "highlight": false,
+      "price": { "en": "Free", "el": "Δωρεάν" },
+      "period": { "en": "for your first month, then ~€70–75/mo", "el": "τον πρώτο μήνα, μετά ~€70–75/μήνα" },
+      "highlight": true,
       "description": {
-        "en": "A paid boost for a specific campaign, launch, or guest artist spot.",
-        "el": "Μια πληρωμένη προβολή για συγκεκριμένη καμπάνια, launch, ή guest καλλιτέχνη."
+        "en": "Everything in Basic, plus priority placement so you get discovered first.",
+        "el": "Όλα όσα περιλαμβάνει το Basic, συν προτεραιότητα προβολής ώστε να σας βρίσκουν πρώτους."
       },
       "features": [
-        { "en": "Homepage & city-page placement", "el": "Προβολή στην αρχική σελίδα & στη σελίδα πόλης" },
-        { "en": "Featured badge for a fixed window", "el": "Σήμα προβολής για συγκεκριμένο διάστημα" },
-        { "en": "Stacks with Founding or Pro", "el": "Συνδυάζεται με το Ιδρυτικό ή το Pro" }
+        { "en": "Everything in Basic", "el": "Όλα όσα περιλαμβάνει το Basic" },
+        { "en": "Priority placement in city search", "el": "Προτεραιότητα στην αναζήτηση ανά πόλη" },
+        { "en": "Featured badge on your profile", "el": "Σήμα προβολής στο προφίλ σας" },
+        { "en": "Homepage & city-page placement", "el": "Προβολή στην αρχική σελίδα & στη σελίδα πόλης" }
       ]
     }
   ]

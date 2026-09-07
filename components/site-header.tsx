@@ -21,7 +21,6 @@ export function SiteHeader() {
     { href: "/news", label: t.nav.news },
     { href: "/how-it-works", label: t.nav.howItWorks },
     { href: "/for-studios", label: t.nav.forStudios },
-    { href: "/pricing", label: t.nav.pricing },
     { href: "/about", label: t.nav.about },
   ];
 

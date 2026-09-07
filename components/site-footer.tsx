@@ -21,10 +21,7 @@ export function SiteFooter() {
     },
     {
       heading: t.footer.forStudios,
-      links: [
-        { href: "/for-studios", label: t.nav.listYourStudio },
-        { href: "/pricing", label: t.nav.pricing },
-      ],
+      links: [{ href: "/for-studios", label: t.nav.listYourStudio }],
     },
   ];
 

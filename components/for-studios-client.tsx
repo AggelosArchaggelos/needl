@@ -1,13 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { BarChart3, CalendarCheck, Image as ImageIcon, Star } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { StudioSignupForm } from "@/components/studio-signup-form";
-import { buttonVariants } from "@/components/ui/button";
 import { useLocale } from "@/lib/i18n/locale-context";
-import { cn } from "@/lib/utils";
 
 const icons = [ImageIcon, Star, CalendarCheck, BarChart3];
 
@@ -46,23 +43,6 @@ export function ForStudiosClient() {
             );
           })}
         </div>
-
-        <ScrollReveal delay={0.2} className="mt-16 rounded-xl border border-line bg-ink-2 p-8 sm:p-10">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <h2 className="font-display text-2xl text-paper">{t.forStudios.freeDuringLaunch}</h2>
-              <p className="mt-2 max-w-lg text-sm leading-relaxed text-paper-dim">
-                {t.forStudios.freeDuringLaunchBody}
-              </p>
-            </div>
-            <Link
-              href="/pricing"
-              className={cn(buttonVariants({ variant: "outline", size: "lg" }), "shrink-0 border-line-strong text-paper hover:bg-ink-3")}
-            >
-              {t.forStudios.seePricing}
-            </Link>
-          </div>
-        </ScrollReveal>
       </div>
     </div>
   );
