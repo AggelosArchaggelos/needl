@@ -8,13 +8,29 @@
   },
   "pricingTiers": [
     {
-      "name": { "en": "Basic", "el": "Basic" },
+      "name": { "en": "Founding", "el": "Ιδρυτικό" },
       "price": { "en": "Free", "el": "Δωρεάν" },
-      "period": { "en": "for your first month, then ~€45–50/mo", "el": "τον πρώτο μήνα, μετά ~€45–50/μήνα" },
+      "period": { "en": "for your first month", "el": "τον πρώτο μήνα" },
       "highlight": false,
       "description": {
-        "en": "Everything a studio needs to get listed and start taking booking requests. Exact pricing confirmed when we follow up with you.",
-        "el": "Όλα όσα χρειάζεται ένα στούντιο για να καταχωριστεί και να αρχίσει να δέχεται αιτήματα κράτησης. Η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας."
+        "en": "Get your studio listed and start taking booking requests — no cost for your first month, no card required.",
+        "el": "Καταχωρίστε το στούντιο σας και αρχίστε να δέχεστε αιτήματα κράτησης — χωρίς κόστος τον πρώτο μήνα, χωρίς κάρτα."
+      },
+      "features": [
+        { "en": "Studio profile with gallery", "el": "Προφίλ στούντιο με γκαλερί" },
+        { "en": "Unlimited artist profiles", "el": "Απεριόριστα προφίλ καλλιτεχνών" },
+        { "en": "Portfolio uploads per artist", "el": "Ανέβασμα portfolio ανά καλλιτέχνη" },
+        { "en": "Booking requests to your inbox", "el": "Αιτήματα κράτησης απευθείας στο inbox σας" }
+      ]
+    },
+    {
+      "name": { "en": "Pro", "el": "Pro" },
+      "price": { "en": "~€45–50", "el": "~€45–50" },
+      "period": { "en": "/mo after your first month", "el": "/μήνα μετά τον πρώτο μήνα" },
+      "highlight": false,
+      "description": {
+        "en": "The ongoing plan for studios ready to keep growing on Needl. Exact pricing confirmed when we follow up with you.",
+        "el": "Το συνεχές πλάνο για στούντιο που θέλουν να συνεχίσουν να αναπτύσσονται στο Needl. Η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας."
       },
       "features": [
         { "en": "Studio profile with gallery", "el": "Προφίλ στούντιο με γκαλερί" },
@@ -25,15 +41,15 @@
     },
     {
       "name": { "en": "Featured", "el": "Προβεβλημένο" },
-      "price": { "en": "Free", "el": "Δωρεάν" },
-      "period": { "en": "for your first month, then ~€70–75/mo", "el": "τον πρώτο μήνα, μετά ~€70–75/μήνα" },
+      "price": { "en": "~€70–75", "el": "~€70–75" },
+      "period": { "en": "/mo after your first month", "el": "/μήνα μετά τον πρώτο μήνα" },
       "highlight": true,
       "description": {
-        "en": "Everything in Basic, plus priority placement so you get discovered first.",
-        "el": "Όλα όσα περιλαμβάνει το Basic, συν προτεραιότητα προβολής ώστε να σας βρίσκουν πρώτους."
+        "en": "Everything in Pro, plus priority placement so you get discovered first.",
+        "el": "Όλα όσα περιλαμβάνει το Pro, συν προτεραιότητα προβολής ώστε να σας βρίσκουν πρώτους."
       },
       "features": [
-        { "en": "Everything in Basic", "el": "Όλα όσα περιλαμβάνει το Basic" },
+        { "en": "Everything in Pro", "el": "Όλα όσα περιλαμβάνει το Pro" },
         { "en": "Priority placement in city search", "el": "Προτεραιότητα στην αναζήτηση ανά πόλη" },
         { "en": "Featured badge on your profile", "el": "Σήμα προβολής στο προφίλ σας" },
         { "en": "Homepage & city-page placement", "el": "Προβολή στην αρχική σελίδα & στη σελίδα πόλης" }

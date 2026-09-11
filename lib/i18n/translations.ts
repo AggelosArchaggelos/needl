@@ -178,7 +178,7 @@ export const translations = {
     pricing: {
       eyebrow: "Pricing",
       title: "Free for your first month, then a simple monthly plan.",
-      description: "Every studio starts with a free first month. After that, pick Basic or Featured — exact pricing is confirmed when we follow up with you directly.",
+      description: "Every studio starts free on Founding for the first month. After that, choose Pro or Featured — exact pricing is confirmed when we follow up with you directly.",
     },
     about: {
       eyebrow: "About Needl",
@@ -382,7 +382,7 @@ export const translations = {
     pricing: {
       eyebrow: "Τιμές",
       title: "Δωρεάν τον πρώτο μήνα, μετά ένα απλό μηνιαίο πλάνο.",
-      description: "Κάθε στούντιο ξεκινά με έναν δωρεάν πρώτο μήνα. Στη συνέχεια επιλέγετε Basic ή Προβεβλημένο — η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας.",
+      description: "Κάθε στούντιο ξεκινά δωρεάν με το Ιδρυτικό τον πρώτο μήνα. Στη συνέχεια επιλέγετε Pro ή Προβεβλημένο — η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας.",
     },
     about: {
       eyebrow: "Σχετικά με το Needl",
