@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { styleName } from "@/lib/data/styles";
 import { useLocale } from "@/lib/i18n/locale-context";
+import { disciplineLabel } from "@/lib/profile-details";
 import { localize } from "@/lib/i18n/localize";
 import type { Artist } from "@/lib/types";
 
@@ -27,9 +28,9 @@ export function ArtistCard({ artist }: { artist: Artist }) {
         </div>
         <div className="min-w-0">
           <h3 className="truncate font-display text-base text-paper">{artist.name}</h3>
-          <p className="text-sm text-paper-dim">{localize(artist.role, locale)}</p>
+          <p className="text-sm text-paper-dim">{disciplineLabel(artist, locale)} · {localize(artist.role, locale)}</p>
           <div className="mt-1.5 flex flex-wrap gap-1.5">
-            {artist.styleIds.map((id) => (
+            {(artist.discipline === "piercing" ? [] : artist.styleIds).map((id) => (
               <span key={id} className="text-xs text-paper-dim">
                 {styleName(id)}
                 {id !== artist.styleIds[artist.styleIds.length - 1] && (

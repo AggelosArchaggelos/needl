@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { MapPin, Clock, Phone } from "lucide-react";
+import { studioWebsite } from "@/lib/profile-details";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { ArtistCard } from "@/components/artist-card";
 import { BookingDialog } from "@/components/booking-dialog";
@@ -87,7 +88,7 @@ export function StudioView({ studio }: { studio: Studio }) {
             )}
 
             <ScrollReveal delay={0.1} className="mt-14">
-              <h2 className="font-display text-2xl text-paper">{t.studio.artists}</h2>
+              <h2 className="font-display text-2xl text-paper">{locale === "el" ? "Η ομάδα" : "The team"}</h2>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {studio.artists.map((artist) => (
                   <ArtistCard key={artist.id} artist={artist} />
@@ -130,6 +131,7 @@ export function StudioView({ studio }: { studio: Studio }) {
               <p className="mt-1 text-sm text-paper-dim">{studio.address}</p>
             </div>
             <div className="flex flex-col gap-2 border-t border-line pt-5">
+              {studioWebsite(studio.websiteUrl) && <a href={studioWebsite(studio.websiteUrl)!} target="_blank" rel="noopener noreferrer" className="flex min-h-11 items-center text-sm text-paper-dim hover:text-paper">{locale === "el" ? "Ιστότοπος στούντιο ↗" : "Studio website ↗"}</a>}
               <a
                 href={`https://instagram.com/${studio.instagramHandle}`}
                 target="_blank"

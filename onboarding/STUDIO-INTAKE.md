@@ -61,4 +61,4 @@ Supply original image files rather than Instagram screenshots. Keep skin tones a
 - [ ] Content validation passes, and warnings have been reviewed.
 - [ ] Website and app previews reviewed with the owner before publication.
 
-**Current implementation limits:** the current public data model requires numeric prices, ratings and tattoo-style portfolio references. Unknown values and piercing-only work must be held for review, not forced into tattoo categories or filled with made-up numbers. This template captures optional studio websites and piercing specialities; displaying those new fields and adapting piercing-specific portfolios will be a separate approved change.
+**Current implementation limits:** studio-wide prices and ratings still require confirmed numeric values. Individual-work prices may be left unknown. Piercing work now has its own category and does not need a tattoo style. Public profiles support optional studio websites and piercing specialities; see TEAM-AND-WEBSITES.md. Local dashboard drafts still require manual review and publication.

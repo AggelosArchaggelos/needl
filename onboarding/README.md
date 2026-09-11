@@ -18,7 +18,7 @@ The report identifies exact locations such as `studios[0].artists[1].bio.el`. In
 
 URL checks do not make network requests or prove a link works. Image warnings do not prove permission, authenticity or that the image host is configured. The current website image configuration allows Picsum only; choose and configure a real image host when importing real studios. Local image paths must point to existing public assets.
 
-No content is automatically corrected. The private dashboard, website-link display, piercing-specific portfolio model and protected pricing are separate future changes. This workflow adds no subscription or account system.
+No content is automatically corrected. The local dashboard and public website/piercer fields are now implemented; see LOCAL-DASHBOARD.md and TEAM-AND-WEBSITES.md. Secure online editing, publishing, and protected pricing remain separate future changes. This workflow adds no subscription or account system.
 
 ## Undo
 

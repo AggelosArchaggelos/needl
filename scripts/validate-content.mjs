@@ -37,7 +37,7 @@ export function validateContent({ studios, cities, styles, news, config }) {
     text(s.address, p + '.address');
     if (text(s.phone, p + '.phone') && !/^\+?[\d\s().-]{7,24}$/.test(s.phone)) error(p + '.phone', 'Check the phone number format.');
     instagram(s.instagramHandle, p + '.instagramHandle');
-    if (s.websiteUrl) url(s.websiteUrl, p + '.websiteUrl');
+    if (s.websiteUrl !== undefined && s.websiteUrl !== '') url(s.websiteUrl, p + '.websiteUrl');
     url(s.heroImageUrl, p + '.heroImageUrl', true);
     list(s.galleryImages, p + '.galleryImages', true).forEach((v, n) => url(v, p + '.galleryImages[' + n + ']', true));
     number(s.rating, p + '.rating', 5); number(s.reviewCount, p + '.reviewCount', Infinity, true); number(s.avgSessionEUR, p + '.avgSessionEUR');
@@ -49,12 +49,16 @@ export function validateContent({ studios, cities, styles, news, config }) {
       const q = p + '.artists[' + j + ']'; if (!object(a, q)) continue;
       unique(a.id, q + '.id', artistIds); unique(a.slug, q + '.slug', artistSlugs); slug(a.slug, q + '.slug'); text(a.name, q + '.name');
       if (a.studioSlug !== s.slug) error(q + '.studioSlug', 'Must match the parent studio slug.');
+      if (a.discipline !== undefined && !['tattoo', 'piercing', 'both'].includes(a.discipline)) error(q + '.discipline', 'Choose tattoo, piercing or both.');
+      if (a.piercingSpecialities !== undefined && typeof a.piercingSpecialities !== 'string') error(q + '.piercingSpecialities', 'Expected text.');
       localized(a.role, q + '.role'); localized(a.bio, q + '.bio'); number(a.yearsExperience, q + '.yearsExperience', Infinity, true);
       instagram(a.instagramHandle, q + '.instagramHandle'); url(a.avatarUrl, q + '.avatarUrl', true); refs(a.styleIds, q + '.styleIds');
       for (const [k, piece] of list(a.portfolio, q + '.portfolio', true).entries()) {
         const r = q + '.portfolio[' + k + ']'; if (!object(piece, r)) continue;
-        unique(piece.id, r + '.id', pieceIds); text(piece.caption, r + '.caption'); url(piece.imageUrl, r + '.imageUrl', true); number(piece.priceEUR, r + '.priceEUR');
-        if (!styleIds.has(piece.styleId)) error(r + '.styleId', 'Unknown tattoo style; piercing-only work needs model review.');
+        unique(piece.id, r + '.id', pieceIds); text(piece.caption, r + '.caption'); url(piece.imageUrl, r + '.imageUrl', true); if (piece.priceEUR !== undefined) number(piece.priceEUR, r + '.priceEUR');
+        if (piece.kind !== undefined && !['tattoo', 'piercing'].includes(piece.kind)) error(r + '.kind', 'Choose tattoo or piercing.');
+        if (piece.kind !== 'piercing' && !styleIds.has(piece.styleId)) error(r + '.styleId', 'Tattoo work needs a configured tattoo style.');
+        if (piece.kind === 'piercing' && piece.styleId) error(r + '.styleId', 'Piercing work should not have a tattoo style.');
       }
     }
   }

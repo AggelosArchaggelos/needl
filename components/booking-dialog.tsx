@@ -178,7 +178,7 @@ export function BookingDialog({
                     id="booking-notes"
                     className="min-h-24 border-line-strong bg-transparent text-paper"
                     placeholder={
-                      chosenArtist
+                      chosenArtist && chosenArtist.discipline !== "piercing" && chosenArtist.styleIds.length > 0
                         ? `e.g. a ${styleName(chosenArtist.styleIds[0]).toLowerCase()} piece, roughly palm-sized`
                         : t.booking.notesPlaceholder
                     }

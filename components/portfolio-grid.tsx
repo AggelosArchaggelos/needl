@@ -26,11 +26,11 @@ export function PortfolioGrid({ pieces, artistName }: { pieces: PortfolioPiece[]
           />
           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink via-ink/60 to-transparent p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
             <p className="font-mono text-xs uppercase tracking-[0.1em] text-brass-bright">
-              {styleName(piece.styleId)}
+              {piece.kind === "piercing" ? "Piercing" : styleName(piece.styleId ?? "")}
             </p>
             <p className="mt-0.5 text-sm text-paper">{piece.caption}</p>
             <p className="font-mono text-xs text-paper-dim">
-              {t.artist.from} €{piece.priceEUR}
+              {piece.priceEUR !== undefined ? <>{t.artist.from} €{piece.priceEUR}</> : null}
             </p>
           </div>
         </button>))}

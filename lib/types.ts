@@ -21,12 +21,15 @@ export type City = {
 export type PortfolioPiece = {
   id: string;
   imageUrl: string;
-  styleId: string;
+  kind?: "tattoo" | "piercing";
+  styleId?: string;
   caption: string;
-  priceEUR: number;
+  priceEUR?: number;
 };
 
 export type Artist = {
+  discipline?: "tattoo" | "piercing" | "both";
+  piercingSpecialities?: string;
   id: string;
   slug: string;
   name: string;
@@ -41,6 +44,7 @@ export type Artist = {
 };
 
 export type Studio = {
+  websiteUrl?: string;
   id: string;
   slug: string;
   name: string;

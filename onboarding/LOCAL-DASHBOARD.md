@@ -11,4 +11,4 @@ Open http://localhost:3210/local-dashboard while the website development server 
 - Draft storage is not a backup. Clearing browser data removes drafts. Keep your completed intake forms and original photographs separately. If storage fails, keep the tab open and preserve the information elsewhere.
 - Production renders the not-found page for this route. This is not an authenticated online admin area. Secure sign-in, permanent storage, publishing and pricing access rules are separate work.
 
-The initial workspace is copied from the project's sample content on first use. Existing browser drafts are deliberately not replaced when seed content changes. Editing website links and piercing details here does not implement their public display.
+The initial workspace is copied from the project's sample content on first use. Existing browser drafts are deliberately not replaced when seed content changes. Public clients now support website links and piercing details, but editing a draft still does not publish it. See TEAM-AND-WEBSITES.md.

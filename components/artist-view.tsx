@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { cityName } from "@/lib/data/cities";
 import { styleName } from "@/lib/data/styles";
 import { useLocale } from "@/lib/i18n/locale-context";
+import { disciplineLabel } from "@/lib/profile-details";
 import { localize } from "@/lib/i18n/localize";
 import type { Artist, Studio } from "@/lib/types";
 
@@ -42,10 +43,10 @@ export function ArtistView({ studio, artist }: { studio: Studio; artist: Artist 
           <div>
             <SaveButton id={"artist:" + artist.id} /><h1 className="font-display text-3xl text-paper sm:text-4xl">{artist.name}</h1>
             <p className="mt-1 text-paper-dim">
-              {localize(artist.role, locale)} · {studio.name} · {cityName(studio.cityId, locale)}
+              {disciplineLabel(artist, locale)} · {localize(artist.role, locale)} · {studio.name} · {cityName(studio.cityId, locale)}
             </p>
             <p className="mt-1 font-mono text-xs text-paper-faint">
-              {artist.yearsExperience} {t.artist.yearsExperience}
+              {artist.yearsExperience} {locale === "el" ? "χρόνια εμπειρίας" : "years of experience"}
             </p>
           </div>
         </div>
@@ -62,9 +63,10 @@ export function ArtistView({ studio, artist }: { studio: Studio; artist: Artist 
 
       <ScrollReveal className="mt-10 max-w-2xl">
         <p className="leading-relaxed text-paper-dim">{localize(artist.bio, locale)}</p>
+        {artist.discipline !== "tattoo" && artist.piercingSpecialities && <p className="mt-4 text-sm text-paper-dim"><span className="text-brass-bright">{locale === "el" ? "Ειδικότητες piercing" : "Piercing specialities"}: </span>{artist.piercingSpecialities}</p>}
         <div className="mt-4 flex flex-wrap items-center gap-3">
           <div className="flex flex-wrap gap-1.5">
-            {artist.styleIds.map((id) => (
+            {(artist.discipline === "piercing" ? [] : artist.styleIds).map((id) => (
               <span
                 key={id}
                 className="rounded-full border border-line-strong px-2.5 py-1 text-xs text-paper-dim"
