@@ -6,7 +6,7 @@ Updated: 2026-09-11. Shared working context for Claude Code and Codex; this is a
 
 Needl is a contemporary, minimal, luxurious directory for tattoo studios, artists and piercers in Greece. The website and app are in separate private repositories: AggelosArchaggelos/needl and AggelosArchaggelos/needl-app. The existing website beta is https://needl-vert.vercel.app.
 
-The user authorised completion of the already discussed local improvements with separate saves and easy undo. DO NOT push to GitHub or deploy to Vercel until the user reviews and explicitly approves. Ask before new, unapproved feature or visual changes. Do not send messages or enquiry emails without authorisation. Do not use Lovable.
+The user authorised completion of the already discussed local improvements with separate saves and easy undo. On 2026-09-11 the user explicitly approved pushing all current changes to GitHub and deploying both beta versions to Vercel. This approval covers this release; obtain approval for future releases. Deployment verification is in progress. Ask before new, unapproved feature or visual changes. Do not send messages or enquiry emails without authorisation. Do not use Lovable.
 
 ## Design and product decisions
 
@@ -54,3 +54,4 @@ Further workflow details: website onboarding/LOCAL-DASHBOARD.md and onboarding/L
 ## Keeping both assistants informed
 
 Read this file at task start. After meaningful approved work, update completed work, decisions, checks, limitations and next steps. Keep a matching copy at PROJECT-HANDOVER.md in both repositories when both are available; if only one is available, record that its sibling needs synchronisation. Preserve existing decisions; distinguish proposed work from approved work. Never invent missing discussion. These files share context when both assistants read them; they do not automatically synchronise chat history or transfer files to another computer. Remote sharing requires the user's later push approval.
+
