@@ -6,7 +6,7 @@ Updated: 2026-09-11. Shared working context for Claude Code and Codex; this is a
 
 Needl is a contemporary, minimal, luxurious directory for tattoo studios, artists and piercers in Greece. The website and app are in separate private repositories: AggelosArchaggelos/needl and AggelosArchaggelos/needl-app. The existing website beta is https://needl-vert.vercel.app.
 
-The user authorised completion of the already discussed local improvements with separate saves and easy undo. On 2026-09-11 the user explicitly approved pushing all current changes to GitHub and deploying both beta versions to Vercel. This approval covers this release; obtain approval for future releases. Deployment verification is in progress. Ask before new, unapproved feature or visual changes. Do not send messages or enquiry emails without authorisation. Do not use Lovable.
+The user authorised completion of the already discussed local improvements with separate saves and easy undo. On 2026-09-11 the user explicitly approved pushing all current changes to GitHub and deploying both beta versions to Vercel. This approval covers this release; obtain approval for future releases. Both repositories were pushed and both Vercel beta deployments are live. Website: https://needl-vert.vercel.app. App browser beta: https://needl-app.vercel.app. The app Vercel project was created under team needl2 and points EXPO_PUBLIC_API_BASE_URL at the hosted website. This is a browser showcase, not an App Store or Play Store release. Ask before new, unapproved feature or visual changes. Do not send messages or enquiry emails without authorisation. Do not use Lovable.
 
 ## Design and product decisions
 
@@ -41,7 +41,7 @@ Get listed uses Resend to aggkritharas@gmail.com. Real delivery still needs depl
 
 Production build, both TypeScript checks and nine content/workspace/token tests passed. Production checks confirmed local dashboard routes return404, protected pricing returns401 without access, and public config omits prices. No real enquiry email was sent and no real content was applied during tests. Seed content still produces placeholder-image warnings.
 
-Pending: user visual review; real content; physical iOS/Android testing (the owner's Expo Go previously did not support SDK57); real email verification; eventual booking delivery, billing and store releases. Online owner administration still needs secure identity, owner-only server permissions, durable shared content/image storage and tested publication/rollback. Local backups are not cloud storage. Coordinate new app and website API releases because the pricing API contract changed.
+Pending: further user feedback; real content; physical iOS/Android testing (the owner's Expo Go previously did not support SDK57); real email verification; eventual booking delivery, billing and store releases. Online owner administration still needs secure identity, owner-only server permissions, durable shared content/image storage and tested publication/rollback. Local backups are not cloud storage. Coordinate new app and website API releases because the pricing API contract changed.
 
 ## Undo and checkpoints
 
@@ -53,5 +53,10 @@ Further workflow details: website onboarding/LOCAL-DASHBOARD.md and onboarding/L
 
 ## Keeping both assistants informed
 
-Read this file at task start. After meaningful approved work, update completed work, decisions, checks, limitations and next steps. Keep a matching copy at PROJECT-HANDOVER.md in both repositories when both are available; if only one is available, record that its sibling needs synchronisation. Preserve existing decisions; distinguish proposed work from approved work. Never invent missing discussion. These files share context when both assistants read them; they do not automatically synchronise chat history or transfer files to another computer. Remote sharing requires the user's later push approval.
+Read this file at task start. After meaningful approved work, update completed work, decisions, checks, limitations and next steps. Keep a matching copy at PROJECT-HANDOVER.md in both repositories when both are available; if only one is available, record that its sibling needs synchronisation. Preserve existing decisions; distinguish proposed work from approved work. Never invent missing discussion. These files share context when both assistants read them; they do not automatically synchronise chat history or transfer files to another computer. The approved current release has been pushed; future releases still require approval.
+
+
+## Beta deployment verification (2026-09-11)
+
+Vercel marked website commit 6dd8220 and app commit 00bb5f3 Ready. Public website API returns content without pricing; local dashboard/write endpoints return404 and protected pricing returns401. App home loads the live directory; direct profile routes return the app shell. App hosting uses Expo single web output with Vercel rewrites so runtime studio/artist routes open directly. Both repositories retain separate feature commits for undo. Website deployment currently has only STUDIO_SIGNUP_NOTIFY_EMAIL configured: Resend and signing-secret setup remains pending; no enquiry email was sent. Documentation-only sync commits follow the verified code commits.
 
