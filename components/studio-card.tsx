@@ -30,11 +30,11 @@ export function StudioCard({ studio }: { studio: Studio }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
         {studio.promoted && (
-          <PromotedBadge className="absolute left-3 top-3 bg-ink/70 backdrop-blur-sm" />
+          <PromotedBadge className="absolute left-3 top-3 bg-ink/90 backdrop-blur-sm" />
         )}
-        <div className="absolute bottom-3 right-3 rounded-full border border-line-strong bg-ink/70 px-2.5 py-1 font-mono text-xs text-paper backdrop-blur-sm">
+        <div className="absolute bottom-3 right-3 rounded-full border border-line-strong bg-ink/90 px-2.5 py-1 font-mono text-xs text-paper backdrop-blur-sm">
           {studio.priceBand}
-          <span className="text-paper-faint"> · {t.artist.from} €{studio.avgSessionEUR}</span>
+          <span className="text-paper-dim"> · {t.artist.from} €{studio.avgSessionEUR}</span>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ export function StudioCard({ studio }: { studio: Studio }) {
           {studio.styleIds.slice(0, 3).map((id) => (
             <span
               key={id}
-              className="rounded-full border border-line-strong px-2 py-0.5 text-[11px] text-paper-dim"
+              className="rounded-full border border-line-strong px-2 py-0.5 text-xs text-paper-dim"
             >
               {styleName(id)}
             </span>

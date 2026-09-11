@@ -30,7 +30,7 @@ export function ArtistCard({ artist }: { artist: Artist }) {
           <p className="text-sm text-paper-dim">{localize(artist.role, locale)}</p>
           <div className="mt-1.5 flex flex-wrap gap-1.5">
             {artist.styleIds.map((id) => (
-              <span key={id} className="text-[11px] text-red-bright">
+              <span key={id} className="text-xs text-paper-dim">
                 {styleName(id)}
                 {id !== artist.styleIds[artist.styleIds.length - 1] && (
                   <span className="text-paper-faint"> · </span>

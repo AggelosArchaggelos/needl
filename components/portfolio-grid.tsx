@@ -24,8 +24,8 @@ export function PortfolioGrid({ pieces, artistName }: { pieces: PortfolioPiece[]
             sizes="(min-width: 640px) 33vw, 50vw"
             className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.025]"
           />
-          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink/95 via-ink/10 to-transparent p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-brass-bright">
+          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink via-ink/60 to-transparent p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+            <p className="font-mono text-xs uppercase tracking-[0.1em] text-brass-bright">
               {styleName(piece.styleId)}
             </p>
             <p className="mt-0.5 text-sm text-paper">{piece.caption}</p>
