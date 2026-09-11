@@ -1,3 +1,4 @@
+import { issuePricingAccess, pricingAccessConfigured } from "@/lib/pricing-access";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -66,6 +67,7 @@ export async function POST(request: Request) {
     );
   }
 
+  if (!pricingAccessConfigured()) return NextResponse.json({ ok: false, error: "Studio access is not configured yet." }, { status: 503, headers: CORS_HEADERS });
   const resend = new Resend(apiKey);
   const fromEmail = process.env.STUDIO_SIGNUP_FROM_EMAIL ?? "Needl <onboarding@resend.dev>";
 
@@ -104,5 +106,8 @@ export async function POST(request: Request) {
     );
   }
 
-  return NextResponse.json({ ok: true }, { headers: CORS_HEADERS });
+  const pricingToken = issuePricingAccess();
+  const response = NextResponse.json({ ok: true, pricingToken }, { headers: { ...CORS_HEADERS, "Cache-Control": "no-store" } });
+  response.cookies.set("needl-studio-access", pricingToken, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax", path: "/", maxAge: 3600 });
+  return response;
 }

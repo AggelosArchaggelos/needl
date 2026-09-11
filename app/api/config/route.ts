@@ -5,7 +5,7 @@ import { styles } from "@/lib/data/styles";
 
 export async function GET() {
   return NextResponse.json(
-    { ...siteConfig, cities, styles },
+    { siteName: siteConfig.siteName, tagline: siteConfig.tagline, contactEmail: siteConfig.contactEmail, instagramHandle: siteConfig.instagramHandle, features: siteConfig.features, cities, styles },
     { headers: { "Access-Control-Allow-Origin": "*" } },
   );
 }

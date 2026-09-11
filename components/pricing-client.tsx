@@ -3,12 +3,12 @@
 import { Check } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { siteConfig } from "@/lib/data/site-config";
+import type { PricingTier } from "@/lib/types";
 import { useLocale } from "@/lib/i18n/locale-context";
 import { localize } from "@/lib/i18n/localize";
 import { cn } from "@/lib/utils";
 
-export function PricingClient() {
+export function PricingClient({ tiers }: { tiers: PricingTier[] }) {
   const { t, locale } = useLocale();
 
   return (
@@ -22,7 +22,7 @@ export function PricingClient() {
       />
 
       <div className="mt-14 grid gap-6 sm:grid-cols-3">
-        {siteConfig.pricingTiers.map((tier, i) => (
+        {tiers.map((tier, i) => (
           <ScrollReveal key={tier.name.en} delay={i * 0.06}>
             <div
               className={cn(

@@ -148,7 +148,7 @@ export const translations = {
         },
       ],
       freeDuringLaunch: "Free for your first month",
-      freeDuringLaunchBody: "After that, plans start around €45–50/mo — exact pricing gets confirmed when we follow up with you.",
+      freeDuringLaunchBody: "After that, choose your studio plan — pricing is available after your enquiry.",
       seePricing: "See pricing",
       form: {
         studioName: "Studio name",
@@ -352,7 +352,7 @@ export const translations = {
         },
       ],
       freeDuringLaunch: "Δωρεάν τον πρώτο μήνα",
-      freeDuringLaunchBody: "Στη συνέχεια, τα πλάνα ξεκινούν περίπου από €45–50/μήνα — η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας.",
+      freeDuringLaunchBody: "Στη συνέχεια, επιλέξτε το πλάνο σας — οι τιμές είναι διαθέσιμες μετά το αίτημά σας.",
       seePricing: "Δείτε τις τιμές",
       form: {
         studioName: "Όνομα στούντιο",
