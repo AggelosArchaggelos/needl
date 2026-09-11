@@ -48,7 +48,7 @@ export function ArtistCard({ artist }: { artist: Artist }) {
               alt={piece.caption}
               fill
               sizes="120px"
-              className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+              className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.025]"
             />
           </div>
         ))}

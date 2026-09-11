@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type ReactElement } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { Phone, Stamp } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/instagram-icon";
 import {
@@ -38,6 +38,7 @@ export function BookingDialog({
   trigger: ReactElement;
 }) {
   const { t, locale } = useLocale();
+  const reducedMotion = useReducedMotion();
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [artistChoice, setArtistChoice] = useState(artist?.id ?? "any");
@@ -64,9 +65,9 @@ export function BookingDialog({
               className="flex flex-col items-center px-2 py-6 text-center"
             >
               <motion.div
-                initial={{ scale: 2, rotate: -18, opacity: 0 }}
+                initial={reducedMotion ? false : { scale: 0.96, rotate: -8, opacity: 0 }}
                 animate={{ scale: 1, rotate: -8, opacity: 1 }}
-                transition={{ type: "spring", stiffness: 260, damping: 16 }}
+                transition={{ duration: reducedMotion ? 0 : 0.24, ease: "easeOut" }}
                 className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-red-bright text-red-bright"
               >
                 <Stamp size={32} strokeWidth={1.5} />
