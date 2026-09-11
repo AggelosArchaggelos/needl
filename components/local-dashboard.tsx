@@ -81,6 +81,30 @@ export function LocalDashboard({ initialStudios, initialNews, cities, tattooStyl
     setSelected(id); setShowTrash(false); setPreview(false); setQuery("");
     setNotice(l("Draft restored.", "Το πρόχειρο επανήλθε."));
   }
+  function deletePermanently(id: string, name: string) {
+    const key = section + ":" + id;
+    if (!(workspace.trash ?? []).includes(key)) return;
+    const label = name || l("Untitled draft", "Πρόχειρο χωρίς τίτλο");
+    if (!window.confirm(l(
+      'Permanently delete "' + label + '" and all its draft contents? This cannot be undone. Public listings are not affected.',
+      'Να διαγραφεί οριστικά το «' + label + '» και όλο το περιεχόμενο του προχείρου; Δεν υπάρχει δυνατότητα επαναφοράς. Οι δημόσιες καταχωρίσεις δεν επηρεάζονται.',
+    ))) return;
+    const next: Workspace = {
+      ...workspace,
+      studios: section === "studios" ? workspace.studios.filter(item => item.id !== id) : workspace.studios,
+      news: section === "news" ? workspace.news.filter(item => item.id !== id) : workspace.news,
+      trash: (workspace.trash ?? []).filter(value => value !== key),
+    };
+    // Only report deletion after durable browser storage succeeds.
+    try { localStorage.setItem(KEY, JSON.stringify(next)); }
+    catch {
+      setStorageMessage(l("Deletion could not be saved. The draft remains in trash. Please try again.", "Η διαγραφή δεν αποθηκεύτηκε. Το πρόχειρο παραμένει στον κάδο. Δοκιμάστε ξανά."));
+      return;
+    }
+    setWorkspace(next); setStorageMessage(""); setReviewed(false);
+    if (selected === id) setSelected("");
+    setNotice(l("Draft permanently deleted.", "Το πρόχειρο διαγράφηκε οριστικά."));
+  }
   function add() {
     const id = makeId();
     if (section === "studios") {
@@ -120,7 +144,7 @@ export function LocalDashboard({ initialStudios, initialNews, cities, tattooStyl
         <button className={button + " w-full"} aria-pressed={showTrash} onClick={() => { setShowTrash(!showTrash); setNotice(""); }}><Trash2 size={16}/>{l("Trash", "Κάδος")} ({trashed.length})</button>
         <div className="max-h-96 space-y-1 overflow-y-auto">{visibleItems.filter(n => n.name.toLowerCase().includes(query.toLowerCase())).map(n => <button key={n.id} aria-current={!showTrash && selected === n.id ? "true" : undefined} className={"block min-h-11 w-full rounded-lg px-3 py-2 text-left text-sm " + (!showTrash && selected === n.id ? "bg-ink-3 text-paper" : "text-paper-dim hover:bg-ink-3")} onClick={() => { setSelected(n.id); setReviewed(false); setShowTrash(false); }}>{n.name || l("Untitled draft", "Πρόχειρο χωρίς τίτλο")}</button>)}</div>
       </aside>
-      {showTrash ? <section className="min-w-0 rounded-xl border border-line bg-ink-2 p-5 sm:p-7"><h2 className="font-display text-2xl">{l("Trash", "Κάδος")} · {section === "studios" ? l("Studios", "Στούντιο") : l("News", "Ειδήσεις")}</h2><p className="my-4 text-sm text-paper-dim">{l("These drafts remain saved locally. Restoring a studio also restores its team and portfolio information. Public listings are unaffected.", "Τα πρόχειρα παραμένουν αποθηκευμένα τοπικά. Η επαναφορά στούντιο επαναφέρει και την ομάδα του. Οι δημόσιες καταχωρίσεις δεν αλλάζουν.")}</p>{trashed.length ? <ul className="space-y-3">{trashed.map(item => <li key={item.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-line p-3"><span>{item.name || l("Untitled draft", "Πρόχειρο χωρίς τίτλο")}</span><button className={button} onClick={() => restore(item.id)}><RotateCcw size={16}/>{l("Restore", "Επαναφορά")}</button></li>)}</ul> : <p>{l("Trash is empty.", "Ο κάδος είναι άδειος.")}</p>}</section> : <section aria-label={l("Draft editor", "Επεξεργασία προχείρου")} className="min-w-0 rounded-xl border border-line bg-ink-2 p-5 sm:p-7">
+      {showTrash ? <section className="min-w-0 rounded-xl border border-line bg-ink-2 p-5 sm:p-7"><h2 className="font-display text-2xl">{l("Trash", "Κάδος")} · {section === "studios" ? l("Studios", "Στούντιο") : l("News", "Ειδήσεις")}</h2><p className="my-4 text-sm text-paper-dim">{l("These drafts remain saved locally. Restoring a studio also restores its team and portfolio information. Public listings are unaffected.", "Τα πρόχειρα παραμένουν αποθηκευμένα τοπικά. Η επαναφορά στούντιο επαναφέρει και την ομάδα του. Οι δημόσιες καταχωρίσεις δεν αλλάζουν.")}</p>{trashed.length ? <ul className="space-y-3">{trashed.map(item => <li key={item.id} className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-line p-3"><span>{item.name || l("Untitled draft", "Πρόχειρο χωρίς τίτλο")}</span><div className="flex flex-wrap gap-2"><button className={button} onClick={() => restore(item.id)}><RotateCcw size={16}/>{l("Restore", "Επαναφορά")}</button><button className={button + " text-paper border-red/60 hover:bg-red/20"} onClick={() => deletePermanently(item.id, item.name)}><Trash2 size={16}/>{l("Delete permanently", "Οριστική διαγραφή")}</button></div></li>)}</ul> : <p>{l("Trash is empty.", "Ο κάδος είναι άδειος.")}</p>}</section> : <section aria-label={l("Draft editor", "Επεξεργασία προχείρου")} className="min-w-0 rounded-xl border border-line bg-ink-2 p-5 sm:p-7">
         {selected && <div className="mb-4 flex justify-end"><button className={button + " text-paper-dim"} onClick={trashSelected}><Trash2 size={16}/>{l("Move to trash", "Μεταφορά στον κάδο")}</button></div>}
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3"><span role="status" className="text-xs text-paper-dim">{reviewed ? l("Marked for local review", "Σημειώθηκε για τοπικό έλεγχο") : l("Draft · changes saved locally as you type", "Πρόχειρο · τοπική αποθήκευση αλλαγών")}</span><button className={button} onClick={() => setPreview(!preview)}>{preview ? <Pencil size={16}/> : <Eye size={16}/>} {preview ? l("Edit", "Επεξεργασία") : l("Preview", "Προεπισκόπηση")}</button></div>
         {preview ? <div className="space-y-6">
