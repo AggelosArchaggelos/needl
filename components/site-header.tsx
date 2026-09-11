@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { Heart, Menu } from "lucide-react";
 import { LanguageToggle } from "@/components/language-toggle";
 import { NeedleMark } from "@/components/needle-mark";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
@@ -15,6 +15,7 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const { t, locale } = useLocale();
+  const savedLabel = locale === "el" ? "Αποθηκευμένα" : "Saved";
 
   const navLinks = [
     { href: "/saved", label: locale === "el" ? "Αποθηκευμένα" : "Saved" },
@@ -36,7 +37,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-4 xl:gap-8 lg:flex">
-          {navLinks.map((link) => (
+          {navLinks.filter((link) => link.href !== "/saved").map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -51,6 +52,18 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <Link
+            href="/saved"
+            aria-label={savedLabel}
+            title={savedLabel}
+            aria-current={pathname === "/saved" ? "page" : undefined}
+            className={cn(
+              "flex size-11 shrink-0 items-center justify-center rounded-full transition-colors hover:bg-ink-3 hover:text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
+              pathname === "/saved" ? "text-red-bright" : "text-paper-dim",
+            )}
+          >
+            <Heart size={19} strokeWidth={1.5} aria-hidden="true" />
+          </Link>
           <LanguageToggle />
           <Link
             href="/for-studios"
