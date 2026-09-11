@@ -35,6 +35,12 @@ export async function POST(request: Request) {
     );
   }
 
+  if (!payload || typeof payload !== "object" || Array.isArray(payload) ||
+      Object.entries(payload).some(([key, value]) =>
+        ["studioName", "contactName", "email", "phone", "city", "instagramHandle", "message"].includes(key) &&
+        (typeof value !== "string" || value.length > (key === "message" ? 5000 : 300)))) {
+    return NextResponse.json({ ok: false, error: "Please provide valid text fields." }, { status: 400, headers: CORS_HEADERS });
+  }
   const { studioName, contactName, email, phone, city, instagramHandle, message } = payload;
 
   if (!studioName?.trim() || !contactName?.trim() || !email?.trim()) {
