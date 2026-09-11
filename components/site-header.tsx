@@ -14,9 +14,10 @@ import { cn } from "@/lib/utils";
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
 
   const navLinks = [
+    { href: "/saved", label: locale === "el" ? "Αποθηκευμένα" : "Saved" },
     { href: "/browse", label: t.nav.browse },
     { href: "/news", label: t.nav.news },
     { href: "/how-it-works", label: t.nav.howItWorks },
@@ -34,7 +35,7 @@ export function SiteHeader() {
           <span className="font-display text-lg tracking-tight text-paper">Needl</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-4 xl:gap-8 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -49,7 +50,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <LanguageToggle />
           <Link
             href="/for-studios"
@@ -68,7 +69,7 @@ export function SiteHeader() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <LanguageToggle />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger

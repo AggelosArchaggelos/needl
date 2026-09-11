@@ -1,4 +1,6 @@
 "use client";
+import { SaveButton } from "@/components/save-button";
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -38,7 +40,7 @@ export function ArtistView({ studio, artist }: { studio: Studio; artist: Artist 
             />
           </div>
           <div>
-            <h1 className="font-display text-3xl text-paper sm:text-4xl">{artist.name}</h1>
+            <SaveButton id={"artist:" + artist.id} /><h1 className="font-display text-3xl text-paper sm:text-4xl">{artist.name}</h1>
             <p className="mt-1 text-paper-dim">
               {localize(artist.role, locale)} · {studio.name} · {cityName(studio.cityId, locale)}
             </p>

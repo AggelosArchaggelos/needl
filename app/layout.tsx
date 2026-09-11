@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import "./globals.css";
+import { FavouritesProvider } from "@/lib/favourites";
 
 const literata = Literata({
   variable: "--font-literata",
@@ -35,11 +36,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${literata.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col">
-        <LocaleProvider>
+        <LocaleProvider><FavouritesProvider>
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
-        </LocaleProvider>
+        </FavouritesProvider></LocaleProvider>
       </body>
     </html>
   );

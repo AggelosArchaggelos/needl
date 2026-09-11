@@ -1,4 +1,6 @@
 "use client";
+import { SaveButton } from "@/components/save-button";
+
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
@@ -43,7 +45,7 @@ export function PortfolioViewer({ pieces, index, artistName, onChange, onClose }
           {failed === piece.id ? <p className="flex h-full items-center justify-center text-paper-dim">{el ? "Η εικόνα δεν είναι διαθέσιμη." : "Image unavailable."}</p> :
             <Image key={piece.id} src={piece.imageUrl} alt={piece.caption} fill sizes="(min-width: 900px) 850px, 95vw" className="object-contain" onError={() => setFailed(piece.id)} />}
         </div>
-        <div className="flex items-center justify-between gap-4">
+        <SaveButton id={"piece:" + piece.id} /><div className="flex items-center justify-between gap-4">
           <button type="button" className={control} disabled={index === 0} onClick={() => move(-1)} aria-label={el ? "Προηγούμενη εικόνα" : "Previous image"}><ChevronLeft /></button>
           <div aria-live="polite" className="min-w-0 text-center"><p className="text-paper">{piece.caption}</p><p className="mt-1 text-sm text-paper-dim">{(index ?? 0) + 1} / {pieces.length}</p></div>
           <button type="button" className={control} disabled={index === pieces.length - 1} onClick={() => move(1)} aria-label={el ? "Επόμενη εικόνα" : "Next image"}><ChevronRight /></button>

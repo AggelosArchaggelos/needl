@@ -1,4 +1,6 @@
 "use client";
+import { SaveButton } from "@/components/save-button";
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +16,7 @@ export function StudioCard({ studio }: { studio: Studio }) {
   const { locale, t } = useLocale();
 
   return (
-    <Link
+    <div className="relative"><div className="absolute right-3 top-3 z-10"><SaveButton id={"studio:" + studio.id} /></div><Link
       href={`/studios/${studio.slug}`}
       className="group block overflow-hidden rounded-lg border border-line bg-ink-2 transition-colors duration-300 hover:border-line-strong"
     >
@@ -55,6 +57,6 @@ export function StudioCard({ studio }: { studio: Studio }) {
           ))}
         </div>
       </div>
-    </Link>
+    </Link></div>
   );
 }
