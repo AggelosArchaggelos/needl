@@ -1,19 +1,21 @@
 "use client";
 
+import { useState } from "react";
+import { PortfolioViewer } from "@/components/portfolio-viewer";
 import Image from "next/image";
 import { styleName } from "@/lib/data/styles";
 import { useLocale } from "@/lib/i18n/locale-context";
 import type { PortfolioPiece } from "@/lib/types";
 
-export function PortfolioGrid({ pieces }: { pieces: PortfolioPiece[] }) {
+export function PortfolioGrid({ pieces, artistName }: { pieces: PortfolioPiece[]; artistName: string }) {
   const { t, locale } = useLocale();
+  const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-      {pieces.map((piece) => (
-        <div
-          key={piece.id}
-          className="group relative aspect-[4/5] overflow-hidden rounded-lg border border-line bg-ink-2"
+    <><div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      {pieces.map((piece, index) => (
+        <button type="button" onClick={() => setSelected(index)} aria-label={(locale === "el" ? "Προβολή: " : "View: ") + piece.caption} key={piece.id}
+          className="group text-left focus-visible:outline-2 focus-visible:outline-brass relative aspect-[4/5] overflow-hidden rounded-lg border border-line bg-ink-2"
         >
           <Image
             src={piece.imageUrl}
@@ -31,8 +33,8 @@ export function PortfolioGrid({ pieces }: { pieces: PortfolioPiece[] }) {
               {t.artist.from} €{piece.priceEUR}
             </p>
           </div>
-        </div>
-      ))}
-    </div>
-  );
+        </button>))}
+    </div><PortfolioViewer pieces={pieces} artistName={artistName} index={selected} onChange={setSelected} onClose={() => setSelected(null)} /></>);
 }
+
+

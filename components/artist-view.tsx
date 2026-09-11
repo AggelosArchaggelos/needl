@@ -85,9 +85,10 @@ export function ArtistView({ studio, artist }: { studio: Studio; artist: Artist 
       <ScrollReveal delay={0.08} className="mt-12">
         <h2 className="font-display text-2xl text-paper">{t.artist.portfolio}</h2>
         <div className="mt-6">
-          <PortfolioGrid pieces={artist.portfolio} />
+          <PortfolioGrid pieces={artist.portfolio} artistName={artist.name} />
         </div>
       </ScrollReveal>
     </div>
   );
 }
+
