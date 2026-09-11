@@ -10,7 +10,8 @@
     "content:check": "node scripts/validate-content.mjs",
     "content:report": "node scripts/validate-content.mjs --report",
     "test:content": "node --test scripts/validate-content.test.mjs",
-    "prebuild": "npm run content:check"
+    "prebuild": "npm run content:check",
+    "test:local": "node --test scripts/local-workspace.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

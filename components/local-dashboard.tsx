@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Plus, Eye, Pencil, CheckCircle2, ImageIcon, Trash2, RotateCcw } from "lucide-react";
 import { disciplineLabel } from "@/lib/profile-details";
+import { isDraftWorkspace } from "@/lib/draft-workspace";
 import { useLocale } from "@/lib/i18n/locale-context";
 import type { Artist, City, Localized, NewsArticle, PortfolioPiece, Studio, TattooStyle } from "@/lib/types";
 
@@ -46,12 +47,13 @@ export function LocalDashboard({ initialStudios, initialNews, cities, tattooStyl
   const [reviewed, setReviewed] = useState(false);
   const [showTrash, setShowTrash] = useState(false);
   const [notice, setNotice] = useState("");
+  const [working, setWorking] = useState(false);
   useEffect(() => {
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) {
         const draft = JSON.parse(raw);
-        if (draft.version !== 1 || !Array.isArray(draft.studios) || !Array.isArray(draft.news) || !draft.studios.every((s: Studio) => typeof s.id === "string" && s.description?.en !== undefined && Array.isArray(s.artists) && Array.isArray(s.galleryImages)) || !draft.news.every((n: NewsArticle) => typeof n.id === "string" && n.title?.en !== undefined)) throw Error();
+        if (!isDraftWorkspace(draft)) throw Error();
         if (draft.trash !== undefined && (!Array.isArray(draft.trash) || !draft.trash.every((id: unknown) => typeof id === "string"))) throw Error();
         setWorkspace(draft); setSelected(draft.studios.find((s: Studio) => !(draft.trash ?? []).includes("studios:" + s.id))?.id ?? "");
       }
@@ -62,6 +64,34 @@ export function LocalDashboard({ initialStudios, initialNews, cities, tattooStyl
     setWorkspace(next); setReviewed(false); setStorageMessage("");
     try { localStorage.setItem(KEY, JSON.stringify(next)); }
     catch { setStorageMessage("Draft changes are only in memory. Browser storage is unavailable or full. Keep this tab open."); }
+  }
+  function exportDrafts() {
+    const url=URL.createObjectURL(new Blob([JSON.stringify(workspace,null,2)],{type:"application/json"}));
+    const link=document.createElement("a"); link.href=url; link.download="needl-drafts-"+new Date().toISOString().slice(0,10)+".json"; link.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+  async function importDrafts(file?: File) {
+    if(!file) return;
+    try {
+      if(file.size>2_000_000) throw Error();
+      const next:Workspace=JSON.parse(await file.text());
+      if(!isDraftWorkspace(next)) throw Error();
+      if(!window.confirm(l("Replace this browser's drafts with this file? Export your current drafts first if you need to keep them.","Αντικατάσταση των προχείρων από το αρχείο; Εξαγάγετε πρώτα τα τωρινά πρόχειρα αν θέλετε να τα κρατήσετε."))) return;
+      update(next); setSelected(next.studios.find(s=>!(next.trash??[]).includes("studios:"+s.id))?.id??""); setSection("studios"); setShowTrash(false); setNotice(l("Drafts imported.","Τα πρόχειρα εισήχθησαν."));
+    } catch { setStorageMessage(l("Could not import this file. Use a Needl draft export under 2 MB.","Δεν ήταν δυνατή η εισαγωγή. Χρησιμοποιήστε εξαγωγή Needl κάτω από 2 MB.")); }
+  }
+  async function diskAction(action:"backup"|"load"|"apply") {
+    if(action==="apply" && !window.confirm(l("Apply all non-trashed drafts to the LOCAL website content files? This also removes locally listed items that are in trash. A content backup will be created. Nothing will be uploaded. The app must use the local API to show these edits.","Εφαρμογή όλων των ενεργών προχείρων στα ΤΟΠΙΚΑ αρχεία; Τα στοιχεία στον κάδο θα αφαιρεθούν από την τοπική λίστα. Δημιουργείται αντίγραφο ασφαλείας. Δεν γίνεται μεταφόρτωση."))) return;
+    if(action==="load" && !window.confirm(l("Replace browser drafts with the last disk backup? Export current drafts first if needed.","Αντικατάσταση από το τελευταίο τοπικό αντίγραφο; Εξαγάγετε πρώτα τα τωρινά πρόχειρα αν χρειάζεται."))) return;
+    setWorking(true); setStorageMessage("");
+    try {
+      const response=await fetch("/api/local-workspace",action==="load"?{cache:"no-store"}:{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action,workspace})});
+      const result=await response.json();
+      if(!response.ok) throw Error(result.error+(result.issues?"\n"+result.issues.filter((i:{level:string})=>i.level==="ERROR").slice(0,12).map((i:{location:string;message:string})=>i.location+": "+i.message).join("\n"):""));
+      if(action==="load") { if(!isDraftWorkspace(result)) throw Error("Invalid disk backup"); update(result); setSection("studios"); setSelected(result.studios.find((s:Studio)=>!(result.trash??[]).includes("studios:"+s.id))?.id??""); setShowTrash(false); }
+      setNotice(action==="apply" ? l("Applied locally. Backup: ","Εφαρμόστηκε τοπικά. Αντίγραφο: ")+result.backup+" · "+result.warnings+" warnings" : action==="backup" ? l("Draft backup saved on this computer.","Το αντίγραφο αποθηκεύτηκε στον υπολογιστή.") : l("Disk backup loaded.","Το αντίγραφο φορτώθηκε."));
+    } catch(error) { setStorageMessage(error instanceof Error?error.message:"Local operation failed"); }
+    finally { setWorking(false); }
   }
   const studio = workspace.studios.find(s => s.id === selected);
   const article = workspace.news.find(n => n.id === selected);
@@ -133,8 +163,15 @@ export function LocalDashboard({ initialStudios, initialNews, cities, tattooStyl
   const visibleItems = items.filter(n => !(workspace.trash ?? []).includes(section + ":" + n.id));
 
   return <div className="mx-auto max-w-7xl px-5 py-10">
-    <div className="mb-8 flex flex-wrap items-start justify-between gap-4"><div><p className="mb-2 font-mono text-xs uppercase tracking-widest text-brass-bright">Needl / Studio desk</p><h1 className="font-display text-3xl">{l("Your content workspace", "Ο χώρος του περιεχομένου σας")}</h1><p className="mt-3 max-w-2xl text-sm text-paper-dim">{l("Local prototype. Drafts stay in this browser; nothing here changes the public website or app. Clearing browser data removes drafts.", "Τοπικό πρωτότυπο. Τα πρόχειρα μένουν σε αυτό το πρόγραμμα περιήγησης και δεν αλλάζουν τον δημόσιο ιστότοπο ή την εφαρμογή.")}</p></div><span className="rounded-full border border-brass/40 px-3 py-2 text-xs text-brass-bright">{l("LOCAL ONLY", "ΜΟΝΟ ΤΟΠΙΚΑ")}</span></div>
+    <div className="mb-8 flex flex-wrap items-start justify-between gap-4"><div><p className="mb-2 font-mono text-xs uppercase tracking-widest text-brass-bright">Needl / Studio desk</p><h1 className="font-display text-3xl">{l("Your content workspace", "Ο χώρος του περιεχομένου σας")}</h1><p className="mt-3 max-w-2xl text-sm text-paper-dim">{l("Local prototype. Drafts stay in this browser; nothing here uploads changes. Apply to local preview changes this computer’s content files only. Clearing browser data removes drafts.", "Τοπικό πρωτότυπο. Τα πρόχειρα μένουν σε αυτό το πρόγραμμα περιήγησης και δεν αλλάζουν τον δημόσιο ιστότοπο ή την εφαρμογή.")}</p></div><span className="rounded-full border border-brass/40 px-3 py-2 text-xs text-brass-bright">{l("LOCAL ONLY", "ΜΟΝΟ ΤΟΠΙΚΑ")}</span></div>
     {!ready ? <p>Loading drafts…</p> : <>
+    <div className="mb-5 flex flex-wrap gap-2">
+      <button className={button} onClick={exportDrafts}>{l("Export drafts", "Εξαγωγή προχείρων")}</button>
+      <label className={button+" cursor-pointer"}>{l("Import drafts", "Εισαγωγή προχείρων")}<input type="file" accept=".json,application/json" className="sr-only" onChange={e=>{void importDrafts(e.target.files?.[0]);e.target.value="";}}/></label>
+      <button className={button} disabled={working} onClick={()=>void diskAction("backup")}>{l("Back up to this computer", "Τοπικό αντίγραφο")}</button>
+      <button className={button} disabled={working} onClick={()=>void diskAction("load")}>{l("Load disk backup", "Φόρτωση αντιγράφου")}</button>
+      <button className={button+" border-brass/50"} disabled={working} onClick={()=>void diskAction("apply")}>{l("Apply to local preview", "Εφαρμογή τοπικά")}</button>
+    </div>
     {storageMessage && <p role="alert" className="mb-5 rounded-lg border border-red p-4">{storageMessage}</p>}
     {notice && <p role="status" className="mb-5 text-sm text-paper-dim">{notice}</p>}
     <div className="grid items-start gap-6 lg:grid-cols-[240px_minmax(0,1fr)]">
@@ -178,7 +215,7 @@ export function LocalDashboard({ initialStudios, initialNews, cities, tattooStyl
             <button className={button} onClick={() => { const id=makeId(); const a:TeamMember={id,slug:"draft-"+id.slice(0,8),name:"",studioSlug:studio.slug,role:emptyText(),bio:emptyText(),yearsExperience:0,avatarUrl:"",instagramHandle:"",styleIds:[],portfolio:[],discipline:"tattoo"}; setStudio({...studio,artists:[...studio.artists,a]}); }}><Plus size={16}/>{l("Add artist or piercer", "Προσθήκη καλλιτέχνη ή piercer")}</button>
           </div>
         </div> : article ? <div className="space-y-5"><Bilingual label={l("Title", "Τίτλος")} value={article.title} onChange={title=>setArticle({...article,title})}/><Bilingual label={l("Excerpt", "Περίληψη")} value={article.excerpt} onChange={excerpt=>setArticle({...article,excerpt})}/><Field label={l("Image URL", "Διεύθυνση εικόνας")} value={article.imageUrl} onChange={imageUrl=>setArticle({...article,imageUrl})}/><Field label={l("Source name", "Όνομα πηγής")} value={article.sourceName} onChange={sourceName=>setArticle({...article,sourceName})}/><Field label={l("Source URL (optional)", "Διεύθυνση πηγής (προαιρετικό)")} value={article.sourceUrl ?? ""} onChange={sourceUrl=>setArticle({...article,sourceUrl})}/><Field label={l("Date · YYYY-MM-DD", "Ημερομηνία · ΕΕΕΕ-ΜΜ-ΗΗ")} value={article.publishedAt} onChange={publishedAt=>setArticle({...article,publishedAt})}/><Field label={l("Tags · comma separated", "Ετικέτες · διαχωρισμένες με κόμμα")} value={article.tags.join(",")} onChange={value=>setArticle({...article,tags:value.split(",")})}/></div> : <p>{l("Create a draft to begin.", "Δημιουργήστε ένα πρόχειρο.")}</p>}
-        <div className="mt-8 border-t border-line pt-6"><h2 className="font-display text-xl">{l("Before review", "Πριν τον έλεγχο")}</h2>{issues.length ? <ul className="mt-3 max-h-48 list-disc overflow-auto pl-5 text-sm text-paper-dim">{issues.map((issue,i)=><li key={i}>{issue}</li>)}</ul> : <p className="mt-3 text-sm text-paper-dim">{l("Basic fields complete. Photos, permissions, prices, URLs and final content validation still need a person to review them.", "Τα βασικά πεδία συμπληρώθηκαν. Απαιτείται ακόμη έλεγχος φωτογραφιών, δικαιωμάτων και περιεχομένου.")}</p>}<button disabled={issues.length>0 || (!studio && !article)} className={button+" mt-4 disabled:opacity-40"} onClick={()=>{setReviewed(true);setPreview(true);}}><CheckCircle2 size={16}/>{l("Mark for local review", "Σήμανση για τοπικό έλεγχο")}</button><p className="mt-3 text-xs text-paper-faint">{l("There is no publish action in this prototype. Keep original photographs separately; use hosted image URLs here.", "Δεν υπάρχει δημοσίευση σε αυτό το πρωτότυπο. Κρατήστε τα πρωτότυπα αρχεία φωτογραφιών χωριστά.")}</p></div>
+        <div className="mt-8 border-t border-line pt-6"><h2 className="font-display text-xl">{l("Before review", "Πριν τον έλεγχο")}</h2>{issues.length ? <ul className="mt-3 max-h-48 list-disc overflow-auto pl-5 text-sm text-paper-dim">{issues.map((issue,i)=><li key={i}>{issue}</li>)}</ul> : <p className="mt-3 text-sm text-paper-dim">{l("Basic fields complete. Photos, permissions, prices, URLs and final content validation still need a person to review them.", "Τα βασικά πεδία συμπληρώθηκαν. Απαιτείται ακόμη έλεγχος φωτογραφιών, δικαιωμάτων και περιεχομένου.")}</p>}<button disabled={issues.length>0 || (!studio && !article)} className={button+" mt-4 disabled:opacity-40"} onClick={()=>{setReviewed(true);setPreview(true);}}><CheckCircle2 size={16}/>{l("Mark for local review", "Σήμανση για τοπικό έλεγχο")}</button><p className="mt-3 text-xs text-paper-faint">{l("Apply to local preview writes validated local files with backups. There is no online publishing. Keep original photographs separately.", "Δεν υπάρχει δημοσίευση σε αυτό το πρωτότυπο. Κρατήστε τα πρωτότυπα αρχεία φωτογραφιών χωριστά.")}</p></div>
       </section>}
     </div></>}
   </div>;
