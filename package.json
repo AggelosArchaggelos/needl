@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "content:check": "node scripts/validate-content.mjs",
+    "content:report": "node scripts/validate-content.mjs --report",
+    "test:content": "node --test scripts/validate-content.test.mjs",
+    "prebuild": "npm run content:check"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
