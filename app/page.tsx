@@ -106,6 +106,7 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
+          <Link href="/how-it-works" className="mt-8 inline-flex min-h-11 items-center gap-2 text-red-bright hover:underline">{t.nav.howItWorks} <ArrowRight size={16} /></Link>
         </div>
       </section>
 

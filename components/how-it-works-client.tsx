@@ -1,63 +1,27 @@
 "use client";
-
 import Link from "next/link";
-import { ArrowRight, Filter, MessageSquare, Search, Sparkles } from "lucide-react";
-import { NeedleMark } from "@/components/needle-mark";
+import { ArrowRight, Plus } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
-import { SectionHeading } from "@/components/section-heading";
-import { buttonVariants } from "@/components/ui/button";
+import { styles } from "@/lib/data/styles";
 import { useLocale } from "@/lib/i18n/locale-context";
-import { cn } from "@/lib/utils";
-
-const icons = [Search, Filter, MessageSquare, Sparkles];
-
+import { localize } from "@/lib/i18n/localize";
+import { styleGuideCopy } from "@/lib/i18n/style-guide";
+import { finderCopy } from "@/lib/style-finder";
 export function HowItWorksClient() {
-  const { t } = useLocale();
-
-  return (
-    <div>
-      <div className="border-b border-line bg-ink-2/40">
-        <div className="mx-auto max-w-4xl px-6 pb-14 pt-16 text-center">
-          <SectionHeading
-            align="center"
-            eyebrow={t.howItWorks.eyebrow}
-            title={t.howItWorks.title}
-            description={t.howItWorks.description}
-          />
-        </div>
-      </div>
-
-      <div className="mx-auto max-w-4xl px-6 py-16">
-        <div className="grid gap-10 sm:grid-cols-2">
-          {t.howItWorks.steps.map((step, i) => {
-            const Icon = icons[i];
-            return (
-              <ScrollReveal key={step.title} delay={i * 0.06}>
-                <Icon size={22} className="text-red-bright" strokeWidth={1.5} />
-                <h3 className="mt-4 font-display text-xl text-paper">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-paper-dim">{step.body}</p>
-              </ScrollReveal>
-            );
-          })}
-        </div>
-
-        <ScrollReveal delay={0.2} className="mt-16 text-paper-dim">
-          <NeedleMark variant="divider" className="h-3 text-line-strong" />
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.24} className="mt-12 rounded-xl border border-line bg-ink-2 p-8 sm:p-10">
-          <h2 className="font-display text-2xl text-paper">{t.howItWorks.noteTitle}</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-paper-dim">
-            {t.howItWorks.noteBody}
-          </p>
-          <Link
-            href="/browse"
-            className={cn(buttonVariants({ size: "lg" }), "mt-6 bg-red text-paper hover:bg-red-bright")}
-          >
-            {t.howItWorks.startBrowsing} <ArrowRight />
-          </Link>
-        </ScrollReveal>
-      </div>
-    </div>
-  );
+ const { locale } = useLocale(); const c = styleGuideCopy[locale];
+ return <div className="mx-auto max-w-4xl px-6 py-16">
+  <p className="font-mono text-xs uppercase tracking-[0.16em] text-red-bright">{c.eyebrow}</p>
+  <h1 className="mt-5 max-w-2xl font-display text-4xl leading-tight text-paper sm:text-5xl">{c.title}</h1>
+  <p className="mt-5 max-w-2xl leading-relaxed text-paper-dim">{c.intro}</p>
+  <ScrollReveal className="my-10 rounded-xl border border-line bg-ink-2 p-6"><h2 className="font-display text-xl text-paper">{c.tipTitle}</h2><p className="mt-3 text-sm leading-relaxed text-paper-dim">{c.tip}</p></ScrollReveal>
+  <div className="divide-y divide-line border-y border-line">
+   {styles.filter(s=>s.guide).map((style,i)=><details key={style.id} name="tattoo-styles" className="group py-1">
+    <summary className="flex min-h-24 cursor-pointer list-none items-center gap-4 py-5 focus-visible:outline-2 focus-visible:outline-brass [&::-webkit-details-marker]:hidden">
+     <span className="font-mono text-xs text-brass-bright">{String(i+1).padStart(2,'0')}</span><div className="flex-1"><h2 className="font-display text-2xl text-paper">{style.name.en}</h2><p className="mt-1 text-sm text-paper-dim">{localize(style.guide!.summary,locale)}</p></div><Plus size={18} className="shrink-0 text-paper-dim transition-transform group-open:rotate-45 motion-reduce:transition-none" />
+    </summary>
+    <div className="pb-7 pl-8"><div className="grid gap-6 sm:grid-cols-2">{([[c.looks,style.guide!.description],[c.example,style.guide!.example]] as const).map(([title,body])=><div key={title}><h3 className="text-xs uppercase tracking-wider text-brass-bright">{title}</h3><p className="mt-2 text-sm leading-relaxed text-paper-dim">{localize(body,locale)}</p></div>)}</div><p className="mt-6 text-sm leading-relaxed text-paper-dim"><strong className="font-medium text-paper">{c.compare}: </strong>{localize(style.guide!.comparison,locale)}</p><Link href={'/browse?styles='+style.id} className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm text-red-bright hover:underline focus-visible:outline-2 focus-visible:outline-brass">{c.cta} · {style.name.en}<ArrowRight size={16}/></Link></div>
+   </details>)}
+  </div>
+  <ScrollReveal className="mt-12 rounded-xl border border-line bg-ink-2 p-7"><h2 className="font-display text-2xl text-paper">{c.endTitle}</h2><p className="mt-3 text-sm leading-relaxed text-paper-dim">{c.end}</p><Link href="/style-finder" className="mt-5 inline-flex min-h-11 items-center rounded-lg border border-brass px-5 text-sm text-brass-bright hover:bg-brass/10">{finderCopy[locale].entry} →</Link><br/><Link href="/browse" className="mt-5 inline-flex min-h-11 items-center rounded-lg bg-red px-5 text-sm text-paper hover:bg-red-bright">{c.all}</Link></ScrollReveal>
+ </div>;
 }

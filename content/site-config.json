@@ -1,6 +1,9 @@
 {
   "siteName": "Needl",
-  "tagline": { "en": "Find the artist worth the ink.", "el": "Βρες τον καλλιτέχνη που αξίζει το τατουάζ σου." },
+  "tagline": {
+    "en": "Find the artist worth the ink.",
+    "el": "Βρες τον καλλιτέχνη που αξίζει το τατουάζ σου."
+  },
   "contactEmail": "studios@needl.gr",
   "instagramHandle": "needl.gr",
   "features": {
@@ -8,51 +11,69 @@
   },
   "pricingTiers": [
     {
-      "name": { "en": "Founding", "el": "Ιδρυτικό" },
-      "price": { "en": "Free", "el": "Δωρεάν" },
-      "period": { "en": "for your first month", "el": "τον πρώτο μήνα" },
-      "highlight": false,
-      "description": {
-        "en": "Get your studio listed and start taking booking requests — no cost for your first month, no card required.",
-        "el": "Καταχωρίστε το στούντιο σας και αρχίστε να δέχεστε αιτήματα κράτησης — χωρίς κόστος τον πρώτο μήνα, χωρίς κάρτα."
+      "name": {
+        "en": "Free access",
+        "el": "Δωρεάν πρόσβαση"
       },
-      "features": [
-        { "en": "Studio profile with gallery", "el": "Προφίλ στούντιο με γκαλερί" },
-        { "en": "Unlimited artist profiles", "el": "Απεριόριστα προφίλ καλλιτεχνών" },
-        { "en": "Portfolio uploads per artist", "el": "Ανέβασμα portfolio ανά καλλιτέχνη" },
-        { "en": "Booking requests to your inbox", "el": "Αιτήματα κράτησης απευθείας στο inbox σας" }
-      ]
-    },
-    {
-      "name": { "en": "Pro", "el": "Pro" },
-      "price": { "en": "~€45–50", "el": "~€45–50" },
-      "period": { "en": "/mo after your first month", "el": "/μήνα μετά τον πρώτο μήνα" },
-      "highlight": false,
-      "description": {
-        "en": "The ongoing plan for studios ready to keep growing on Needl. Exact pricing confirmed when we follow up with you.",
-        "el": "Το συνεχές πλάνο για στούντιο που θέλουν να συνεχίσουν να αναπτύσσονται στο Needl. Η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας."
+      "price": {
+        "en": "€0",
+        "el": "0€"
       },
-      "features": [
-        { "en": "Studio profile with gallery", "el": "Προφίλ στούντιο με γκαλερί" },
-        { "en": "Unlimited artist profiles", "el": "Απεριόριστα προφίλ καλλιτεχνών" },
-        { "en": "Portfolio uploads per artist", "el": "Ανέβασμα portfolio ανά καλλιτέχνη" },
-        { "en": "Booking requests to your inbox", "el": "Αιτήματα κράτησης απευθείας στο inbox σας" }
-      ]
-    },
-    {
-      "name": { "en": "Featured", "el": "Προβεβλημένο" },
-      "price": { "en": "~€70–75", "el": "~€70–75" },
-      "period": { "en": "/mo after your first month", "el": "/μήνα μετά τον πρώτο μήνα" },
+      "period": {
+        "en": "for now",
+        "el": "προς το παρόν"
+      },
       "highlight": true,
       "description": {
-        "en": "Everything in Pro, plus priority placement so you get discovered first.",
-        "el": "Όλα όσα περιλαμβάνει το Pro, συν προτεραιότητα προβολής ώστε να σας βρίσκουν πρώτους."
+        "en": "Free until Needl announces otherwise. No fixed trial deadline and no automatic charges.",
+        "el": "Δωρεάν μέχρι νεότερης ανακοίνωσης. Χωρίς καθορισμένη λήξη δοκιμής ή αυτόματες χρεώσεις."
       },
       "features": [
-        { "en": "Everything in Pro", "el": "Όλα όσα περιλαμβάνει το Pro" },
-        { "en": "Priority placement in city search", "el": "Προτεραιότητα στην αναζήτηση ανά πόλη" },
-        { "en": "Featured badge on your profile", "el": "Σήμα προβολής στο προφίλ σας" },
-        { "en": "Homepage & city-page placement", "el": "Προβολή στην αρχική σελίδα & στη σελίδα πόλης" }
+        {
+          "en": "Studio page and team profiles",
+          "el": "Σελίδα στούντιο και προφίλ ομάδας"
+        },
+        {
+          "en": "Artist discovery and portfolios",
+          "el": "Αναζήτηση καλλιτεχνών και portfolio"
+        },
+        {
+          "en": "No payment details required",
+          "el": "Δεν απαιτούνται στοιχεία πληρωμής"
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Studio plan · coming later",
+        "el": "Πλάνο στούντιο · μελλοντικά"
+      },
+      "price": {
+        "en": "€10",
+        "el": "10€"
+      },
+      "period": {
+        "en": "/ artist / month",
+        "el": "/ καλλιτέχνη / μήνα"
+      },
+      "highlight": false,
+      "description": {
+        "en": "The studio pays for its listed artists when paid plans launch. Free access remains active until further notice.",
+        "el": "Το στούντιο πληρώνει για τους καταχωρισμένους καλλιτέχνες του όταν ξεκινήσουν τα πλάνα χρέωσης. Μέχρι νεότερης ανακοίνωσης η πρόσβαση παραμένει δωρεάν."
+      },
+      "features": [
+        {
+          "en": "3 artists: €30/month when activated",
+          "el": "3 καλλιτέχνες: 30€/μήνα όταν ενεργοποιηθεί"
+        },
+        {
+          "en": "5 artists: €50/month when activated",
+          "el": "5 καλλιτέχνες: 50€/μήνα όταν ενεργοποιηθεί"
+        },
+        {
+          "en": "Artists do not pay individually",
+          "el": "Δεν χρεώνονται οι καλλιτέχνες ατομικά"
+        }
       ]
     }
   ]

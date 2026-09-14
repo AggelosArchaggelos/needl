@@ -32,15 +32,19 @@ export function BookingDialog({
   studio,
   artist,
   trigger,
+  localEmailTest = false,
 }: {
   studio: Studio;
   artist?: Artist;
   trigger: ReactElement;
+  localEmailTest?: boolean;
 }) {
   const { t, locale } = useLocale();
   const reducedMotion = useReducedMotion();
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
   const [artistChoice, setArtistChoice] = useState(artist?.id ?? "any");
 
   function handleOpenChange(next: boolean) {
@@ -52,6 +56,8 @@ export function BookingDialog({
   }
 
   const chosenArtist = studio.artists.find((a) => a.id === artistChoice);
+
+  if (studio.experimental || artist?.discipline === "art") return <Button disabled className="border border-line-strong bg-ink-2 text-paper-dim">{locale === "el" ? "Προεπισκόπηση · χωρίς κρατήσεις" : "Preview · bookings disabled"}</Button>;
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
@@ -72,9 +78,9 @@ export function BookingDialog({
               >
                 <Stamp size={32} strokeWidth={1.5} />
               </motion.div>
-              <h3 className="mt-5 font-display text-2xl text-paper">{t.booking.confirmedTitle}</h3>
+              <h3 className="mt-5 font-display text-2xl text-paper">{localEmailTest ? "Test request accepted for sending" : t.booking.confirmedTitle}</h3>
               <p className="mt-2 text-sm leading-relaxed text-paper-dim">
-                {studio.name} {t.booking.confirmedBodyPrefix}
+                {localEmailTest ? "Check your inbox. This is not a confirmed appointment." : `${studio.name} ${t.booking.confirmedBodyPrefix}`}
               </p>
               <div className="mt-6 flex w-full flex-col gap-2">
                 <a
@@ -112,8 +118,24 @@ export function BookingDialog({
 
               <form
                 className="mt-2 flex flex-col gap-4"
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
+                  if (localEmailTest) {
+                    if (sending) return;
+                    const values = new FormData(e.currentTarget);
+                    setSending(true); setSendError("");
+                    try {
+                      const response = await fetch("/api/local-booking-test", {
+                        method: "POST", headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ studioSlug: studio.slug, artistId: artistChoice, name: values.get("name"), contact: values.get("contact"), notes: values.get("notes") }),
+                      });
+                      const result = await response.json();
+                      if (!response.ok || !result.ok) throw new Error(result.error || "Test email failed.");
+                      setSubmitted(true);
+                    } catch (error) { setSendError(error instanceof Error ? error.message : "Test email failed."); }
+                    finally { setSending(false); }
+                    return;
+                  }
                   setSubmitted(true);
                 }}
               >
@@ -152,6 +174,7 @@ export function BookingDialog({
                     </Label>
                     <Input
                       id="booking-name"
+                      name="name"
                       required
                       className="border-line-strong bg-transparent text-paper"
                       placeholder={t.booking.namePlaceholder}
@@ -163,6 +186,7 @@ export function BookingDialog({
                     </Label>
                     <Input
                       id="booking-contact"
+                      name="contact"
                       required
                       className="border-line-strong bg-transparent text-paper"
                       placeholder={t.booking.contactPlaceholder}
@@ -176,6 +200,7 @@ export function BookingDialog({
                   </Label>
                   <Textarea
                     id="booking-notes"
+                    name="notes"
                     className="min-h-24 border-line-strong bg-transparent text-paper"
                     placeholder={
                       chosenArtist && chosenArtist.discipline !== "piercing" && chosenArtist.styleIds.length > 0
@@ -185,8 +210,9 @@ export function BookingDialog({
                   />
                 </div>
 
-                <Button type="submit" className="mt-1 bg-red text-paper hover:bg-red-bright">
-                  {t.booking.submit}
+                {sendError && <p role="alert" className="text-sm text-red-bright">{sendError}</p>}
+                <Button disabled={sending} type="submit" className="mt-1 bg-red text-paper hover:bg-red-bright">
+                  {sending ? "Sending test…" : t.booking.submit}
                 </Button>
               </form>
             </div>

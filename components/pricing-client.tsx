@@ -21,7 +21,7 @@ export function PricingClient({ tiers }: { tiers: PricingTier[] }) {
         className="mx-auto max-w-2xl"
       />
 
-      <div className="mt-14 grid gap-6 sm:grid-cols-3">
+      <div className="mx-auto mt-14 grid max-w-3xl gap-6 sm:grid-cols-2">
         {tiers.map((tier, i) => (
           <ScrollReveal key={tier.name.en} delay={i * 0.06}>
             <div

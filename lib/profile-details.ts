@@ -2,6 +2,7 @@ import type { Artist, Locale } from "@/lib/types";
 export function disciplineLabel(artist: Artist, locale: Locale) {
  const greek = locale === "el";
  switch (artist.discipline ?? "tattoo") {
+ case "art": return greek ? "Εικαστικός" : "Custom artist";
  case "piercing": return greek ? "Ειδικός piercing" : "Piercer";
  case "both": return greek ? "Καλλιτέχνης τατουάζ & ειδικός piercing" : "Tattoo artist & piercer";
  default: return greek ? "Καλλιτέχνης τατουάζ" : "Tattoo artist";

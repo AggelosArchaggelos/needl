@@ -20,6 +20,16 @@ const safeImage = (url: string) => { try { const u = new URL(url); return u.prot
 function Field({ label, value, onChange, multiline = false, number = false }: { label: string; value: string | number; onChange: (value: string) => void; multiline?: boolean; number?: boolean }) {
   return <label className="flex min-w-0 flex-col gap-2 text-sm text-paper-dim"><span>{label}</span>{multiline ? <textarea className={control + " min-h-24"} value={value} onChange={e => onChange(e.target.value)} /> : <input className={control} type={number ? "number" : "text"} min={number ? 0 : undefined} value={value} onChange={e => onChange(e.target.value)} />}</label>;
 }
+function CoordinatesField({ value, onChange, greek }: { value: Studio["coordinates"]; onChange: (value: Studio["coordinates"]) => void; greek: boolean }) {
+  const [raw, setRaw] = useState(value ? value.latitude + ", " + value.longitude : "");
+  const parse = (text: string) => {
+    const parts = text.split(",").map(v => v.trim());
+    if (parts.length !== 2 || parts.some(v => !v)) return undefined;
+    const [latitude, longitude] = parts.map(Number);
+    return Number.isFinite(latitude) && Number.isFinite(longitude) && Math.abs(latitude) <= 90 && Math.abs(longitude) <= 180 ? { latitude, longitude } : undefined;
+  };
+  return <div><Field label={greek ? "Συντεταγμένες: πλάτος, μήκος (προαιρετικό)" : "Coordinates: latitude, longitude (optional)"} value={raw} onChange={text => { setRaw(text); onChange(parse(text)); }} />{raw && !parse(raw) && <p role="status" className="mt-2 text-sm text-paper-dim">{greek ? "Συμπληρώστε και τις δύο έγκυρες συντεταγμένες. Δεν έχει αποθηκευτεί τοποθεσία." : "Enter both valid coordinates. No location has been saved."}</p>}</div>;
+}
 function Bilingual({ label, value, onChange }: { label: string; value: Localized; onChange: (value: Localized) => void }) {
   return <div className="grid gap-4 sm:grid-cols-2">{(["en", "el"] as const).map(lang => <Field key={lang} label={label + " · " + (lang === "en" ? "English" : "Ελληνικά")} value={value[lang]} onChange={text => onChange({ ...value, [lang]: text })} multiline />)}</div>;
 }
@@ -196,6 +206,9 @@ export function LocalDashboard({ initialStudios, initialNews, cities, tattooStyl
           <div className="grid gap-4 sm:grid-cols-2"><Field label={l("Public phone", "Δημόσιο τηλέφωνο")} value={studio.phone} onChange={phone => setStudio({...studio,phone})}/><Field label="Instagram" value={studio.instagramHandle} onChange={instagramHandle => setStudio({...studio,instagramHandle})}/></div>
           <Field label={l("Website (optional)", "Ιστότοπος (προαιρετικό)")} value={studio.websiteUrl ?? ""} onChange={websiteUrl => setStudio({...studio,websiteUrl})}/>
           <Bilingual label={l("Description", "Περιγραφή")} value={studio.description} onChange={description => setStudio({...studio,description})}/>
+          <div className="grid grid-cols-2 gap-3">
+            <CoordinatesField key={studio.id} value={studio.coordinates} greek={locale === "el"} onChange={coordinates=>setStudio({...studio,coordinates})}/>
+          </div>
           <Bilingual label={l("Opening hours", "Ωράριο")} value={studio.hours} onChange={hours => setStudio({...studio,hours})}/>
           <Field label={l("Cover image · HTTPS URL", "Κεντρική εικόνα · HTTPS URL")} value={studio.heroImageUrl} onChange={heroImageUrl => setStudio({...studio,heroImageUrl})}/>
           <Field label={l("Gallery URLs · one per line", "Εικόνες συλλογής · μία διεύθυνση ανά γραμμή")} multiline value={studio.galleryImages.join("\n")} onChange={value => setStudio({...studio,galleryImages:value.split("\n")})}/>
@@ -206,6 +219,8 @@ export function LocalDashboard({ initialStudios, initialNews, cities, tattooStyl
               <label className="block text-sm text-paper-dim">{l("Discipline", "Ειδικότητα")}<select className={control} value={a.discipline ?? "tattoo"} onChange={e => setArtist(i,{...a,discipline:e.target.value as TeamMember["discipline"]})}><option value="tattoo">Tattoo artist</option><option value="piercing">Piercer</option><option value="both">Tattoo artist & piercer</option></select></label>
               <Bilingual label={l("Role", "Ρόλος")} value={a.role} onChange={role => setArtist(i,{...a,role})}/><Bilingual label={l("Biography", "Βιογραφικό")} value={a.bio} onChange={bio => setArtist(i,{...a,bio})}/>
               <Field label="Instagram" value={a.instagramHandle} onChange={instagramHandle => setArtist(i,{...a,instagramHandle})}/><Field label={l("Portrait URL", "Διεύθυνση πορτρέτου")} value={a.avatarUrl} onChange={avatarUrl => setArtist(i,{...a,avatarUrl})}/>
+              <Field label={l("Artist rating 0–5 (optional, verified only)", "Αξιολόγηση καλλιτέχνη 0–5 (μόνο επαληθευμένη)")} number value={a.rating ?? ""} onChange={v=>setArtist(i,{...a,rating:v === "" ? undefined : Number(v)})}/>
+              <Field label={l("Artist review count (optional)", "Πλήθος κριτικών καλλιτέχνη (προαιρετικό)")} number value={a.reviewCount ?? ""} onChange={v=>setArtist(i,{...a,reviewCount:v === "" ? undefined : Number(v)})}/>
               <Field label={l("Years of experience", "Χρόνια εμπειρίας")} number value={a.yearsExperience} onChange={v => setArtist(i,{...a,yearsExperience:Number(v)})}/>
               {a.discipline !== "piercing" && <StylePicker value={a.styleIds} styles={tattooStyles} onChange={styleIds => setArtist(i,{...a,styleIds})}/>}
               {a.discipline && a.discipline !== "tattoo" && <Field label={l("Piercing specialities", "Ειδικότητες piercing")} multiline value={a.piercingSpecialities ?? ""} onChange={piercingSpecialities => setArtist(i,{...a,piercingSpecialities})}/>}

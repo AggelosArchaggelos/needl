@@ -3,8 +3,8 @@ import { BrowseClient } from "@/components/browse/browse-client";
 import { studios } from "@/lib/data/studios";
 
 export const metadata: Metadata = {
-  title: "Browse studios — Needl",
-  description: "Filter tattoo studios across Greece by city and tattoo style.",
+  title: "Browse artists — Needl",
+  description: "Filter tattoo artists across Greece by city and tattoo style.",
 };
 
 export default async function BrowsePage({ searchParams }: PageProps<"/browse">) {

@@ -20,10 +20,10 @@ import { localize } from "@/lib/i18n/localize";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function StudioSignupForm() {
+export function StudioSignupForm({ previewSuccess = false }: { previewSuccess?: boolean } = {}) {
   const { t, locale } = useLocale();
   const f = t.forStudios.form;
-  const [status, setStatus] = useState<Status>("idle");
+  const [status, setStatus] = useState<Status>(previewSuccess ? "success" : "idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [cityId, setCityId] = useState("");
 
@@ -73,7 +73,7 @@ export function StudioSignupForm() {
           <p className="font-display text-lg text-paper">{t.forStudios.freeDuringLaunch}</p>
           <p className="mt-1.5 text-sm leading-relaxed text-paper-dim">{t.forStudios.freeDuringLaunchBody}</p>
           <Link
-            href="/pricing"
+            href={previewSuccess ? "/local-dashboard/pricing" : "/pricing"}
             className="mt-4 inline-block text-sm font-medium text-brass-bright transition-colors hover:text-brass"
           >
             {t.forStudios.seePricing} →

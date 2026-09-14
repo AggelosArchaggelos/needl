@@ -1,5 +1,6 @@
 "use client";
 
+import { StudioGallery } from "@/components/studio-gallery";
 import Image from "next/image";
 import { MapPin, Clock, Phone } from "lucide-react";
 import { studioWebsite } from "@/lib/profile-details";
@@ -36,6 +37,7 @@ export function StudioView({ studio }: { studio: Studio }) {
       <div className="mx-auto max-w-6xl px-6">
         <div className="-mt-20 flex flex-col gap-8 rounded-xl border border-line bg-ink-2/95 p-6 backdrop-blur sm:p-8 md:flex-row md:items-end md:justify-between">
           <div>
+            {studio.experimental && <p className="mb-3 font-mono text-xs text-brass-bright">{locale === "el" ? "Πειραματικό προφίλ · Οι κρατήσεις είναι ανενεργές" : "Experimental profile · Bookings disabled"}</p>}
             {studio.promoted && <PromotedBadge className="mb-3" />}
             <h1 className="font-display text-4xl text-paper sm:text-5xl">{studio.name}</h1>
             <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-paper-dim">
@@ -68,22 +70,7 @@ export function StudioView({ studio }: { studio: Studio }) {
 
             {studio.galleryImages.length > 0 && (
               <ScrollReveal delay={0.05} className="mt-10">
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                  {studio.galleryImages.map((src, i) => (
-                    <div
-                      key={src}
-                      className="relative aspect-square overflow-hidden rounded-lg border border-line"
-                    >
-                      <Image
-                        src={src}
-                        alt={`${studio.name}, photo ${i + 1}`}
-                        fill
-                        sizes="220px"
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
+                <StudioGallery key={studio.id} images={studio.galleryImages} studioName={studio.name} />
               </ScrollReveal>
             )}
 
@@ -103,10 +90,10 @@ export function StudioView({ studio }: { studio: Studio }) {
                 {t.studio.price}
               </p>
               <p className="mt-1 text-paper">
-                {studio.priceBand}{" "}
+                {studio.avgSessionEUR > 0 ? <>
                 <span className="text-sm text-paper-dim">
-                  · {t.studio.avgPerSession} €{studio.avgSessionEUR} {t.studio.perSession}
-                </span>
+                  {t.studio.avgPerSession} €{studio.avgSessionEUR} {t.studio.perSession}
+                </span></> : (locale === "el" ? "Κατόπιν συνεννόησης" : "By consultation")}
               </p>
             </div>
             <div>
@@ -131,6 +118,7 @@ export function StudioView({ studio }: { studio: Studio }) {
               <p className="mt-1 text-sm text-paper-dim">{studio.address}</p>
             </div>
             <div className="flex flex-col gap-2 border-t border-line pt-5">
+              {studio.email && <p className="text-sm text-paper-dim">{studio.email}</p>}
               {studioWebsite(studio.websiteUrl) && <a href={studioWebsite(studio.websiteUrl)!} target="_blank" rel="noopener noreferrer" className="flex min-h-11 items-center text-sm text-paper-dim hover:text-paper">{locale === "el" ? "Ιστότοπος στούντιο ↗" : "Studio website ↗"}</a>}
               <a
                 href={`https://instagram.com/${studio.instagramHandle}`}

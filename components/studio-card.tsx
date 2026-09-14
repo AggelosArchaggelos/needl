@@ -13,7 +13,7 @@ import { localize } from "@/lib/i18n/localize";
 import type { Studio } from "@/lib/types";
 
 export function StudioCard({ studio }: { studio: Studio }) {
-  const { locale, t } = useLocale();
+  const { locale } = useLocale();
 
   return (
     <div className="relative"><div className="absolute right-3 top-3 z-10"><SaveButton id={"studio:" + studio.id} /></div><Link
@@ -32,10 +32,6 @@ export function StudioCard({ studio }: { studio: Studio }) {
         {studio.promoted && (
           <PromotedBadge className="absolute left-3 top-3 bg-ink/90 backdrop-blur-sm" />
         )}
-        <div className="absolute bottom-3 right-3 rounded-full border border-line-strong bg-ink/90 px-2.5 py-1 font-mono text-xs text-paper backdrop-blur-sm">
-          {studio.priceBand}
-          <span className="text-paper-dim"> · {t.artist.from} €{studio.avgSessionEUR}</span>
-        </div>
       </div>
 
       <div className="p-4">

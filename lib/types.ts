@@ -8,6 +8,7 @@ export type Localized = {
 export type PriceBand = "€" | "€€" | "€€€";
 
 export type TattooStyle = {
+  guide?: { summary: Localized; description: Localized; example: Localized; comparison: Localized };
   id: string;
   name: Localized;
 };
@@ -21,14 +22,16 @@ export type City = {
 export type PortfolioPiece = {
   id: string;
   imageUrl: string;
-  kind?: "tattoo" | "piercing";
+  kind?: "tattoo" | "piercing" | "art";
   styleId?: string;
   caption: string;
   priceEUR?: number;
 };
 
 export type Artist = {
-  discipline?: "tattoo" | "piercing" | "both";
+  rating?: number;
+  reviewCount?: number;
+  discipline?: "tattoo" | "piercing" | "both" | "art";
   piercingSpecialities?: string;
   id: string;
   slug: string;
@@ -44,6 +47,9 @@ export type Artist = {
 };
 
 export type Studio = {
+  experimental?: boolean;
+  email?: string;
+  coordinates?: { latitude: number; longitude: number };
   websiteUrl?: string;
   id: string;
   slug: string;

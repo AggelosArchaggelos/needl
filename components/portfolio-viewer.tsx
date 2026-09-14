@@ -8,9 +8,9 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogClose } fr
 import { useLocale } from "@/lib/i18n/locale-context";
 import type { PortfolioPiece } from "@/lib/types";
 
-export function PortfolioViewer({ pieces, index, artistName, onChange, onClose }: {
+export function PortfolioViewer({ pieces, index, artistName, onChange, onClose, studioPhotos = false }: {
   pieces: PortfolioPiece[]; index: number | null; artistName: string;
-  onChange: (index: number) => void; onClose: () => void;
+  onChange: (index: number) => void; onClose: () => void; studioPhotos?: boolean;
 }) {
   const { locale } = useLocale();
   const start = useRef<{ x: number; y: number } | null>(null);
@@ -28,7 +28,7 @@ export function PortfolioViewer({ pieces, index, artistName, onChange, onClose }
       }}>
       <div className="flex items-center justify-between gap-4">
         <div><DialogTitle className="font-display text-xl">{artistName}</DialogTitle>
-          <DialogDescription>{el ? "Συλλογή έργων" : "Portfolio"}</DialogDescription></div>
+          <DialogDescription>{studioPhotos ? (el ? "Φωτογραφίες στούντιο" : "Studio photos") : (el ? "Συλλογή έργων" : "Portfolio")}</DialogDescription></div>
         <DialogClose aria-label={el ? "Κλείσιμο" : "Close"} className={control}><X size={20} /></DialogClose>
       </div>
       {piece && <>
@@ -45,7 +45,7 @@ export function PortfolioViewer({ pieces, index, artistName, onChange, onClose }
           {failed === piece.id ? <p className="flex h-full items-center justify-center text-paper-dim">{el ? "Η εικόνα δεν είναι διαθέσιμη." : "Image unavailable."}</p> :
             <Image key={piece.id} src={piece.imageUrl} alt={piece.caption} fill sizes="(min-width: 900px) 850px, 95vw" className="object-contain" onError={() => setFailed(piece.id)} />}
         </div>
-        <SaveButton id={"piece:" + piece.id} /><div className="flex items-center justify-between gap-4">
+        {!studioPhotos && <SaveButton id={"piece:" + piece.id} />}<div className="flex items-center justify-between gap-4">
           <button type="button" className={control} disabled={index === 0} onClick={() => move(-1)} aria-label={el ? "Προηγούμενη εικόνα" : "Previous image"}><ChevronLeft /></button>
           <div aria-live="polite" className="min-w-0 text-center"><p className="text-paper">{piece.caption}</p><p className="mt-1 text-sm text-paper-dim">{(index ?? 0) + 1} / {pieces.length}</p></div>
           <button type="button" className={control} disabled={index === pieces.length - 1} onClick={() => move(1)} aria-label={el ? "Επόμενη εικόνα" : "Next image"}><ChevronRight /></button>

@@ -46,3 +46,12 @@ test('mixed team members retain per-work categories and tattoo style validation'
  a.discipline='invalid';
  assert.ok(validateContent(data).some(i=>i.location.endsWith('.discipline')));
 });
+
+test('optional artist ratings and studio coordinates must be valid when supplied', () => {
+ const data=fixture(); const studio=data.studios[0]; const artist=studio.artists[0];
+ studio.coordinates={latitude:37.98,longitude:23.72}; artist.rating=4.7; artist.reviewCount=12;
+ assert.equal(validateContent(data).filter(i=>i.level==='ERROR').length,0);
+ studio.coordinates.latitude=91; artist.rating=5.5; artist.reviewCount=0;
+ const errors=validateContent(data).filter(i=>i.level==='ERROR');
+ for(const field of ['latitude','rating','reviewCount']) assert.ok(errors.some(i=>i.location.endsWith(field)),field);
+});

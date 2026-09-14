@@ -19,6 +19,6 @@ export function getArtist(
 
 export function topRatedStudios(count: number): Studio[] {
   return [...studios]
-    .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount)
+    .sort((a, b) => Number(!!b.experimental) - Number(!!a.experimental) || b.rating - a.rating || b.reviewCount - a.reviewCount)
     .slice(0, count);
 }

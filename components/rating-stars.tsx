@@ -14,6 +14,7 @@ export function RatingStars({
 }) {
   const starSize = size === "sm" ? 12 : 14;
 
+  if (!Number.isFinite(rating) || rating <= 0 || reviewCount === 0) return null;
   return (
     <div className={cn("flex items-center gap-1.5", className)}>
       <div className="flex items-center gap-0.5 text-brass">

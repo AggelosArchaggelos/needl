@@ -11,6 +11,7 @@ export function PortfolioGrid({ pieces, artistName }: { pieces: PortfolioPiece[]
   const { t, locale } = useLocale();
   const [selected, setSelected] = useState<number | null>(null);
 
+  if (!pieces.length) return <p className="rounded-lg border border-line p-6 text-sm text-paper-dim">{locale === "el" ? "Επιλεγμένα έργα θα προστεθούν εδώ. Δείτε περισσότερα στο Instagram του καλλιτέχνη." : "Selected work will be added here. Explore more on the artist’s Instagram."}</p>;
   return (
     <><div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
       {pieces.map((piece, index) => (
@@ -26,7 +27,7 @@ export function PortfolioGrid({ pieces, artistName }: { pieces: PortfolioPiece[]
           />
           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-ink via-ink/60 to-transparent p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
             <p className="font-mono text-xs uppercase tracking-[0.1em] text-brass-bright">
-              {piece.kind === "piercing" ? "Piercing" : styleName(piece.styleId ?? "")}
+              {piece.kind === "art" ? (locale === "el" ? "Εικαστικό έργο" : "Custom art") : piece.kind === "piercing" ? "Piercing" : !piece.styleId ? "Tattoo" : styleName(piece.styleId ?? "")}
             </p>
             <p className="mt-0.5 text-sm text-paper">{piece.caption}</p>
             <p className="font-mono text-xs text-paper-dim">

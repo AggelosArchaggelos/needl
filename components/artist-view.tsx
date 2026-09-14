@@ -45,9 +45,9 @@ export function ArtistView({ studio, artist }: { studio: Studio; artist: Artist 
             <p className="mt-1 text-paper-dim">
               {disciplineLabel(artist, locale)} · {localize(artist.role, locale)} · {studio.name} · {cityName(studio.cityId, locale)}
             </p>
-            <p className="mt-1 font-mono text-xs text-paper-faint">
+            {artist.yearsExperience > 0 && <p className="mt-1 font-mono text-xs text-paper-faint">
               {artist.yearsExperience} {locale === "el" ? "χρόνια εμπειρίας" : "years of experience"}
-            </p>
+            </p>}
           </div>
         </div>
         <BookingDialog

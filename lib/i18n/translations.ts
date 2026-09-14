@@ -3,7 +3,7 @@ export const translations = {
     nav: {
       browse: "Browse",
       news: "News",
-      howItWorks: "How it works",
+      howItWorks: "Tattoo styles",
       forStudios: "For studios",
       pricing: "Pricing",
       about: "About",
@@ -12,7 +12,7 @@ export const translations = {
     },
     footer: {
       tagline:
-        "Every tattoo studio in Greece, in one place — browse by city and style, then book directly with the artist.",
+        "Discover tattoo artists across Greece by their work, style and studio.",
       explore: "Explore",
       forStudios: "For studios",
       cities: "Cities",
@@ -25,38 +25,38 @@ export const translations = {
       titleEm: "worth",
       titleSuffix: " the ink.",
       subhead:
-        "Every studio, every artist, every style — filtered by city, booked straight from the page.",
-      browseStudios: "Browse studios",
-      topRatedEyebrow: "Top rated this week",
-      topRatedTitle: "Where Greece is booking right now",
-      topRatedDescription: "Ranked by rating and review volume — the studios their own clients keep coming back to.",
-      seeEveryStudio: "See every studio",
-      howItWorksEyebrow: "How it works",
-      howItWorksTitle: "Three steps, no messaging back and forth",
+        "Discover studios across Greece, then explore each artist by their own work and style.",
+      browseStudios: "Browse artists",
+      topRatedEyebrow: "Studio spotlight",
+      topRatedTitle: "Discover the spaces behind the art",
+      topRatedDescription: "Explore a studio, meet its team, and find the artist for you.",
+      seeEveryStudio: "Find your artist",
+      howItWorksEyebrow: "Tattoo styles",
+      howItWorksTitle: "Find the style behind your idea",
       steps: [
-        {
-          title: "Browse & filter",
-          body: "Search every listed studio in Greece by city and tattoo style — see real portfolios and Google-style ratings before you commit.",
-        },
-        {
-          title: "Message the studio",
-          body: "Pick an artist by their actual work, then send a booking request straight from their profile. No detours through five different apps.",
-        },
-        {
-          title: "Get tattooed",
-          body: "The studio confirms your slot directly. You show up, they already know what you're after.",
-        },
-      ],
+  {
+    "title": "Notice the lines",
+    "body": "Delicate outlines or bold shapes? Start with the details that catch your eye."
+  },
+  {
+    "title": "Look at shading and colour",
+    "body": "Soft gradients, solid black or vivid colour can make the same subject feel completely different."
+  },
+  {
+    "title": "Explore the styles",
+    "body": "Learn the names, compare the differences and find artists whose work fits your idea."
+  }
+],
       promoTitle: "Run a studio? Get found.",
       promoBody: "Listing is free while Needl grows. Add your artists, your portfolio, and start taking booking requests today.",
     },
     browse: {
       eyebrow: "Directory",
-      title: "Every studio, one search",
-      description: "Filter by city and tattoo style to find the right studio, fast.",
-      studio: "studio",
-      studios: "studios",
-      emptyTitle: "No studios match yet",
+      title: "Find your artist",
+      description: "Explore artists by city, style, rating and distance.",
+      studio: "artist",
+      studios: "artists",
+      emptyTitle: "No artists match yet",
       emptyBody: "Try selecting fewer styles, or a different city.",
     },
     filters: {
@@ -91,7 +91,7 @@ export const translations = {
       namePlaceholder: "Your name",
       contact: "Email or phone",
       contactPlaceholder: "For them to reach you",
-      notes: "What are you thinking of getting done?",
+      notes: "What are you thinking of getting done? (optional)",
       notesPlaceholder: "Style, size, and placement help most",
       submit: "Send booking request",
       confirmedTitle: "Request sent",
@@ -135,8 +135,8 @@ export const translations = {
           body: "One page per artist, organised by style and price — not buried three scrolls deep in an Instagram grid.",
         },
         {
-          title: "Listed fairly, not ranked by ad spend",
-          body: "Studios show up alphabetically by default, so strong work isn't buried under whoever has the bigger budget. Featured placement is the only paid boost.",
+          title: "Your artists, individually discoverable",
+          body: "Clients find each artist by their own styles and portfolio, with a direct link back to your studio.",
         },
         {
           title: "Booking requests, organised",
@@ -144,11 +144,11 @@ export const translations = {
         },
         {
           title: "Room to grow with us",
-          body: "Early studios shape what comes next — promoted placement, an owner dashboard, and eventually a native app.",
+          body: "Help shape an artist-first directory, with one studio plan for your team when paid listings begin.",
         },
       ],
-      freeDuringLaunch: "Free for your first month",
-      freeDuringLaunchBody: "After that, choose your studio plan — pricing is available after your enquiry.",
+      freeDuringLaunch: "Free while we grow",
+      freeDuringLaunchBody: "No end date has been set for free listings. We will contact you before any paid plan begins.",
       seePricing: "See pricing",
       form: {
         studioName: "Studio name",
@@ -177,8 +177,8 @@ export const translations = {
     },
     pricing: {
       eyebrow: "Pricing",
-      title: "Free for your first month, then a simple monthly plan.",
-      description: "Every studio starts free on Founding for the first month. After that, choose Pro or Featured — exact pricing is confirmed when we follow up with you directly.",
+      title: "Your artists. One studio plan.",
+      description: "Listing is free until we announce otherwise. The planned rate is €10 per listed artist per month, paid by the studio. No automatic charges.",
     },
     about: {
       eyebrow: "About Needl",
@@ -186,7 +186,7 @@ export const translations = {
       paragraphs: [
         "Every good tattoo starts the same way: scrolling. Instagram hashtags, saved geotags, a friend's recommendation typed into Google Maps next to a listing with three photos and a phone number that goes to voicemail. Greece has no shortage of exceptional tattoo artists — it just has no single place to actually find them.",
         "Needl started as a simple idea: one directory, organised the way people actually search — by city, by style — with real portfolios attached to real artists, not just a studio's front door. Booking happens on the page, not across four different apps.",
-        "It launches free, for every studio willing to be listed. As it grows, studios will be able to promote themselves and unlock deeper tools — but the directory itself stays the point: help someone find the right artist, quickly, and get out of the way.",
+        "Listing is free until we announce otherwise. Our planned studio subscription is €10 per listed artist per month. The goal stays the same: help someone find the right artist through their own work.",
       ],
       builtIn: "Built in Greece",
     },
@@ -200,14 +200,14 @@ export const translations = {
     notFound: {
       title: "Nothing here",
       body: "That studio or page doesn't exist — it may have moved, or the link was mistyped.",
-      browseStudios: "Browse studios",
+      browseStudios: "Browse artists",
     },
   },
   el: {
     nav: {
       browse: "Αναζήτηση",
       news: "Νέα",
-      howItWorks: "Πώς λειτουργεί",
+      howItWorks: "Στιλ τατουάζ",
       forStudios: "Για στούντιο",
       pricing: "Τιμές",
       about: "Σχετικά",
@@ -216,7 +216,7 @@ export const translations = {
     },
     footer: {
       tagline:
-        "Κάθε στούντιο τατουάζ στην Ελλάδα, σε ένα μέρος — αναζητήστε ανά πόλη και στιλ, και κλείστε ραντεβού απευθείας με τον καλλιτέχνη.",
+        "Ανακάλυψε tattoo artists σε όλη την Ελλάδα μέσα από τη δουλειά, το στιλ και το στούντιό τους.",
       explore: "Πλοήγηση",
       forStudios: "Για στούντιο",
       cities: "Πόλεις",
@@ -229,38 +229,38 @@ export const translations = {
       titleEm: "αξίζει",
       titleSuffix: " το τατουάζ σου.",
       subhead:
-        "Κάθε στούντιο, κάθε καλλιτέχνης, κάθε στιλ — φιλτραρισμένα ανά πόλη, με κράτηση απευθείας από τη σελίδα.",
-      browseStudios: "Αναζήτηση στούντιο",
-      topRatedEyebrow: "Κορυφαία αυτή την εβδομάδα",
-      topRatedTitle: "Πού κλείνει ραντεβού η Ελλάδα αυτή τη στιγμή",
-      topRatedDescription: "Κατάταξη βάσει βαθμολογίας και αριθμού κριτικών — τα στούντιο στα οποία επιστρέφουν οι ίδιοι οι πελάτες τους.",
-      seeEveryStudio: "Δείτε όλα τα στούντιο",
-      howItWorksEyebrow: "Πώς λειτουργεί",
-      howItWorksTitle: "Τρία βήματα, χωρίς μηνύματα πέρα-δώθε",
+        "Ανακάλυψε στούντιο σε όλη την Ελλάδα και βρες καλλιτέχνες μέσα από τη δουλειά και το στιλ τους.",
+      browseStudios: "Αναζήτηση καλλιτεχνών",
+      topRatedEyebrow: "Στούντιο στο επίκεντρο",
+      topRatedTitle: "Γνώρισε τους χώρους πίσω από την τέχνη",
+      topRatedDescription: "Γνώρισε το στούντιο, την ομάδα του και τον καλλιτέχνη που σου ταιριάζει.",
+      seeEveryStudio: "Βρες τον καλλιτέχνη σου",
+      howItWorksEyebrow: "Στιλ τατουάζ",
+      howItWorksTitle: "Βρες το στιλ πίσω από την ιδέα σου",
       steps: [
-        {
-          title: "Αναζήτηση & φιλτράρισμα",
-          body: "Αναζητήστε κάθε καταχωρημένο στούντιο στην Ελλάδα ανά πόλη και στιλ τατουάζ — δείτε αληθινά portfolio και βαθμολογίες τύπου Google πριν αποφασίσετε.",
-        },
-        {
-          title: "Στείλτε μήνυμα στο στούντιο",
-          body: "Επιλέξτε καλλιτέχνη βάσει της πραγματικής του δουλειάς και στείλτε αίτημα κράτησης απευθείας από το προφίλ του. Χωρίς παρακάμψεις μέσα από πέντε διαφορετικές εφαρμογές.",
-        },
-        {
-          title: "Κάντε το τατουάζ",
-          body: "Το στούντιο επιβεβαιώνει το ραντεβού σας απευθείας. Έρχεστε και ήδη γνωρίζουν τι θέλετε.",
-        },
-      ],
+  {
+    "title": "Πρόσεξε τις γραμμές",
+    "body": "Λεπτά περιγράμματα ή έντονα σχήματα; Ξεκίνα από τις λεπτομέρειες που σε τραβούν."
+  },
+  {
+    "title": "Δες τις σκιές και το χρώμα",
+    "body": "Απαλές διαβαθμίσεις, συμπαγές μαύρο ή ζωηρό χρώμα αλλάζουν την αίσθηση του ίδιου θέματος."
+  },
+  {
+    "title": "Γνώρισε τα στιλ",
+    "body": "Μάθε τις ονομασίες, σύγκρινε τις διαφορές και βρες καλλιτέχνες που ταιριάζουν στην ιδέα σου."
+  }
+],
       promoTitle: "Έχετε στούντιο; Γίνετε ορατοί.",
       promoBody: "Η καταχώριση είναι δωρεάν όσο το Needl μεγαλώνει. Προσθέστε τους καλλιτέχνες σας, το portfolio σας, και αρχίστε να δέχεστε αιτήματα κράτησης σήμερα.",
     },
     browse: {
       eyebrow: "Κατάλογος",
-      title: "Όλα τα στούντιο, μία αναζήτηση",
-      description: "Φιλτράρετε ανά πόλη και στιλ τατουάζ για να βρείτε το κατάλληλο στούντιο, γρήγορα.",
-      studio: "στούντιο",
-      studios: "στούντιο",
-      emptyTitle: "Κανένα στούντιο δεν ταιριάζει ακόμα",
+      title: "Βρες τον καλλιτέχνη σου",
+      description: "Ανακάλυψε καλλιτέχνες ανά πόλη, στιλ, αξιολόγηση και απόσταση.",
+      studio: "καλλιτέχνες",
+      studios: "καλλιτέχνες",
+      emptyTitle: "Δεν βρέθηκαν καλλιτέχνες",
       emptyBody: "Δοκιμάστε λιγότερα επιλεγμένα στιλ, ή διαφορετική πόλη.",
     },
     filters: {
@@ -295,7 +295,7 @@ export const translations = {
       namePlaceholder: "Το όνομά σας",
       contact: "Email ή τηλέφωνο",
       contactPlaceholder: "Για να επικοινωνήσουν μαζί σας",
-      notes: "Τι σκέφτεστε να κάνετε;",
+      notes: "Τι σκέφτεστε να κάνετε; (προαιρετικό)",
       notesPlaceholder: "Στιλ, μέγεθος και τοποθέτηση βοηθούν περισσότερο",
       submit: "Αποστολή αιτήματος",
       confirmedTitle: "Το αίτημα στάλθηκε",
@@ -339,8 +339,8 @@ export const translations = {
           body: "Μία σελίδα ανά καλλιτέχνη, οργανωμένη ανά στιλ και τιμή — όχι θαμμένη τρία scroll μέσα σε ένα grid του Instagram.",
         },
         {
-          title: "Δίκαιη καταχώριση, όχι κατάταξη βάσει διαφημιστικού budget",
-          body: "Τα στούντιο εμφανίζονται αλφαβητικά εξ ορισμού, ώστε η καλή δουλειά να μη χάνεται πίσω από όποιον έχει μεγαλύτερο budget. Η προβεβλημένη θέση είναι η μόνη πληρωμένη προτεραιότητα.",
+          title: "Κάθε καλλιτέχνης ξεχωριστά",
+          body: "Οι πελάτες βρίσκουν κάθε καλλιτέχνη από το στιλ και το portfolio του, με σύνδεσμο στο στούντιό σας.",
         },
         {
           title: "Οργανωμένα αιτήματα κράτησης",
@@ -348,11 +348,11 @@ export const translations = {
         },
         {
           title: "Χώρος να μεγαλώσουμε μαζί",
-          body: "Τα πρώτα στούντιο διαμορφώνουν τι ακολουθεί — προβεβλημένη τοποθέτηση, πίνακα διαχείρισης ιδιοκτήτη, και τελικά μια εφαρμογή.",
+          body: "Βοηθήστε να διαμορφωθεί ένας κατάλογος με επίκεντρο τον καλλιτέχνη, με ένα πλάνο για την ομάδα σας όταν ξεκινήσουν οι χρεώσεις.",
         },
       ],
-      freeDuringLaunch: "Δωρεάν τον πρώτο μήνα",
-      freeDuringLaunchBody: "Στη συνέχεια, επιλέξτε το πλάνο σας — οι τιμές είναι διαθέσιμες μετά το αίτημά σας.",
+      freeDuringLaunch: "Δωρεάν όσο αναπτυσσόμαστε",
+      freeDuringLaunchBody: "Δεν έχει οριστεί ημερομηνία λήξης της δωρεάν καταχώρισης. Θα επικοινωνήσουμε μαζί σας πριν ξεκινήσει οποιοδήποτε πλάνο χρέωσης.",
       seePricing: "Δείτε τις τιμές",
       form: {
         studioName: "Όνομα στούντιο",
@@ -381,8 +381,8 @@ export const translations = {
     },
     pricing: {
       eyebrow: "Τιμές",
-      title: "Δωρεάν τον πρώτο μήνα, μετά ένα απλό μηνιαίο πλάνο.",
-      description: "Κάθε στούντιο ξεκινά δωρεάν με το Ιδρυτικό τον πρώτο μήνα. Στη συνέχεια επιλέγετε Pro ή Προβεβλημένο — η ακριβής τιμή επιβεβαιώνεται όταν επικοινωνήσουμε μαζί σας.",
+      title: "Οι καλλιτέχνες σας. Ένα πλάνο στούντιο.",
+      description: "Η καταχώριση είναι δωρεάν μέχρι νεότερης ανακοίνωσης. Η προβλεπόμενη τιμή είναι 10€ ανά καταχωρισμένο καλλιτέχνη τον μήνα, με χρέωση στο στούντιο. Χωρίς αυτόματες χρεώσεις.",
     },
     about: {
       eyebrow: "Σχετικά με το Needl",
@@ -390,7 +390,7 @@ export const translations = {
       paragraphs: [
         "Κάθε καλό τατουάζ ξεκινά με τον ίδιο τρόπο: scrolling. Hashtags στο Instagram, αποθηκευμένα geotags, μια σύσταση φίλου γραμμένη στο Google Maps δίπλα σε μια καταχώριση με τρεις φωτογραφίες και ένα τηλέφωνο που πέφτει σε τηλεφωνητή. Η Ελλάδα δεν έχει έλλειψη εξαιρετικών καλλιτεχνών τατουάζ — απλώς δεν έχει ένα μέρος για να τους βρεις.",
         "Το Needl ξεκίνησε ως μια απλή ιδέα: ένας κατάλογος, οργανωμένος με τον τρόπο που αναζητούν πραγματικά οι άνθρωποι — ανά πόλη, ανά στιλ — με αληθινά portfolio συνδεδεμένα με πραγματικούς καλλιτέχνες, όχι απλώς την πόρτα ενός στούντιο. Η κράτηση γίνεται στη σελίδα, όχι σε τέσσερις διαφορετικές εφαρμογές.",
-        "Ξεκινά δωρεάν, για κάθε στούντιο που θέλει να καταχωριστεί. Καθώς μεγαλώνει, τα στούντιο θα μπορούν να προβάλλονται και να ξεκλειδώνουν πιο ολοκληρωμένα εργαλεία — αλλά ο ίδιος ο κατάλογος παραμένει ο στόχος: να βοηθήσει κάποιον να βρει τον κατάλληλο καλλιτέχνη, γρήγορα, χωρίς να μπαίνει εμπόδιο.",
+        "Η καταχώριση παραμένει δωρεάν μέχρι νεότερης ανακοίνωσης. Η σχεδιαζόμενη συνδρομή του στούντιο είναι €10 ανά καταχωρισμένο καλλιτέχνη τον μήνα. Στόχος παραμένει να βρίσκει κανείς τον κατάλληλο καλλιτέχνη μέσα από τη δουλειά του.",
       ],
       builtIn: "Φτιαγμένο στην Ελλάδα",
     },
@@ -404,7 +404,7 @@ export const translations = {
     notFound: {
       title: "Δεν υπάρχει τίποτα εδώ",
       body: "Αυτό το στούντιο ή η σελίδα δεν υπάρχει — μπορεί να μετακινήθηκε, ή ο σύνδεσμος να είναι λάθος.",
-      browseStudios: "Αναζήτηση στούντιο",
+      browseStudios: "Αναζήτηση καλλιτεχνών",
     },
   },
 };

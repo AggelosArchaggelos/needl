@@ -10,5 +10,5 @@ export const metadata = { title: "Local content dashboard — Needl", robots: { 
 
 export default function LocalDashboardPage() {
   if (process.env.NODE_ENV !== "development") notFound();
-  return <LocalDashboard initialStudios={studios} initialNews={newsArticles} cities={cities} tattooStyles={styles} />;
+  return <LocalDashboard initialStudios={studios.filter(studio => !studio.experimental)} initialNews={newsArticles} cities={cities} tattooStyles={styles} />;
 }

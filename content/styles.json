@@ -1,13 +1,302 @@
 [
-  { "id": "fine-line", "name": { "en": "Fine Line", "el": "Λεπτή Γραμμή" } },
-  { "id": "blackwork", "name": { "en": "Blackwork", "el": "Μπλάκγουορκ" } },
-  { "id": "traditional", "name": { "en": "Traditional", "el": "Παραδοσιακό" } },
-  { "id": "neo-traditional", "name": { "en": "Neo-Traditional", "el": "Νεο-Παραδοσιακό" } },
-  { "id": "japanese", "name": { "en": "Japanese Irezumi", "el": "Ιαπωνικό Ιρεζούμι" } },
-  { "id": "realism", "name": { "en": "Realism", "el": "Ρεαλισμός" } },
-  { "id": "geometric", "name": { "en": "Geometric", "el": "Γεωμετρικό" } },
-  { "id": "watercolor", "name": { "en": "Watercolor", "el": "Υδατογραφία" } },
-  { "id": "lettering", "name": { "en": "Lettering & Script", "el": "Γραμματοσειρά & Καλλιγραφία" } },
-  { "id": "dotwork", "name": { "en": "Dotwork & Stippling", "el": "Τεχνική Κουκκίδων" } },
-  { "id": "tribal", "name": { "en": "Tribal & Polynesian", "el": "Φυλετικό & Πολυνησιακό" } }
+  {
+    "id": "fine-line",
+    "name": {
+      "en": "Fine Line",
+      "el": "Λεπτή Γραμμή"
+    },
+    "guide": {
+      "summary": {
+        "en": "Delicate lines, light detail",
+        "el": "Λεπτές γραμμές, διακριτική λεπτομέρεια"
+      },
+      "description": {
+        "en": "Thin outlines and a light visual touch. Often used for small drawings, but Fine Line describes the linework, not the size.",
+        "el": "Λεπτά περιγράμματα και ανάλαφρη εικόνα. Συχνά εμφανίζεται σε μικρά σχέδια, αλλά το Fine Line περιγράφει τη γραμμή, όχι το μέγεθος."
+      },
+      "example": {
+        "en": "A flower drawn with thin contours and little shading.",
+        "el": "Ένα λουλούδι με λεπτό περίγραμμα και λίγες σκιές."
+      },
+      "comparison": {
+        "en": "Minimal describes simplicity; Fine Line describes thin lines. A detailed design can still be Fine Line.",
+        "el": "Το minimal αφορά την απλότητα· το Fine Line το πάχος της γραμμής. Ένα λεπτομερές σχέδιο μπορεί επίσης να είναι Fine Line."
+      }
+    }
+  },
+  {
+    "id": "blackwork",
+    "name": {
+      "en": "Blackwork",
+      "el": "Μπλάκγουορκ"
+    },
+    "guide": {
+      "summary": {
+        "en": "Black ink, strong contrast",
+        "el": "Μαύρο μελάνι, έντονη αντίθεση"
+      },
+      "description": {
+        "en": "Designs built with black ink, often using solid areas and the untouched skin as part of the composition. Subjects can be abstract or figurative.",
+        "el": "Σχέδια με μαύρο μελάνι, συχνά με συμπαγείς επιφάνειες και το ακάλυπτο δέρμα ως μέρος της σύνθεσης. Μπορεί να είναι αφηρημένα ή παραστατικά."
+      },
+      "example": {
+        "en": "A dark botanical design with open spaces between its leaves.",
+        "el": "Ένα σκούρο φυτικό σχέδιο με κενά ανάμεσα στα φύλλα."
+      },
+      "comparison": {
+        "en": "Black-and-grey realism uses tonal shading to look lifelike. Blackwork often emphasises shape and contrast.",
+        "el": "Ο ασπρόμαυρος ρεαλισμός χρησιμοποιεί τόνους για φυσική απόδοση. Το Blackwork συχνά δίνει έμφαση στο σχήμα και την αντίθεση."
+      }
+    }
+  },
+  {
+    "id": "traditional",
+    "name": {
+      "en": "Traditional",
+      "el": "Παραδοσιακό"
+    },
+    "guide": {
+      "summary": {
+        "en": "Bold outlines, classic motifs",
+        "el": "Έντονα περιγράμματα, κλασικά μοτίβα"
+      },
+      "description": {
+        "en": "Here, Traditional means American Traditional: clear black outlines, a restrained colour palette and simplified, instantly readable shapes.",
+        "el": "Εδώ το Traditional σημαίνει American Traditional: καθαρά μαύρα περιγράμματα, περιορισμένη παλέτα και απλοποιημένα, ευανάγνωστα σχήματα."
+      },
+      "example": {
+        "en": "A rose, anchor or swallow with a strong outline.",
+        "el": "Ένα τριαντάφυλλο, μια άγκυρα ή ένα χελιδόνι με έντονο περίγραμμα."
+      },
+      "comparison": {
+        "en": "Neo-Traditional keeps the bold foundation but adds more detail, colour and depth.",
+        "el": "Το Neo-Traditional διατηρεί τη δυνατή βάση, προσθέτοντας λεπτομέρεια, χρώμα και βάθος."
+      }
+    }
+  },
+  {
+    "id": "neo-traditional",
+    "name": {
+      "en": "Neo-Traditional",
+      "el": "Νεο-Παραδοσιακό"
+    },
+    "guide": {
+      "summary": {
+        "en": "Bold structure, richer detail",
+        "el": "Δυνατή δομή, πλουσιότερη λεπτομέρεια"
+      },
+      "description": {
+        "en": "Illustrative designs with pronounced outlines, a broader palette and more layered shading than American Traditional.",
+        "el": "Εικονογραφικά σχέδια με έντονα περιγράμματα, ευρύτερη παλέτα και πιο σύνθετη σκίαση από το American Traditional."
+      },
+      "example": {
+        "en": "An ornate animal portrait framed by flowers.",
+        "el": "Ένα περίτεχνο πορτρέτο ζώου με λουλούδια γύρω του."
+      },
+      "comparison": {
+        "en": "New School usually pushes distortion and cartoon expression much further.",
+        "el": "Το New School συνήθως προχωρά περισσότερο στην παραμόρφωση και την έκφραση cartoon."
+      }
+    }
+  },
+  {
+    "id": "japanese",
+    "name": {
+      "en": "Japanese Irezumi",
+      "el": "Ιαπωνικό Ιρεζούμι"
+    },
+    "guide": {
+      "summary": {
+        "en": "Flowing scenes, symbolic imagery",
+        "el": "Ρευστές συνθέσεις, συμβολικές εικόνες"
+      },
+      "description": {
+        "en": "Japanese Irezumi often combines dragons, koi, flowers or other motifs with waves, wind or clouds that connect the composition around the body.",
+        "el": "Το Japanese Irezumi συχνά συνδυάζει δράκους, koi, λουλούδια ή άλλα μοτίβα με κύματα, αέρα ή σύννεφα που ενώνουν τη σύνθεση πάνω στο σώμα."
+      },
+      "example": {
+        "en": "A koi surrounded by waves and flowers across an arm.",
+        "el": "Ένα koi με κύματα και λουλούδια κατά μήκος του χεριού."
+      },
+      "comparison": {
+        "en": "A Japanese subject alone does not define the style. Composition and the relationship between motifs matter too.",
+        "el": "Ένα ιαπωνικό θέμα δεν αρκεί για να ορίσει το στιλ. Μετρούν και η σύνθεση και η σχέση των μοτίβων."
+      }
+    }
+  },
+  {
+    "id": "realism",
+    "name": {
+      "en": "Realism",
+      "el": "Ρεαλισμός"
+    },
+    "guide": {
+      "summary": {
+        "en": "Light, texture, lifelike depth",
+        "el": "Φως, υφή, φυσικό βάθος"
+      },
+      "description": {
+        "en": "Shading recreates the appearance of a person, animal or object. Realism can use colour or black and grey.",
+        "el": "Η σκίαση αναπαράγει την εμφάνιση ενός προσώπου, ζώου ή αντικειμένου. Ο ρεαλισμός μπορεί να είναι έγχρωμος ή ασπρόμαυρος."
+      },
+      "example": {
+        "en": "A portrait that looks like a photograph.",
+        "el": "Ένα πορτρέτο που θυμίζει φωτογραφία."
+      },
+      "comparison": {
+        "en": "Portrait is a subject; Realism is an approach. A portrait can also be stylised or cartoon-like.",
+        "el": "Το πορτρέτο είναι θέμα· ο ρεαλισμός τρόπος απόδοσης. Ένα πορτρέτο μπορεί επίσης να είναι στιλιζαρισμένο ή cartoon."
+      }
+    }
+  },
+  {
+    "id": "geometric",
+    "name": {
+      "en": "Geometric",
+      "el": "Γεωμετρικό"
+    },
+    "guide": {
+      "summary": {
+        "en": "Shapes, repetition, symmetry",
+        "el": "Σχήματα, επανάληψη, συμμετρία"
+      },
+      "description": {
+        "en": "Lines, circles, polygons and repeated patterns organise the design. Some pieces are symmetrical; others combine geometry with organic subjects.",
+        "el": "Γραμμές, κύκλοι, πολύγωνα και επαναλαμβανόμενα μοτίβα οργανώνουν το σχέδιο. Κάποια έργα είναι συμμετρικά, ενώ άλλα συνδυάζουν γεωμετρία με οργανικά θέματα."
+      },
+      "example": {
+        "en": "An animal formed from triangles or a repeating circular pattern.",
+        "el": "Ένα ζώο σχηματισμένο από τρίγωνα ή ένα κυκλικό επαναλαμβανόμενο μοτίβο."
+      },
+      "comparison": {
+        "en": "Dotwork can provide the shading inside a geometric design. These labels can overlap.",
+        "el": "Το Dotwork μπορεί να δώσει τις σκιές σε ένα γεωμετρικό σχέδιο. Οι δύο όροι μπορούν να συνυπάρχουν."
+      }
+    }
+  },
+  {
+    "id": "watercolor",
+    "name": {
+      "en": "Watercolor",
+      "el": "Υδατογραφία"
+    },
+    "guide": {
+      "summary": {
+        "en": "Colour washes, painterly edges",
+        "el": "Χρωματικές διαφάνειες, ζωγραφικά όρια"
+      },
+      "description": {
+        "en": "Colours blend, splash or fade in ways that recall watercolour on paper. Some designs add a clear line drawing beneath the colour.",
+        "el": "Τα χρώματα αναμειγνύονται, πιτσιλίζουν ή σβήνουν σαν ακουαρέλα στο χαρτί. Κάποια σχέδια έχουν καθαρή γραμμή κάτω από το χρώμα."
+      },
+      "example": {
+        "en": "A bird with loose blue and violet washes.",
+        "el": "Ένα πουλί με ελεύθερες μπλε και βιολετί χρωματικές επιφάνειες."
+      },
+      "comparison": {
+        "en": "Not every colourful tattoo is Watercolor; look for the wash-like treatment of colour.",
+        "el": "Δεν είναι κάθε έγχρωμο τατουάζ Watercolor· προσέξτε τον τρόπο που απλώνεται το χρώμα σαν ακουαρέλα."
+      }
+    }
+  },
+  {
+    "id": "lettering",
+    "name": {
+      "en": "Lettering & Script",
+      "el": "Γραμματοσειρά & Καλλιγραφία"
+    },
+    "guide": {
+      "summary": {
+        "en": "Words become the design",
+        "el": "Οι λέξεις γίνονται σχέδιο"
+      },
+      "description": {
+        "en": "The shapes, spacing and rhythm of letters are the focus, from handwritten script to bold typographic compositions.",
+        "el": "Στο επίκεντρο βρίσκονται το σχήμα, οι αποστάσεις και ο ρυθμός των γραμμάτων, από χειρόγραφη καλλιγραφία μέχρι έντονες τυπογραφικές συνθέσεις."
+      },
+      "example": {
+        "en": "A name in flowing script or a phrase in bold lettering.",
+        "el": "Ένα όνομα με ρέουσα καλλιγραφία ή μια φράση με έντονα γράμματα."
+      },
+      "comparison": {
+        "en": "Lettering can also use Fine Line or Blackwork. Check the spelling and readability of the actual design.",
+        "el": "Το Lettering μπορεί να συνδυάζεται με Fine Line ή Blackwork. Ελέγξτε την ορθογραφία και την αναγνωσιμότητα του συγκεκριμένου σχεδίου."
+      }
+    }
+  },
+  {
+    "id": "dotwork",
+    "name": {
+      "en": "Dotwork & Stippling",
+      "el": "Τεχνική Κουκκίδων"
+    },
+    "guide": {
+      "summary": {
+        "en": "Tiny dots build shade",
+        "el": "Μικρές κουκκίδες σχηματίζουν σκιές"
+      },
+      "description": {
+        "en": "Many small dots build texture and tonal transitions. Denser dots create darker areas; wider spacing leaves a lighter impression.",
+        "el": "Πολλές μικρές κουκκίδες σχηματίζουν υφή και τονικές μεταβάσεις. Οι πυκνές κουκκίδες δίνουν σκούρες επιφάνειες και οι αραιές πιο φωτεινή εικόνα."
+      },
+      "example": {
+        "en": "A shaded sphere or mandala made from dots.",
+        "el": "Μια σκιασμένη σφαίρα ή ένα mandala φτιαγμένο από κουκκίδες."
+      },
+      "comparison": {
+        "en": "Dotwork describes how marks are arranged, not the subject or whether a machine is used.",
+        "el": "Το Dotwork περιγράφει τη διάταξη των σημαδιών, όχι το θέμα ή το αν χρησιμοποιείται μηχανή."
+      }
+    }
+  },
+  {
+    "id": "tribal",
+    "name": {
+      "en": "Tribal & Polynesian",
+      "el": "Φυλετικό & Πολυνησιακό"
+    },
+    "guide": {
+      "summary": {
+        "en": "Bold patterns with distinct traditions",
+        "el": "Έντονα μοτίβα με ξεχωριστές παραδόσεις"
+      },
+      "description": {
+        "en": "This browsing label groups several different approaches. Modern tribal designs and Polynesian traditions are not interchangeable; specific motifs can carry cultural and personal meaning.",
+        "el": "Αυτή η κατηγορία συγκεντρώνει διαφορετικές προσεγγίσεις. Τα σύγχρονα tribal σχέδια και οι πολυνησιακές παραδόσεις δεν είναι ταυτόσημα· συγκεκριμένα μοτίβα μπορεί να έχουν πολιτισμικό και προσωπικό νόημα."
+      },
+      "example": {
+        "en": "A composition of black patterns following the contours of an arm.",
+        "el": "Μια σύνθεση μαύρων μοτίβων που ακολουθεί τις καμπύλες του χεριού."
+      },
+      "comparison": {
+        "en": "For tradition-specific work, learn about its context with an artist experienced in that tradition.",
+        "el": "Για έργα συγκεκριμένης παράδοσης, γνωρίστε το πλαίσιό τους με έναν καλλιτέχνη που έχει σχετική εμπειρία."
+      }
+    }
+  },
+  {
+    "id": "new-school",
+    "name": {
+      "en": "New School",
+      "el": "New School"
+    },
+    "guide": {
+      "summary": {
+        "en": "Cartoon energy, exaggerated shapes",
+        "el": "Ενέργεια cartoon, υπερβολικά σχήματα"
+      },
+      "description": {
+        "en": "Playful distortion, bold outlines and vivid colour often give subjects a cartoon or comic-book character.",
+        "el": "Η παιχνιδιάρικη παραμόρφωση, τα έντονα περιγράμματα και τα ζωηρά χρώματα δίνουν συχνά στα θέματα χαρακτήρα cartoon ή comic."
+      },
+      "example": {
+        "en": "A character with oversized features and dramatic perspective.",
+        "el": "Ένας χαρακτήρας με υπερμεγέθη χαρακτηριστικά και έντονη προοπτική."
+      },
+      "comparison": {
+        "en": "Compared with Neo-Traditional, New School often leans further into caricature and visual exaggeration.",
+        "el": "Σε σχέση με το Neo-Traditional, το New School συχνά πλησιάζει περισσότερο στην καρικατούρα και την οπτική υπερβολή."
+      }
+    }
+  }
 ]

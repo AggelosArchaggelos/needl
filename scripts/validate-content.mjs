@@ -26,6 +26,7 @@ export function validateContent({ studios, cities, styles, news, config }) {
   const instagram = (v, p) => { if (text(v, p) && !/^[A-Za-z0-9._]{1,30}$/.test(v)) error(p, 'Use the Instagram handle only, without @ or a URL.'); };
   const catalog = (data, p, city = false) => { const seen = new Set(); for (const [i, item] of list(data, p, true).entries()) { const at = p + '[' + i + ']'; if (!object(item, at)) continue; unique(item.id, at + '.id', seen); localized(item.name, at + '.name'); if (city) localized(item.region, at + '.region'); } return seen; };
   const cityIds = catalog(cities, 'cities', true), styleIds = catalog(styles, 'styles');
+  for (const [i, style] of list(styles, 'styles').entries()) { if (style?.guide !== undefined && object(style.guide, 'styles['+i+'].guide')) for (const field of ['summary','description','example','comparison']) localized(style.guide[field], 'styles['+i+'].guide.'+field); }
   const refs = (v, p) => { const seen = new Set(); for (const id of list(v, p)) { unique(id, p, seen); if (!styleIds.has(id)) error(p, 'Unknown tattoo style: ' + id); } };
   const studioIds = new Set(), studioSlugs = new Set(), artistIds = new Set(), pieceIds = new Set(), names = new Set();
   for (const [i, s] of list(studios, 'studios', true).entries()) {
@@ -38,6 +39,11 @@ export function validateContent({ studios, cities, styles, news, config }) {
     if (text(s.phone, p + '.phone') && !/^\+?[\d\s().-]{7,24}$/.test(s.phone)) error(p + '.phone', 'Check the phone number format.');
     instagram(s.instagramHandle, p + '.instagramHandle');
     if (s.websiteUrl !== undefined && s.websiteUrl !== '') url(s.websiteUrl, p + '.websiteUrl');
+    if (s.coordinates !== undefined) {
+      if (object(s.coordinates, p + '.coordinates')) {
+        for (const [field, limit] of [['latitude',90],['longitude',180]]) if (typeof s.coordinates[field] !== 'number' || !Number.isFinite(s.coordinates[field]) || Math.abs(s.coordinates[field]) > limit) error(p + '.coordinates.' + field, 'Enter a valid coordinate.');
+      }
+    }
     url(s.heroImageUrl, p + '.heroImageUrl', true);
     list(s.galleryImages, p + '.galleryImages', true).forEach((v, n) => url(v, p + '.galleryImages[' + n + ']', true));
     number(s.rating, p + '.rating', 5); number(s.reviewCount, p + '.reviewCount', Infinity, true); number(s.avgSessionEUR, p + '.avgSessionEUR');
@@ -49,16 +55,18 @@ export function validateContent({ studios, cities, styles, news, config }) {
       const q = p + '.artists[' + j + ']'; if (!object(a, q)) continue;
       unique(a.id, q + '.id', artistIds); unique(a.slug, q + '.slug', artistSlugs); slug(a.slug, q + '.slug'); text(a.name, q + '.name');
       if (a.studioSlug !== s.slug) error(q + '.studioSlug', 'Must match the parent studio slug.');
-      if (a.discipline !== undefined && !['tattoo', 'piercing', 'both'].includes(a.discipline)) error(q + '.discipline', 'Choose tattoo, piercing or both.');
+      if (a.discipline !== undefined && !['tattoo', 'piercing', 'both', 'art'].includes(a.discipline)) error(q + '.discipline', 'Choose tattoo, piercing, both or art.');
       if (a.piercingSpecialities !== undefined && typeof a.piercingSpecialities !== 'string') error(q + '.piercingSpecialities', 'Expected text.');
+      if (a.rating !== undefined) { number(a.rating, q + '.rating', 5); if (!(a.reviewCount > 0)) error(q + '.reviewCount', 'A rating needs a positive review count.'); }
+      if (a.reviewCount !== undefined) number(a.reviewCount, q + '.reviewCount', Infinity, true);
       localized(a.role, q + '.role'); localized(a.bio, q + '.bio'); number(a.yearsExperience, q + '.yearsExperience', Infinity, true);
       instagram(a.instagramHandle, q + '.instagramHandle'); url(a.avatarUrl, q + '.avatarUrl', true); refs(a.styleIds, q + '.styleIds');
-      for (const [k, piece] of list(a.portfolio, q + '.portfolio', true).entries()) {
+      for (const [k, piece] of list(a.portfolio, q + '.portfolio', !s.experimental).entries()) {
         const r = q + '.portfolio[' + k + ']'; if (!object(piece, r)) continue;
         unique(piece.id, r + '.id', pieceIds); text(piece.caption, r + '.caption'); url(piece.imageUrl, r + '.imageUrl', true); if (piece.priceEUR !== undefined) number(piece.priceEUR, r + '.priceEUR');
-        if (piece.kind !== undefined && !['tattoo', 'piercing'].includes(piece.kind)) error(r + '.kind', 'Choose tattoo or piercing.');
-        if (piece.kind !== 'piercing' && !styleIds.has(piece.styleId)) error(r + '.styleId', 'Tattoo work needs a configured tattoo style.');
-        if (piece.kind === 'piercing' && piece.styleId) error(r + '.styleId', 'Piercing work should not have a tattoo style.');
+        if (piece.kind !== undefined && !['tattoo', 'piercing', 'art'].includes(piece.kind)) error(r + '.kind', 'Choose tattoo, piercing or art.');
+        if (piece.kind !== 'piercing' && piece.kind !== 'art' && !styleIds.has(piece.styleId)) { if (s.experimental && !piece.styleId) warn(r + '.styleId', 'Experimental image: individual work style has not been classified.'); else error(r + '.styleId', 'Tattoo work needs a configured tattoo style.'); }
+        if (['piercing', 'art'].includes(piece.kind) && piece.styleId) error(r + '.styleId', 'Piercing work should not have a tattoo style.');
       }
     }
   }

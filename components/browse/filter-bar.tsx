@@ -25,7 +25,6 @@ export function FilterBar({
   onChange: (next: BrowseFilters) => void;
 }) {
   const { t, locale } = useLocale();
-
   function toggleStyle(id: string) {
     const has = filters.styleIds.includes(id);
     onChange({
@@ -46,7 +45,7 @@ export function FilterBar({
             </span>
             <Select
               value={filters.cityId}
-              onValueChange={(v) => onChange({ ...filters, cityId: v as BrowseFilters["cityId"] })}
+              onValueChange={(v) => onChange({ ...filters, cityId: v ?? "all" })}
             >
               <SelectTrigger className="w-full border-line-strong bg-transparent text-paper">
                 <SelectValue placeholder={t.filters.allCities}>
