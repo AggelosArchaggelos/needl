@@ -92,6 +92,23 @@
   .nav-underline:focus-visible::after {
     transform: translateX(-50%) scaleX(1);
   }
+
+  /* CTA hover signature: a brighter red fills in from the centre outward,
+     the same motion as the nav underline, so the header reads as one system. */
+  .cta-sweep::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-red-bright);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
+  }
+  .cta-sweep:hover::before,
+  .cta-sweep:focus-visible::before {
+    transform: scaleX(1);
+  }
 }
 
 @layer base {

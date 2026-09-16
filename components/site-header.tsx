@@ -76,7 +76,10 @@ export function SiteHeader() {
           </Link>
           <Link
             href="/browse"
-            className={cn(buttonVariants({ size: "sm" }), "bg-red text-paper hover:bg-red-bright")}
+            className={cn(
+              buttonVariants({ size: "sm" }),
+              "cta-sweep relative isolate overflow-hidden bg-red text-paper hover:bg-red",
+            )}
           >
             {t.nav.findAnArtist}
           </Link>
@@ -107,7 +110,10 @@ export function SiteHeader() {
                   <Link
                     href="/browse"
                     onClick={() => setOpen(false)}
-                    className={cn(buttonVariants(), "bg-red text-paper hover:bg-red-bright")}
+                    className={cn(
+                      buttonVariants(),
+                      "cta-sweep relative isolate overflow-hidden bg-red text-paper hover:bg-red",
+                    )}
                   >
                     {t.nav.findAnArtist}
                   </Link>
