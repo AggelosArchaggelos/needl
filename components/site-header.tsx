@@ -42,7 +42,7 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm transition-colors hover:text-paper",
+                "nav-underline text-sm transition-colors hover:text-paper focus-visible:text-paper focus-visible:outline-none",
                 pathname === link.href ? "text-paper" : "text-paper-dim",
               )}
             >
@@ -69,7 +69,7 @@ export function SiteHeader() {
             href="/for-studios"
             className={cn(
               buttonVariants({ variant: "ghost", size: "sm" }),
-              "text-paper-dim hover:bg-ink-3 hover:text-paper",
+              "nav-underline text-paper-dim hover:bg-ink-3 hover:text-paper focus-visible:text-paper",
             )}
           >
             {t.nav.listYourStudio}
