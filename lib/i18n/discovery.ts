@@ -11,7 +11,15 @@ export const discovery = {
     "artists": "artists",
     "empty": "No artists match these filters",
     "emptyBody": "Try another city or fewer tattoo styles.",
-    "review": "reviews"
+    "review": "reviews",
+    "show": "Show",
+    "viewArtists": "Artists",
+    "viewStudios": "Studios",
+    "studioSingular": "studio",
+    "studioPlural": "studios",
+    "emptyStudios": "No studios match these filters",
+    "emptyStudiosBody": "Try another city or fewer tattoo styles.",
+    "teamCount": "artists"
   },
   "el": {
     "unrated": "Χωρίς αξιολόγηση",
@@ -25,6 +33,14 @@ export const discovery = {
     "artists": "καλλιτέχνες",
     "empty": "Δεν βρέθηκαν καλλιτέχνες",
     "emptyBody": "Δοκιμάστε άλλη πόλη ή λιγότερα στιλ τατουάζ.",
-    "review": "κριτικές"
+    "review": "κριτικές",
+    "show": "Εμφάνιση",
+    "viewArtists": "Καλλιτέχνες",
+    "viewStudios": "Στούντιο",
+    "studioSingular": "στούντιο",
+    "studioPlural": "στούντιο",
+    "emptyStudios": "Δεν βρέθηκαν στούντιο",
+    "emptyStudiosBody": "Δοκιμάστε άλλη πόλη ή λιγότερα στιλ τατουάζ.",
+    "teamCount": "καλλιτέχνες"
   }
 } as const;

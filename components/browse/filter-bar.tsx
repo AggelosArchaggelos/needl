@@ -15,16 +15,24 @@ import { styles } from "@/lib/data/styles";
 import { defaultFilters } from "@/lib/filters";
 import { useLocale } from "@/lib/i18n/locale-context";
 import { localize } from "@/lib/i18n/localize";
+import { discovery } from "@/lib/i18n/discovery";
 import type { BrowseFilters } from "@/lib/types";
+
+export type BrowseView = "artists" | "studios";
 
 export function FilterBar({
   filters,
   onChange,
+  view,
+  onViewChange,
 }: {
   filters: BrowseFilters;
   onChange: (next: BrowseFilters) => void;
+  view: BrowseView;
+  onViewChange: (next: BrowseView) => void;
 }) {
   const { t, locale } = useLocale();
+  const d = discovery[locale];
   function toggleStyle(id: string) {
     const has = filters.styleIds.includes(id);
     onChange({
@@ -39,6 +47,29 @@ export function FilterBar({
     <div className="flex flex-col gap-6 rounded-lg border border-line bg-ink-2 p-5">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div className="flex flex-1 flex-wrap gap-3">
+          <div className="flex flex-col gap-1.5">
+            <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint">
+              {d.show}
+            </span>
+            <button
+              type="button"
+              aria-label={d.show + ": " + (view === "artists" ? d.viewArtists : d.viewStudios)}
+              onClick={() => onViewChange(view === "artists" ? "studios" : "artists")}
+              className="flex h-9 items-center gap-1 rounded-lg border border-line-strong p-0.5 text-sm"
+            >
+              {(["artists", "studios"] as const).map((option) => (
+                <span
+                  key={option}
+                  className={cn(
+                    "flex h-full items-center rounded-md px-3.5 transition-colors",
+                    view === option ? "bg-red/15 text-red-bright" : "text-paper-dim",
+                  )}
+                >
+                  {option === "artists" ? d.viewArtists : d.viewStudios}
+                </span>
+              ))}
+            </button>
+          </div>
           <div className="flex min-w-[9rem] max-w-xs flex-1 flex-col gap-1.5">
             <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint">
               {t.filters.city}

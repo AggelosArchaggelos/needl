@@ -16,3 +16,11 @@ export function findArtists(studios: Studio[], filters: BrowseFilters): ArtistRe
  }
  return results.sort((a,b)=> b.matchedStyles-a.matchedStyles || a.artist.name.localeCompare(b.artist.name) || a.studio.slug.localeCompare(b.studio.slug));
 }
+
+// Studios match a style when the studio lists it or any of its tattooists work in it.
+export function findStudios(studios: Studio[], filters: BrowseFilters): Studio[] {
+ return studios
+  .filter(studio => (filters.cityId === "all" || studio.cityId === filters.cityId)
+   && (!filters.styleIds.length || filters.styleIds.some(id => studio.styleIds.includes(id) || studio.artists.some(a => a.discipline !== "piercing" && a.styleIds.includes(id)))))
+  .sort((a,b)=>a.name.localeCompare(b.name));
+}

@@ -2,12 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { FilterBar } from "@/components/browse/filter-bar";
+import { FilterBar, type BrowseView } from "@/components/browse/filter-bar";
+import { StudioCard } from "@/components/studio-card";
 import { SectionHeading } from "@/components/section-heading";
 import { ArtistCard } from "@/components/artist-card";
 import Link from "next/link";
 import { cityName } from "@/lib/data/cities";
-import { findArtists, artistRating } from "@/lib/artist-search";
+import { findArtists, findStudios, artistRating } from "@/lib/artist-search";
 import { discovery } from "@/lib/i18n/discovery";
 import { useLocale } from "@/lib/i18n/locale-context";
 import { cities } from "@/lib/data/cities";
@@ -20,10 +21,12 @@ export function BrowseClient({
   studios,
   initialCity,
   initialStyles = [],
+  initialView,
 }: {
   studios: Studio[];
   initialCity?: string;
   initialStyles?: string[];
+  initialView?: string;
 }) {
   const { t, locale } = useLocale();
   const d = discovery[locale];
@@ -34,8 +37,10 @@ export function BrowseClient({
     styleIds: initialStyles.filter(id => styles.some(s => s.id === id)),
   });
 
+  const [view, setView] = useState<BrowseView>(initialView === "studios" ? "studios" : "artists");
+
   useEffect(() => {
-    const readFilters = () => { const p = new URLSearchParams(location.search); setFilters(current => ({ ...current, cityId: cities.some(c => c.id === p.get("city")) ? p.get("city")! : "all", styleIds: (p.get("styles") ?? "").split(",").filter(id => styles.some(s => s.id === id)) })); };
+    const readFilters = () => { setView(new URLSearchParams(location.search).get("view") === "studios" ? "studios" : "artists"); const p = new URLSearchParams(location.search); setFilters(current => ({ ...current, cityId: cities.some(c => c.id === p.get("city")) ? p.get("city")! : "all", styleIds: (p.get("styles") ?? "").split(",").filter(id => styles.some(s => s.id === id)) })); };
     const key = () => "needl-browse-scroll:" + location.search;
     let frame = 0;
     const save = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(() => { try { sessionStorage.setItem(key(), String(window.scrollY)); } catch {} }); };
@@ -51,7 +56,15 @@ export function BrowseClient({
     url.searchParams.delete("rating");
     window.history.replaceState(window.history.state, "", url);
   }
+  function changeView(next: BrowseView) {
+    setView(next); const url = new URL(location.href);
+    if (next === "studios") url.searchParams.set("view", "studios"); else url.searchParams.delete("view");
+    window.history.replaceState(window.history.state, "", url);
+  }
   const results = useMemo(() => findArtists(studios, filters), [studios, filters]);
+  const studioResults = useMemo(() => findStudios(studios, filters), [studios, filters]);
+  const showingStudios = view === "studios";
+  const count = showingStudios ? studioResults.length : results.length;
 
   return (
     <div>
@@ -66,15 +79,26 @@ export function BrowseClient({
       </div>
 
       <div className="mx-auto max-w-6xl px-6 py-10">
-        <FilterBar filters={filters} onChange={changeFilters} />
+        <FilterBar filters={filters} onChange={changeFilters} view={view} onViewChange={changeView} />
 
         <div className="mt-8 flex items-baseline justify-between">
           <p className="font-mono text-xs uppercase tracking-[0.14em] text-paper-faint">
-            {results.length} {results.length === 1 ? d.artist : d.artists}
+            {count} {showingStudios ? (count === 1 ? d.studioSingular : d.studioPlural) : (count === 1 ? d.artist : d.artists)}
           </p>
         </div>
 
-        {results.length > 0 ? (
+        {showingStudios ? (
+          studioResults.length > 0 ? (
+            <div className="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {studioResults.map((studio) => <StudioCard key={studio.id} studio={studio} />)}
+            </div>
+          ) : (
+            <div className="mt-16 flex flex-col items-center rounded-lg border border-dashed border-line-strong py-20 text-center">
+              <p className="font-display text-xl text-paper">{d.emptyStudios}</p>
+              <p className="mt-2 max-w-sm text-sm text-paper-dim">{d.emptyStudiosBody}</p>
+            </div>
+          )
+        ) : results.length > 0 ? (
           <div className="mt-4 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {results.map(({ artist, studio, matchedStyles }) => (
               <motion.div
