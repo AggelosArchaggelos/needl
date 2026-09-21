@@ -22,11 +22,13 @@ export function BrowseClient({
   initialCity,
   initialStyles = [],
   initialView,
+  initialKind,
 }: {
   studios: Studio[];
   initialCity?: string;
   initialStyles?: string[];
   initialView?: string;
+  initialKind?: string;
 }) {
   const { t, locale } = useLocale();
   const d = discovery[locale];
@@ -34,13 +36,14 @@ export function BrowseClient({
   const [filters, setFilters] = useState<BrowseFilters>({
     ...defaultFilters,
     cityId: cities.some(c => c.id === initialCity) ? initialCity! : defaultFilters.cityId,
-    styleIds: initialStyles.filter(id => styles.some(s => s.id === id)),
+    styleIds: initialKind === "piercing" ? [] : initialStyles.filter(id => styles.some(s => s.id === id)),
+    kind: initialKind === "tattoo" || initialKind === "piercing" ? initialKind : "all",
   });
 
   const [view, setView] = useState<BrowseView>(initialView === "studios" ? "studios" : "artists");
 
   useEffect(() => {
-    const readFilters = () => { setView(new URLSearchParams(location.search).get("view") === "studios" ? "studios" : "artists"); const p = new URLSearchParams(location.search); setFilters(current => ({ ...current, cityId: cities.some(c => c.id === p.get("city")) ? p.get("city")! : "all", styleIds: (p.get("styles") ?? "").split(",").filter(id => styles.some(s => s.id === id)) })); };
+    const readFilters = () => { setView(new URLSearchParams(location.search).get("view") === "studios" ? "studios" : "artists"); const p = new URLSearchParams(location.search); setFilters(current => ({ ...current, cityId: cities.some(c => c.id === p.get("city")) ? p.get("city")! : "all", styleIds: p.get("type") === "piercing" ? [] : (p.get("styles") ?? "").split(",").filter(id => styles.some(s => s.id === id)), kind: p.get("type") === "tattoo" || p.get("type") === "piercing" ? (p.get("type") as "tattoo" | "piercing") : "all" })); };
     const key = () => "needl-browse-scroll:" + location.search;
     let frame = 0;
     const save = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(() => { try { sessionStorage.setItem(key(), String(window.scrollY)); } catch {} }); };
@@ -53,6 +56,7 @@ export function BrowseClient({
     setFilters(next); const url = new URL(location.href);
     if (next.cityId === "all") url.searchParams.delete("city"); else url.searchParams.set("city", next.cityId);
     if (next.styleIds.length) url.searchParams.set("styles", next.styleIds.join(",")); else url.searchParams.delete("styles");
+    if (next.kind && next.kind !== "all") url.searchParams.set("type", next.kind); else url.searchParams.delete("type");
     url.searchParams.delete("rating");
     window.history.replaceState(window.history.state, "", url);
   }
@@ -83,7 +87,7 @@ export function BrowseClient({
 
         <div className="mt-8 flex items-baseline justify-between">
           <p className="font-mono text-xs uppercase tracking-[0.14em] text-paper-faint">
-            {count} {showingStudios ? (count === 1 ? d.studioSingular : d.studioPlural) : (count === 1 ? d.artist : d.artists)}
+            {count} {showingStudios ? (count === 1 ? d.studioSingular : d.studioPlural) : filters.kind === "piercing" ? (count === 1 ? d.piercerSingular : d.piercers.toLowerCase()) : (count === 1 ? d.artist : d.artists)}
           </p>
         </div>
 

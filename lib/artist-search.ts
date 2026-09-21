@@ -9,8 +9,13 @@ export function findArtists(studios: Studio[], filters: BrowseFilters): ArtistRe
   if(filters.cityId !== "all" && studio.cityId !== filters.cityId) continue;
   for(const artist of studio.artists) {
    if (artist.discipline === "art") continue;
-   const matchedStyles=artist.discipline === "piercing" ? 0 : filters.styleIds.filter(id=>artist.styleIds.includes(id)).length;
-   if(filters.styleIds.length && !matchedStyles) continue;
+   const kind=filters.kind ?? "all";
+   if (kind === "piercing" && artist.discipline !== "piercing" && artist.discipline !== "both") continue;
+   if (kind === "tattoo" && artist.discipline === "piercing") continue;
+   // Styles describe tattoo work, so they are ignored when browsing piercers.
+   const styleIds = kind === "piercing" ? [] : filters.styleIds;
+   const matchedStyles=artist.discipline === "piercing" ? 0 : styleIds.filter(id=>artist.styleIds.includes(id)).length;
+   if(styleIds.length && !matchedStyles) continue;
    results.push({artist,studio,matchedStyles});
   }
  }

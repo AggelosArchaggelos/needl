@@ -41,7 +41,9 @@ export function FilterBar({
     });
   }
 
-  const isDefault = filters.cityId === "all" && filters.styleIds.length === 0;
+  const kind = filters.kind ?? "all";
+  const showKind = view === "artists";
+  const isDefault = filters.cityId === "all" && filters.styleIds.length === 0 && kind === "all";
 
   return (
     <div className="flex flex-col gap-6 rounded-lg border border-line bg-ink-2 p-5">
@@ -70,6 +72,31 @@ export function FilterBar({
               ))}
             </button>
           </div>
+          {showKind && (
+            <div className="flex min-w-[9rem] max-w-xs flex-1 flex-col gap-1.5">
+              <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint">
+                {d.typeLabel}
+              </span>
+              <Select
+                value={kind}
+                onValueChange={(v) => {
+                  const next = (v ?? "all") as "all" | "tattoo" | "piercing";
+                  onChange({ ...filters, kind: next, styleIds: next === "piercing" ? [] : filters.styleIds });
+                }}
+              >
+                <SelectTrigger className="w-full border-line-strong bg-transparent text-paper">
+                  <SelectValue placeholder={d.allTypes}>
+                    {(v: string) => (v === "tattoo" ? d.tattooArtists : v === "piercing" ? d.piercers : d.allTypes)}
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent className="border-line-strong bg-ink-2 text-paper">
+                  <SelectItem value="all">{d.allTypes}</SelectItem>
+                  <SelectItem value="tattoo">{d.tattooArtists}</SelectItem>
+                  <SelectItem value="piercing">{d.piercers}</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          )}
           <div className="flex min-w-[9rem] max-w-xs flex-1 flex-col gap-1.5">
             <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint">
               {t.filters.city}
@@ -107,7 +134,7 @@ export function FilterBar({
         )}
       </div>
 
-      <div className="flex flex-col gap-2">
+      {!(showKind && kind === "piercing") && <div className="flex flex-col gap-2">
         <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-faint">
           {t.filters.style}
         </span>
@@ -131,7 +158,7 @@ export function FilterBar({
             );
           })}
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

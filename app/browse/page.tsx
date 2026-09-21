@@ -11,5 +11,5 @@ export default async function BrowsePage({ searchParams }: PageProps<"/browse">)
   const params = await searchParams;
   const cityParam = typeof params.city === "string" ? params.city : undefined;
 
-  return <BrowseClient studios={studios} initialCity={cityParam} initialStyles={typeof params.styles === "string" ? params.styles.split(",") : []} initialView={typeof params.view === "string" ? params.view : undefined} />;
+  return <BrowseClient studios={studios} initialCity={cityParam} initialStyles={typeof params.styles === "string" ? params.styles.split(",") : []} initialView={typeof params.view === "string" ? params.view : undefined} initialKind={typeof params.type === "string" ? params.type : undefined} />;
 }

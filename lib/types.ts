@@ -75,6 +75,7 @@ export type Studio = {
 export type BrowseFilters = {
   cityId: string | "all";
   styleIds: string[];
+  kind?: "all" | "tattoo" | "piercing";
 };
 
 export type NewsArticle = {

@@ -3,6 +3,7 @@ import type { BrowseFilters, Studio } from "@/lib/types";
 export const defaultFilters: BrowseFilters = {
   cityId: "all",
   styleIds: [],
+  kind: "all",
 };
 
 export function filterStudios(studios: Studio[], filters: BrowseFilters): Studio[] {
