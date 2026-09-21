@@ -1,1333 +1,718 @@
 [
   {
-    "id": "aria-ink-collective",
-    "slug": "aria-ink-collective",
-    "name": "Aria Ink Collective",
+    "id": "dr-pepper-tattoo",
+    "slug": "dr-pepper-tattoo",
+    "name": "Dr. Pepper Tattoo",
+    "email": "info@drpepper.gr",
+    "websiteUrl": "https://drpepper.gr/",
     "cityId": "athens",
     "neighborhood": {
-      "en": "Psyrri",
-      "el": "Ψυρρή"
+      "en": "Gazi",
+      "el": "Γκάζι"
     },
-    "address": "12 Miaouli St, Psyrri, Athens",
+    "address": "Iakhou 22, Gazi, Athens 11854",
     "description": {
-      "en": "A light-filled studio behind an unmarked door in Psyrri, built around three resident artists who each keep a tight, single-style focus. Consultations run over coffee before anything is drawn.",
-      "el": "Ένα φωτεινό στούντιο πίσω από μια χωρίς επιγραφή πόρτα στην Ψυρρή, χτισμένο γύρω από τρεις καλλιτέχνες που ο καθένας κρατά αυστηρή εστίαση σε ένα στιλ. Οι συζητήσεις γίνονται με καφέ πριν σχεδιαστεί οτιδήποτε."
+      "en": "Founded in 2012 by Giannis Piperakis, Dr. Pepper Tattoo & Art Hub brings tattooing, piercing and custom art together in Gazi. The studio’s team works across realism, Japanese tattooing, blackwork, geometric work and colour. Its space also hosts art, reflecting a connection to drawing and creative collaboration. Find it at Iakhou 22, near Kerameikos metro station’s Technopolis exit.",
+      "el": "Το Dr. Pepper Tattoo & Art Hub ιδρύθηκε το 2012 από τον Γιάννη Πιπεράκη και συνδυάζει τατουάζ, piercing και custom art στο Γκάζι. Η ομάδα καλύπτει ρεαλισμό, ιαπωνικό τατουάζ, blackwork, γεωμετρικά και έγχρωμα έργα. Ο χώρος φιλοξενεί επίσης τέχνη, με έμφαση στο σχέδιο και τη δημιουργική συνεργασία. Βρίσκεται στην Ιάκχου 22, κοντά στην έξοδο Τεχνόπολη του μετρό Κεραμεικός."
     },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-aria-ink-collective/1600/1000",
+    "heroImageUrl": "/studios/dr-pepper/dr-pepper-001.webp",
     "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-aria-ink-collective-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-aria-ink-collective-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-aria-ink-collective-3/900/700",
-      "https://picsum.photos/seed/needl-gallery-aria-ink-collective-4/900/700"
+      "/studios/dr-pepper/dr-pepper-002.webp",
+      "/studios/dr-pepper/dr-pepper-003.webp",
+      "/studios/dr-pepper/dr-pepper-004.webp",
+      "/studios/dr-pepper/dr-pepper-005.webp"
     ],
-    "rating": 4.9,
-    "reviewCount": 412,
-    "priceBand": "€€€",
-    "avgSessionEUR": 220,
-    "instagramHandle": "aria.ink.athens",
-    "phone": "+30 210 555 0142",
-    "hours": {
-      "en": "Tue–Sat, 11:00–19:00",
-      "el": "Τρί–Σάβ, 11:00–19:00"
-    },
-    "promoted": true,
-    "artists": [
-      {
-        "id": "aria-ink-collective-dimitra-vasou",
-        "slug": "dimitra-vasou",
-        "name": "Dimitra Vasou",
-        "studioSlug": "aria-ink-collective",
-        "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρύτρια & Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Dimitra trained in Florence before returning to Athens to open Aria. Her line work favours restraint — single-needle botanicals and fragmented architectural studies.",
-          "el": "Η Δήμητρα εκπαιδεύτηκε στη Φλωρεντία πριν επιστρέψει στην Αθήνα για να ανοίξει το Aria. Η δουλειά της με τη γραμμή προτιμά τη λιτότητα — μονόβελονα φυτικά μοτίβα και αποσπασματικές αρχιτεκτονικές μελέτες."
-        },
-        "yearsExperience": 11,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-aria-ink-collective-dimitra-vasou/300/300",
-        "instagramHandle": "dimitra.linework",
-        "styleIds": [
-          "fine-line",
-          "dotwork"
-        ],
-        "portfolio": [
-          {
-            "id": "dimitra-vasou-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-dimitra-vasou-1/640/800",
-            "styleId": "fine-line",
-            "caption": "Olive branch, forearm",
-            "priceEUR": 140
-          },
-          {
-            "id": "dimitra-vasou-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-dimitra-vasou-2/640/800",
-            "styleId": "fine-line",
-            "caption": "Single-line portrait, ribs",
-            "priceEUR": 190
-          },
-          {
-            "id": "dimitra-vasou-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-dimitra-vasou-3/640/800",
-            "styleId": "dotwork",
-            "caption": "Stippled moth, shoulder",
-            "priceEUR": 210
-          },
-          {
-            "id": "dimitra-vasou-piece-4",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-dimitra-vasou-4/640/800",
-            "styleId": "fine-line",
-            "caption": "Architectural fragment, calf",
-            "priceEUR": 160
-          }
-        ]
-      },
-      {
-        "id": "aria-ink-collective-nikos-petropoulos",
-        "slug": "nikos-petropoulos",
-        "name": "Nikos Petropoulos",
-        "studioSlug": "aria-ink-collective",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Nikos builds bold geometric compositions that wrap around the body's natural lines, drawing on a background in industrial design.",
-          "el": "Ο Νίκος δημιουργεί τολμηρές γεωμετρικές συνθέσεις που ακολουθούν τις φυσικές γραμμές του σώματος, αντλώντας από το υπόβαθρό του στο βιομηχανικό σχεδιασμό."
-        },
-        "yearsExperience": 8,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-aria-ink-collective-nikos-petropoulos/300/300",
-        "instagramHandle": "petropoulos.ink",
-        "styleIds": [
-          "blackwork",
-          "geometric"
-        ],
-        "portfolio": [
-          {
-            "id": "nikos-petropoulos-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-nikos-petropoulos-1/640/800",
-            "styleId": "geometric",
-            "caption": "Sacred geometry sleeve panel",
-            "priceEUR": 280
-          },
-          {
-            "id": "nikos-petropoulos-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-nikos-petropoulos-2/640/800",
-            "styleId": "blackwork",
-            "caption": "Solid black cuff",
-            "priceEUR": 170
-          },
-          {
-            "id": "nikos-petropoulos-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-nikos-petropoulos-3/640/800",
-            "styleId": "geometric",
-            "caption": "Dotted mandala, sternum",
-            "priceEUR": 230
-          }
-        ]
-      },
-      {
-        "id": "aria-ink-collective-elena-markou",
-        "slug": "elena-markou",
-        "name": "Elena Markou",
-        "studioSlug": "aria-ink-collective",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "A four-year apprenticeship in Osaka shapes Elena's approach to Irezumi — full compositions planned around the body, never isolated flash.",
-          "el": "Μια τετραετής μαθητεία στην Οσάκα διαμόρφωσε την προσέγγιση της Έλενας στο Irezumi — πλήρεις συνθέσεις σχεδιασμένες γύρω από το σώμα, ποτέ μεμονωμένα σχέδια."
-        },
-        "yearsExperience": 9,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-aria-ink-collective-elena-markou/300/300",
-        "instagramHandle": "elena.markou.tattoo",
-        "styleIds": [
-          "japanese",
-          "neo-traditional"
-        ],
-        "portfolio": [
-          {
-            "id": "elena-markou-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-elena-markou-1/640/800",
-            "styleId": "japanese",
-            "caption": "Koi and waves, half sleeve",
-            "priceEUR": 420
-          },
-          {
-            "id": "elena-markou-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-elena-markou-2/640/800",
-            "styleId": "japanese",
-            "caption": "Peony back panel (session 2)",
-            "priceEUR": 380
-          },
-          {
-            "id": "elena-markou-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-aria-ink-collective-elena-markou-3/640/800",
-            "styleId": "neo-traditional",
-            "caption": "Crane, upper arm",
-            "priceEUR": 260
-          }
-        ]
-      }
-    ],
-    "styleIds": [
-      "fine-line",
-      "dotwork",
-      "blackwork",
-      "geometric",
-      "japanese",
-      "neo-traditional"
-    ]
-  },
-  {
-    "id": "blackbird-tattoo-parlour",
-    "slug": "blackbird-tattoo-parlour",
-    "name": "Blackbird Tattoo Parlour",
-    "cityId": "athens",
-    "neighborhood": {
-      "en": "Koukaki",
-      "el": "Κουκάκι"
-    },
-    "address": "45 Veikou St, Koukaki, Athens",
-    "description": {
-      "en": "Two chairs, a record player, and a walk-in policy on Wednesdays. Blackbird has kept the same street-shop energy since 2015, five minutes from the Acropolis Museum.",
-      "el": "Δύο καρέκλες, ένα πικάπ και πολιτική χωρίς ραντεβού κάθε Τετάρτη. Το Blackbird κρατά την ίδια ενέργεια συνοικιακού μαγαζιού από το 2015, πέντε λεπτά από το Μουσείο Ακρόπολης."
-    },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-blackbird-tattoo-parlour/1600/1000",
-    "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-blackbird-tattoo-parlour-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-blackbird-tattoo-parlour-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-blackbird-tattoo-parlour-3/900/700",
-      "https://picsum.photos/seed/needl-gallery-blackbird-tattoo-parlour-4/900/700"
-    ],
-    "rating": 4.8,
-    "reviewCount": 289,
-    "priceBand": "€€",
-    "avgSessionEUR": 150,
-    "instagramHandle": "blackbird.athens",
-    "phone": "+30 210 555 0178",
-    "hours": {
-      "en": "Mon–Sat, 12:00–20:00",
-      "el": "Δευ–Σάβ, 12:00–20:00"
-    },
-    "promoted": false,
-    "artists": [
-      {
-        "id": "blackbird-tattoo-parlour-yannis-fotiadis",
-        "slug": "yannis-fotiadis",
-        "name": "Yannis Fotiadis",
-        "studioSlug": "blackbird-tattoo-parlour",
-        "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρυτής & Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Old-school American traditional, bold and built to last — Yannis has been tattooing anchors, swallows, and roses in Athens for fifteen years.",
-          "el": "Παλιάς σχολής αμερικανικό παραδοσιακό στιλ, τολμηρό και φτιαγμένο να αντέξει — ο Γιάννης τατουάζει άγκυρες, χελιδόνια και τριαντάφυλλα στην Αθήνα εδώ και δεκαπέντε χρόνια."
-        },
-        "yearsExperience": 15,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-blackbird-tattoo-parlour-yannis-fotiadis/300/300",
-        "instagramHandle": "yannis.trad.ink",
-        "styleIds": [
-          "traditional",
-          "neo-traditional"
-        ],
-        "portfolio": [
-          {
-            "id": "yannis-fotiadis-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-blackbird-tattoo-parlour-yannis-fotiadis-1/640/800",
-            "styleId": "traditional",
-            "caption": "Swallow pair, chest",
-            "priceEUR": 130
-          },
-          {
-            "id": "yannis-fotiadis-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-blackbird-tattoo-parlour-yannis-fotiadis-2/640/800",
-            "styleId": "traditional",
-            "caption": "Panther head, thigh",
-            "priceEUR": 180
-          },
-          {
-            "id": "yannis-fotiadis-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-blackbird-tattoo-parlour-yannis-fotiadis-3/640/800",
-            "styleId": "neo-traditional",
-            "caption": "Snake and dagger, forearm",
-            "priceEUR": 210
-          }
-        ]
-      },
-      {
-        "id": "blackbird-tattoo-parlour-sofia-renta",
-        "slug": "sofia-renta",
-        "name": "Sofia Renta",
-        "studioSlug": "blackbird-tattoo-parlour",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Sofia designs custom script and fine-line combination pieces, working closely with clients on wording and placement before every session.",
-          "el": "Η Σοφία σχεδιάζει προσαρμοσμένη καλλιγραφία και συνδυαστικά έργα λεπτής γραμμής, συνεργαζόμενη στενά με τους πελάτες για τη διατύπωση και την τοποθέτηση πριν από κάθε συνεδρία."
-        },
-        "yearsExperience": 6,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-blackbird-tattoo-parlour-sofia-renta/300/300",
-        "instagramHandle": "sofia.renta.tattoo",
-        "styleIds": [
-          "lettering",
-          "fine-line"
-        ],
-        "portfolio": [
-          {
-            "id": "sofia-renta-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-blackbird-tattoo-parlour-sofia-renta-1/640/800",
-            "styleId": "lettering",
-            "caption": "Custom script, collarbone",
-            "priceEUR": 110
-          },
-          {
-            "id": "sofia-renta-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-blackbird-tattoo-parlour-sofia-renta-2/640/800",
-            "styleId": "fine-line",
-            "caption": "Fine-line wildflowers, ankle",
-            "priceEUR": 120
-          },
-          {
-            "id": "sofia-renta-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-blackbird-tattoo-parlour-sofia-renta-3/640/800",
-            "styleId": "lettering",
-            "caption": "Greek phrase, forearm",
-            "priceEUR": 140
-          }
-        ]
-      }
-    ],
-    "styleIds": [
-      "traditional",
-      "neo-traditional",
-      "lettering",
-      "fine-line"
-    ]
-  },
-  {
-    "id": "monastiraki-ink-house",
-    "slug": "monastiraki-ink-house",
-    "name": "Monastiraki Ink House",
-    "cityId": "athens",
-    "neighborhood": {
-      "en": "Monastiraki",
-      "el": "Μοναστηράκι"
-    },
-    "address": "8 Ifestou St, Monastiraki, Athens",
-    "description": {
-      "en": "A small studio above the flea market, popular with travellers for same-week bookings and a colour-forward watercolour specialism you won't find elsewhere in the centre.",
-      "el": "Ένα μικρό στούντιο πάνω από το παζάρι, δημοφιλές σε ταξιδιώτες για ραντεβού μέσα στην ίδια εβδομάδα και για την ειδίκευση σε έγχρωμη υδατογραφία που δεν θα βρείτε αλλού στο κέντρο."
-    },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-monastiraki-ink-house/1600/1000",
-    "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-monastiraki-ink-house-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-monastiraki-ink-house-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-monastiraki-ink-house-3/900/700"
-    ],
-    "rating": 4.6,
-    "reviewCount": 156,
+    "rating": 0,
+    "reviewCount": 0,
     "priceBand": "€",
-    "avgSessionEUR": 90,
-    "instagramHandle": "monastiraki.ink",
-    "phone": "+30 210 555 0193",
-    "hours": {
-      "en": "Daily, 10:00–21:00",
-      "el": "Καθημερινά, 10:00–21:00"
-    },
-    "promoted": false,
-    "artists": [
-      {
-        "id": "monastiraki-ink-house-petros-alexiou",
-        "slug": "petros-alexiou",
-        "name": "Petros Alexiou",
-        "studioSlug": "monastiraki-ink-house",
-        "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρυτής & Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Heavy blackwork and Polynesian-influenced patterning, built up over multiple sessions for full sleeves and back pieces.",
-          "el": "Έντονο blackwork και μοτίβα επηρεασμένα από την Πολυνησία, χτισμένα σε πολλαπλές συνεδρίες για ολόκληρα μανίκια και έργα πλάτης."
-        },
-        "yearsExperience": 10,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-monastiraki-ink-house-petros-alexiou/300/300",
-        "instagramHandle": "petros.blackwork",
-        "styleIds": [
-          "tribal",
-          "blackwork"
-        ],
-        "portfolio": [
-          {
-            "id": "petros-alexiou-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-monastiraki-ink-house-petros-alexiou-1/640/800",
-            "styleId": "tribal",
-            "caption": "Polynesian half sleeve",
-            "priceEUR": 250
-          },
-          {
-            "id": "petros-alexiou-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-monastiraki-ink-house-petros-alexiou-2/640/800",
-            "styleId": "blackwork",
-            "caption": "Solid blackout, calf",
-            "priceEUR": 160
-          },
-          {
-            "id": "petros-alexiou-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-monastiraki-ink-house-petros-alexiou-3/640/800",
-            "styleId": "tribal",
-            "caption": "Patterned band, bicep",
-            "priceEUR": 130
-          }
-        ]
-      },
-      {
-        "id": "monastiraki-ink-house-katerina-doukas",
-        "slug": "katerina-doukas",
-        "name": "Katerina Doukas",
-        "studioSlug": "monastiraki-ink-house",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Katerina blends watercolour bleed with fine linework — a soft, painterly style built for florals and small portraiture.",
-          "el": "Η Κατερίνα συνδυάζει την υδατογραφία με λεπτή γραμμή — ένα απαλό, ζωγραφικό στιλ φτιαγμένο για λουλούδια και μικρές πορτραίτες."
-        },
-        "yearsExperience": 5,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-monastiraki-ink-house-katerina-doukas/300/300",
-        "instagramHandle": "katerina.doukas.art",
-        "styleIds": [
-          "watercolor",
-          "fine-line"
-        ],
-        "portfolio": [
-          {
-            "id": "katerina-doukas-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-monastiraki-ink-house-katerina-doukas-1/640/800",
-            "styleId": "watercolor",
-            "caption": "Watercolour bloom, shoulder",
-            "priceEUR": 150
-          },
-          {
-            "id": "katerina-doukas-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-monastiraki-ink-house-katerina-doukas-2/640/800",
-            "styleId": "fine-line",
-            "caption": "Fine-line bird, wrist",
-            "priceEUR": 90
-          },
-          {
-            "id": "katerina-doukas-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-monastiraki-ink-house-katerina-doukas-3/640/800",
-            "styleId": "watercolor",
-            "caption": "Splash portrait, upper arm",
-            "priceEUR": 190
-          }
-        ]
-      }
-    ],
-    "styleIds": [
-      "tribal",
-      "blackwork",
-      "watercolor",
-      "fine-line"
-    ]
-  },
-  {
-    "id": "ceres-tattoo-studio",
-    "slug": "ceres-tattoo-studio",
-    "name": "Ceres Tattoo Studio",
-    "cityId": "athens",
-    "neighborhood": {
-      "en": "Kolonaki",
-      "el": "Κολωνάκι"
-    },
-    "address": "21 Skoufa St, Kolonaki, Athens",
-    "description": {
-      "en": "Appointment-only, portfolio-led, and booked out months in advance for hyperrealistic portrait and wildlife work. Private consultation room, no walk-ins.",
-      "el": "Μόνο με ραντεβού, με έμφαση στο portfolio, και με λίστα αναμονής μηνών για υπερρεαλιστικά πορτραίτα και έργα άγριας φύσης. Ιδιωτική αίθουσα συνεννόησης, χωρίς είσοδο χωρίς ραντεβού."
-    },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-ceres-tattoo-studio/1600/1000",
-    "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-ceres-tattoo-studio-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-ceres-tattoo-studio-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-ceres-tattoo-studio-3/900/700",
-      "https://picsum.photos/seed/needl-gallery-ceres-tattoo-studio-4/900/700"
-    ],
-    "rating": 4.9,
-    "reviewCount": 501,
-    "priceBand": "€€€",
-    "avgSessionEUR": 260,
-    "instagramHandle": "ceres.tattoo",
-    "phone": "+30 210 555 0121",
-    "hours": {
-      "en": "By appointment, Tue–Fri",
-      "el": "Με ραντεβού, Τρί–Παρ"
-    },
-    "promoted": true,
-    "artists": [
-      {
-        "id": "ceres-tattoo-studio-alexandros-vryzas",
-        "slug": "alexandros-vryzas",
-        "name": "Alexandros Vryzas",
-        "studioSlug": "ceres-tattoo-studio",
-        "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρυτής & Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Alexandros works exclusively in black-and-grey realism, best known for large-scale portrait and animal pieces that take four to six sessions.",
-          "el": "Ο Αλέξανδρος δουλεύει αποκλειστικά σε ρεαλισμό ασπρόμαυρο, γνωστός κυρίως για μεγάλης κλίμακας πορτραίτα και έργα με ζώα που απαιτούν τέσσερις έως έξι συνεδρίες."
-        },
-        "yearsExperience": 14,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-ceres-tattoo-studio-alexandros-vryzas/300/300",
-        "instagramHandle": "vryzas.realism",
-        "styleIds": [
-          "realism"
-        ],
-        "portfolio": [
-          {
-            "id": "alexandros-vryzas-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-ceres-tattoo-studio-alexandros-vryzas-1/640/800",
-            "styleId": "realism",
-            "caption": "Wolf portrait, back panel",
-            "priceEUR": 480
-          },
-          {
-            "id": "alexandros-vryzas-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-ceres-tattoo-studio-alexandros-vryzas-2/640/800",
-            "styleId": "realism",
-            "caption": "Grandfather portrait, forearm",
-            "priceEUR": 340
-          },
-          {
-            "id": "alexandros-vryzas-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-ceres-tattoo-studio-alexandros-vryzas-3/640/800",
-            "styleId": "realism",
-            "caption": "Lion study, thigh",
-            "priceEUR": 420
-          }
-        ]
-      },
-      {
-        "id": "ceres-tattoo-studio-maria-kontou",
-        "slug": "maria-kontou",
-        "name": "Maria Kontou",
-        "studioSlug": "ceres-tattoo-studio",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Maria pairs realist rendering with neo-traditional colour palettes, often finishing pieces with a soft painterly background.",
-          "el": "Η Μαρία συνδυάζει τη ρεαλιστική απόδοση με νεο-παραδοσιακές παλέτες χρωμάτων, ολοκληρώνοντας συχνά τα έργα με απαλό ζωγραφικό φόντο."
-        },
-        "yearsExperience": 9,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-ceres-tattoo-studio-maria-kontou/300/300",
-        "instagramHandle": "maria.kontou.art",
-        "styleIds": [
-          "realism",
-          "neo-traditional"
-        ],
-        "portfolio": [
-          {
-            "id": "maria-kontou-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-ceres-tattoo-studio-maria-kontou-1/640/800",
-            "styleId": "realism",
-            "caption": "Rose and hand, forearm",
-            "priceEUR": 300
-          },
-          {
-            "id": "maria-kontou-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-ceres-tattoo-studio-maria-kontou-2/640/800",
-            "styleId": "neo-traditional",
-            "caption": "Owl portrait, shoulder",
-            "priceEUR": 260
-          },
-          {
-            "id": "maria-kontou-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-ceres-tattoo-studio-maria-kontou-3/640/800",
-            "styleId": "realism",
-            "caption": "Eye study, ribs",
-            "priceEUR": 220
-          }
-        ]
-      },
-      {
-        "id": "ceres-tattoo-studio-thodoris-balis",
-        "slug": "thodoris-balis",
-        "name": "Thodoris Balis",
-        "studioSlug": "ceres-tattoo-studio",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Thodoris handles Ceres's blackwork commissions — dense dotwork shading and negative-space compositions.",
-          "el": "Ο Θοδωρής αναλαμβάνει τις παραγγελίες blackwork του Ceres — πυκνή σκίαση με κουκκίδες και συνθέσεις αρνητικού χώρου."
-        },
-        "yearsExperience": 7,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-ceres-tattoo-studio-thodoris-balis/300/300",
-        "instagramHandle": "balis.dotwork",
-        "styleIds": [
-          "blackwork",
-          "dotwork"
-        ],
-        "portfolio": [
-          {
-            "id": "thodoris-balis-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-ceres-tattoo-studio-thodoris-balis-1/640/800",
-            "styleId": "dotwork",
-            "caption": "Negative-space geometric, back",
-            "priceEUR": 310
-          },
-          {
-            "id": "thodoris-balis-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-ceres-tattoo-studio-thodoris-balis-2/640/800",
-            "styleId": "blackwork",
-            "caption": "Ornamental sleeve panel",
-            "priceEUR": 270
-          }
-        ]
-      }
-    ],
+    "avgSessionEUR": 0,
     "styleIds": [
       "realism",
-      "neo-traditional",
-      "blackwork",
-      "dotwork"
-    ]
-  },
-  {
-    "id": "needle-and-thread-collective",
-    "slug": "needle-and-thread-collective",
-    "name": "Needle & Thread Collective",
-    "cityId": "athens",
-    "neighborhood": {
-      "en": "Exarchia",
-      "el": "Εξάρχεια"
-    },
-    "address": "33 Themistokleous St, Exarchia, Athens",
-    "description": {
-      "en": "A collectively run space above a bookshop, favouring hand-poked dotwork and precise geometric pattern work over machine shading.",
-      "el": "Ένας συλλογικά διαχειριζόμενος χώρος πάνω από ένα βιβλιοπωλείο, που προτιμά τη χειροποίητη τεχνική κουκκίδων και ακριβή γεωμετρικά μοτίβα αντί για μηχανική σκίαση."
-    },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-needle-and-thread-collective/1600/1000",
-    "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-needle-and-thread-collective-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-needle-and-thread-collective-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-needle-and-thread-collective-3/900/700"
-    ],
-    "rating": 4.7,
-    "reviewCount": 203,
-    "priceBand": "€€",
-    "avgSessionEUR": 130,
-    "instagramHandle": "needlethread.exarchia",
-    "phone": "+30 210 555 0165",
-    "hours": {
-      "en": "Wed–Sun, 13:00–20:00",
-      "el": "Τετ–Κυρ, 13:00–20:00"
-    },
-    "promoted": false,
-    "artists": [
-      {
-        "id": "needle-and-thread-collective-iris-chatzi",
-        "slug": "iris-chatzi",
-        "name": "Iris Chatzi",
-        "studioSlug": "needle-and-thread-collective",
-        "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρύτρια & Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Iris hand-pokes every piece, building dense geometric patterns line by line without a machine.",
-          "el": "Η Ίριδα δουλεύει κάθε έργο χειροποίητα, χτίζοντας πυκνά γεωμετρικά μοτίβα γραμμή προς γραμμή χωρίς μηχανή."
-        },
-        "yearsExperience": 6,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-needle-and-thread-collective-iris-chatzi/300/300",
-        "instagramHandle": "iris.handpoke",
-        "styleIds": [
-          "geometric",
-          "dotwork"
-        ],
-        "portfolio": [
-          {
-            "id": "iris-chatzi-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-needle-and-thread-collective-iris-chatzi-1/640/800",
-            "styleId": "dotwork",
-            "caption": "Hand-poked mandala, spine",
-            "priceEUR": 150
-          },
-          {
-            "id": "iris-chatzi-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-needle-and-thread-collective-iris-chatzi-2/640/800",
-            "styleId": "geometric",
-            "caption": "Linework pattern, forearm",
-            "priceEUR": 120
-          },
-          {
-            "id": "iris-chatzi-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-needle-and-thread-collective-iris-chatzi-3/640/800",
-            "styleId": "dotwork",
-            "caption": "Dot-shaded moon phases",
-            "priceEUR": 100
-          }
-        ]
-      },
-      {
-        "id": "needle-and-thread-collective-vasilis-roumelis",
-        "slug": "vasilis-roumelis",
-        "name": "Vasilis Roumelis",
-        "studioSlug": "needle-and-thread-collective",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Vasilis keeps a rotating flash sheet of traditional designs, redrawn weekly and tattooed same-day.",
-          "el": "Ο Βασίλης διατηρεί ένα εναλλασσόμενο φύλλο σχεδίων παραδοσιακού στιλ, που ανανεώνεται κάθε εβδομάδα και τατουάζεται την ίδια μέρα."
-        },
-        "yearsExperience": 8,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-needle-and-thread-collective-vasilis-roumelis/300/300",
-        "instagramHandle": "roumelis.flash",
-        "styleIds": [
-          "traditional"
-        ],
-        "portfolio": [
-          {
-            "id": "vasilis-roumelis-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-needle-and-thread-collective-vasilis-roumelis-1/640/800",
-            "styleId": "traditional",
-            "caption": "Flash sheet dagger",
-            "priceEUR": 100
-          },
-          {
-            "id": "vasilis-roumelis-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-needle-and-thread-collective-vasilis-roumelis-2/640/800",
-            "styleId": "traditional",
-            "caption": "Sailor Jerry-style pin-up",
-            "priceEUR": 140
-          }
-        ]
-      }
-    ],
-    "styleIds": [
-      "geometric",
-      "dotwork",
-      "traditional"
-    ]
-  },
-  {
-    "id": "nikis-ave-tattoo",
-    "slug": "nikis-ave-tattoo",
-    "name": "Nikis Ave Tattoo",
-    "cityId": "thessaloniki",
-    "neighborhood": {
-      "en": "Nikis Avenue",
-      "el": "Λεωφόρος Νίκης"
-    },
-    "address": "58 Nikis Ave, Thessaloniki",
-    "description": {
-      "en": "A waterfront studio with a view of the Thermaic Gulf, known city-wide for its Japanese-trained resident and a strict one-project-at-a-time booking system.",
-      "el": "Ένα παραθαλάσσιο στούντιο με θέα στον Θερμαϊκό Κόλπο, γνωστό σε όλη την πόλη για την καλλιτέχνιδά του με ιαπωνική εκπαίδευση και για το αυστηρό σύστημα ραντεβού ένα έργο τη φορά."
-    },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-nikis-ave-tattoo/1600/1000",
-    "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-nikis-ave-tattoo-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-nikis-ave-tattoo-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-nikis-ave-tattoo-3/900/700",
-      "https://picsum.photos/seed/needl-gallery-nikis-ave-tattoo-4/900/700"
-    ],
-    "rating": 4.8,
-    "reviewCount": 334,
-    "priceBand": "€€",
-    "avgSessionEUR": 160,
-    "instagramHandle": "nikisave.tattoo",
-    "phone": "+30 2310 555 210",
-    "hours": {
-      "en": "Tue–Sat, 11:00–19:00",
-      "el": "Τρί–Σάβ, 11:00–19:00"
-    },
-    "promoted": true,
-    "artists": [
-      {
-        "id": "nikis-ave-tattoo-anna-papadaki",
-        "slug": "anna-papadaki",
-        "name": "Anna Papadaki",
-        "studioSlug": "nikis-ave-tattoo",
-        "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρύτρια & Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Anna spent three years in Tokyo before opening Nikis Ave, and plans every Irezumi piece as a full-body composition from day one.",
-          "el": "Η Άννα πέρασε τρία χρόνια στο Τόκιο πριν ανοίξει το Nikis Ave, και σχεδιάζει κάθε έργο Irezumi ως σύνθεση ολόκληρου σώματος από την πρώτη μέρα."
-        },
-        "yearsExperience": 12,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-nikis-ave-tattoo-anna-papadaki/300/300",
-        "instagramHandle": "anna.irezumi",
-        "styleIds": [
-          "japanese"
-        ],
-        "portfolio": [
-          {
-            "id": "anna-papadaki-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-nikis-ave-tattoo-anna-papadaki-1/640/800",
-            "styleId": "japanese",
-            "caption": "Dragon back piece (session 3)",
-            "priceEUR": 450
-          },
-          {
-            "id": "anna-papadaki-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-nikis-ave-tattoo-anna-papadaki-2/640/800",
-            "styleId": "japanese",
-            "caption": "Hannya mask, ribs",
-            "priceEUR": 320
-          },
-          {
-            "id": "anna-papadaki-piece-3",
-            "imageUrl": "https://picsum.photos/seed/needl-nikis-ave-tattoo-anna-papadaki-3/640/800",
-            "styleId": "japanese",
-            "caption": "Cherry blossom sleeve",
-            "priceEUR": 380
-          }
-        ]
-      },
-      {
-        "id": "nikis-ave-tattoo-kostas-liolios",
-        "slug": "kostas-liolios",
-        "name": "Kostas Liolios",
-        "studioSlug": "nikis-ave-tattoo",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Kostas specialises in heavy blackwork sleeves, often combining freehand pattern work with pre-drawn stencils.",
-          "el": "Ο Κώστας ειδικεύεται σε έντονα blackwork μανίκια, συνδυάζοντας συχνά ελεύθερο σχέδιο με έτοιμα στένσιλ."
-        },
-        "yearsExperience": 9,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-nikis-ave-tattoo-kostas-liolios/300/300",
-        "instagramHandle": "liolios.black",
-        "styleIds": [
-          "blackwork"
-        ],
-        "portfolio": [
-          {
-            "id": "kostas-liolios-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-nikis-ave-tattoo-kostas-liolios-1/640/800",
-            "styleId": "blackwork",
-            "caption": "Full sleeve blackout",
-            "priceEUR": 300
-          },
-          {
-            "id": "kostas-liolios-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-nikis-ave-tattoo-kostas-liolios-2/640/800",
-            "styleId": "blackwork",
-            "caption": "Ornamental chestpiece",
-            "priceEUR": 260
-          }
-        ]
-      },
-      {
-        "id": "nikis-ave-tattoo-eva-stamou",
-        "slug": "eva-stamou",
-        "name": "Eva Stamou",
-        "studioSlug": "nikis-ave-tattoo",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Eva's fine-line botanical and object studies are drawn freehand directly onto skin before every session.",
-          "el": "Οι λεπτές γραμμές της Εύας με φυτικά και αντικείμενα σχεδιάζονται ελεύθερα απευθείας στο δέρμα πριν από κάθε συνεδρία."
-        },
-        "yearsExperience": 5,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-nikis-ave-tattoo-eva-stamou/300/300",
-        "instagramHandle": "eva.stamou.tattoo",
-        "styleIds": [
-          "fine-line"
-        ],
-        "portfolio": [
-          {
-            "id": "eva-stamou-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-nikis-ave-tattoo-eva-stamou-1/640/800",
-            "styleId": "fine-line",
-            "caption": "Freehand fig branch, ribs",
-            "priceEUR": 150
-          },
-          {
-            "id": "eva-stamou-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-nikis-ave-tattoo-eva-stamou-2/640/800",
-            "styleId": "fine-line",
-            "caption": "Line-art seashell, ankle",
-            "priceEUR": 100
-          }
-        ]
-      }
-    ],
-    "styleIds": [
       "japanese",
-      "blackwork",
-      "fine-line"
-    ]
-  },
-  {
-    "id": "ladadika-ink",
-    "slug": "ladadika-ink",
-    "name": "Ladadika Ink",
-    "cityId": "thessaloniki",
-    "neighborhood": {
-      "en": "Ladadika",
-      "el": "Λαδάδικα"
-    },
-    "address": "14 Katouni St, Ladadika, Thessaloniki",
-    "description": {
-      "en": "A friendly, budget-conscious shop in the old warehouse district, best for first tattoos and small custom lettering pieces.",
-      "el": "Ένα φιλικό μαγαζί με προσιτές τιμές στην παλιά συνοικία των αποθηκών, ιδανικό για πρώτα τατουάζ και μικρά προσαρμοσμένα έργα καλλιγραφίας."
-    },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-ladadika-ink/1600/1000",
-    "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-ladadika-ink-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-ladadika-ink-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-ladadika-ink-3/900/700"
-    ],
-    "rating": 4.5,
-    "reviewCount": 98,
-    "priceBand": "€",
-    "avgSessionEUR": 85,
-    "instagramHandle": "ladadika.ink",
-    "phone": "+30 2310 555 244",
-    "hours": {
-      "en": "Mon–Sat, 12:00–21:00",
-      "el": "Δευ–Σάβ, 12:00–21:00"
-    },
-    "promoted": false,
-    "artists": [
-      {
-        "id": "ladadika-ink-giorgos-ntinas",
-        "slug": "giorgos-ntinas",
-        "name": "Giorgos Ntinas",
-        "studioSlug": "ladadika-ink",
-        "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρυτής & Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Giorgos covers everything from classic flash to custom script, and is Ladadika's go-to for first-time clients.",
-          "el": "Ο Γιώργος καλύπτει τα πάντα, από κλασικά έτοιμα σχέδια μέχρι προσαρμοσμένη καλλιγραφία, και είναι η πρώτη επιλογή του Ladadika για πελάτες που έρχονται για πρώτη φορά."
-        },
-        "yearsExperience": 7,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-ladadika-ink-giorgos-ntinas/300/300",
-        "instagramHandle": "ntinas.tattoo",
-        "styleIds": [
-          "traditional",
-          "lettering"
-        ],
-        "portfolio": [
-          {
-            "id": "giorgos-ntinas-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-ladadika-ink-giorgos-ntinas-1/640/800",
-            "styleId": "lettering",
-            "caption": "Custom name script, forearm",
-            "priceEUR": 80
-          },
-          {
-            "id": "giorgos-ntinas-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-ladadika-ink-giorgos-ntinas-2/640/800",
-            "styleId": "traditional",
-            "caption": "Small swallow, wrist",
-            "priceEUR": 70
-          }
-        ]
-      },
-      {
-        "id": "ladadika-ink-marina-efthymiou",
-        "slug": "marina-efthymiou",
-        "name": "Marina Efthymiou",
-        "studioSlug": "ladadika-ink",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Marina's watercolour work leans abstract — colour-field washes behind a simple linear subject.",
-          "el": "Η δουλειά της Μαρίνας με υδατογραφία τείνει προς το αφηρημένο — χρωματιστές πινελιές πίσω από ένα απλό γραμμικό θέμα."
-        },
-        "yearsExperience": 4,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-ladadika-ink-marina-efthymiou/300/300",
-        "instagramHandle": "marina.efth.art",
-        "styleIds": [
-          "watercolor"
-        ],
-        "portfolio": [
-          {
-            "id": "marina-efthymiou-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-ladadika-ink-marina-efthymiou-1/640/800",
-            "styleId": "watercolor",
-            "caption": "Abstract wash, shoulder blade",
-            "priceEUR": 130
-          },
-          {
-            "id": "marina-efthymiou-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-ladadika-ink-marina-efthymiou-2/640/800",
-            "styleId": "watercolor",
-            "caption": "Colour-field feather",
-            "priceEUR": 100
-          }
-        ]
-      }
-    ],
-    "styleIds": [
-      "traditional",
-      "lettering",
-      "watercolor"
-    ]
-  },
-  {
-    "id": "salt-and-iron-tattoo",
-    "slug": "salt-and-iron-tattoo",
-    "name": "Salt & Iron Tattoo",
-    "cityId": "thessaloniki",
-    "neighborhood": {
-      "en": "Ano Poli",
-      "el": "Άνω Πόλη"
-    },
-    "address": "6 Athinas St, Ano Poli, Thessaloniki",
-    "description": {
-      "en": "Set in the upper town's old quarter, Salt & Iron pairs precise geometric linework with heavier blackwork, all done by appointment in a converted stone house.",
-      "el": "Βρίσκεται στην παλιά συνοικία της Άνω Πόλης, το Salt & Iron συνδυάζει ακριβή γεωμετρική γραμμή με πιο έντονο blackwork, όλα με ραντεβού σε ένα διαμορφωμένο πέτρινο σπίτι."
-    },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-salt-and-iron-tattoo/1600/1000",
-    "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-salt-and-iron-tattoo-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-salt-and-iron-tattoo-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-salt-and-iron-tattoo-3/900/700"
-    ],
-    "rating": 4.7,
-    "reviewCount": 177,
-    "priceBand": "€€",
-    "avgSessionEUR": 140,
-    "instagramHandle": "saltiron.tattoo",
-    "phone": "+30 2310 555 267",
-    "hours": {
-      "en": "Thu–Mon, 12:00–19:00",
-      "el": "Πέμ–Δευ, 12:00–19:00"
-    },
-    "promoted": false,
-    "artists": [
-      {
-        "id": "salt-and-iron-tattoo-nasos-kyriakou",
-        "slug": "nasos-kyriakou",
-        "name": "Nasos Kyriakou",
-        "studioSlug": "salt-and-iron-tattoo",
-        "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρυτής & Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Nasos designs symmetrical geometric pieces using compass and ruler before every stencil, then finishes with solid blackwork fills.",
-          "el": "Ο Νάσος σχεδιάζει συμμετρικά γεωμετρικά έργα με διαβήτη και χάρακα πριν από κάθε στένσιλ, και ολοκληρώνει με συμπαγές γέμισμα blackwork."
-        },
-        "yearsExperience": 10,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-salt-and-iron-tattoo-nasos-kyriakou/300/300",
-        "instagramHandle": "nasos.geometry",
-        "styleIds": [
-          "geometric",
-          "blackwork"
-        ],
-        "portfolio": [
-          {
-            "id": "nasos-kyriakou-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-salt-and-iron-tattoo-nasos-kyriakou-1/640/800",
-            "styleId": "geometric",
-            "caption": "Symmetrical mandala, back",
-            "priceEUR": 220
-          },
-          {
-            "id": "nasos-kyriakou-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-salt-and-iron-tattoo-nasos-kyriakou-2/640/800",
-            "styleId": "blackwork",
-            "caption": "Geometric cuff, forearm",
-            "priceEUR": 150
-          }
-        ]
-      },
-      {
-        "id": "salt-and-iron-tattoo-despina-rallis",
-        "slug": "despina-rallis",
-        "name": "Despina Rallis",
-        "studioSlug": "salt-and-iron-tattoo",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Despina's dotwork shading softens Salt & Iron's geometric house style into something closer to fine art.",
-          "el": "Η σκίαση με κουκκίδες της Δέσποινας απαλύνει το γεωμετρικό στιλ του Salt & Iron, φέρνοντάς το πιο κοντά στην καλλιτεχνική τέχνη."
-        },
-        "yearsExperience": 6,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-salt-and-iron-tattoo-despina-rallis/300/300",
-        "instagramHandle": "despina.dots",
-        "styleIds": [
-          "dotwork",
-          "fine-line"
-        ],
-        "portfolio": [
-          {
-            "id": "despina-rallis-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-salt-and-iron-tattoo-despina-rallis-1/640/800",
-            "styleId": "dotwork",
-            "caption": "Shaded lunar phases, spine",
-            "priceEUR": 160
-          },
-          {
-            "id": "despina-rallis-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-salt-and-iron-tattoo-despina-rallis-2/640/800",
-            "styleId": "fine-line",
-            "caption": "Botanical line study, ankle",
-            "priceEUR": 110
-          }
-        ]
-      }
-    ],
-    "styleIds": [
       "geometric",
       "blackwork",
       "dotwork",
-      "fine-line"
-    ]
-  },
-  {
-    "id": "old-port-tattoo-co",
-    "slug": "old-port-tattoo-co",
-    "name": "Old Port Tattoo Co.",
-    "cityId": "patras",
-    "neighborhood": {
-      "en": "Old Port",
-      "el": "Παλιό Λιμάνι"
-    },
-    "address": "3 Iroon Polytechniou, Patras",
-    "description": {
-      "en": "A no-frills shop near Patras Castle with two decades of history — traditional flash on the walls, realism portraits by appointment.",
-      "el": "Ένα απλό μαγαζί κοντά στο Κάστρο της Πάτρας με είκοσι χρόνια ιστορίας — παραδοσιακά σχέδια στους τοίχους, ρεαλιστικά πορτραίτα με ραντεβού."
-    },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-old-port-tattoo-co/1600/1000",
-    "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-old-port-tattoo-co-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-old-port-tattoo-co-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-old-port-tattoo-co-3/900/700"
+      "new-school",
+      "tribal"
     ],
-    "rating": 4.6,
-    "reviewCount": 142,
-    "priceBand": "€",
-    "avgSessionEUR": 95,
-    "instagramHandle": "oldport.tattoo",
-    "phone": "+30 2610 555 118",
+    "instagramHandle": "doctorpeppertattoo",
+    "phone": "+30 210 5622544",
     "hours": {
-      "en": "Tue–Sat, 11:00–20:00",
-      "el": "Τρί–Σάβ, 11:00–20:00"
+      "en": "Mon–Fri 12:00–20:00 · Sat 11:00–16:00 · Sun closed",
+      "el": "Δευ–Παρ 12:00–20:00 · Σάβ 11:00–16:00 · Κυρ κλειστά"
     },
     "promoted": false,
     "artists": [
       {
-        "id": "old-port-tattoo-co-michalis-grigoriou",
-        "slug": "michalis-grigoriou",
-        "name": "Michalis Grigoriou",
-        "studioSlug": "old-port-tattoo-co",
+        "id": "dr-pepper-doctor-pepper",
+        "slug": "doctor-pepper",
+        "name": "Doctor Pepper",
+        "studioSlug": "dr-pepper-tattoo",
         "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρυτής & Καλλιτέχνης"
+          "en": "Giannis Piperakis · Founder",
+          "el": "Γιάννης Πιπεράκης · Ιδρυτής"
         },
         "bio": {
-          "en": "Michalis opened Old Port in 2004 and still tattoos every design freehand from the shop's original flash books.",
-          "el": "Ο Μιχάλης άνοιξε το Old Port το 2004 και ακόμα τατουάζει κάθε σχέδιο ελεύθερα από τα αρχικά βιβλία σχεδίων του μαγαζιού."
+          "en": "Giannis Piperakis founded Dr. Pepper in 2012. His background in graphic arts and photography informs a practice centred on black-and-grey realism, developed after studying tattooing in Budapest in 2000.",
+          "el": "Ο Γιάννης Πιπεράκης ίδρυσε το Dr. Pepper το 2012. Με υπόβαθρο στις γραφικές τέχνες και τη φωτογραφία, εστιάζει στον ασπρόμαυρο ρεαλισμό. Η πορεία του στο τατουάζ ξεκίνησε με σπουδές στη Βουδαπέστη το 2000."
         },
-        "yearsExperience": 20,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-old-port-tattoo-co-michalis-grigoriou/300/300",
-        "instagramHandle": "michalis.oldport",
-        "styleIds": [
-          "traditional",
-          "tribal"
-        ],
-        "portfolio": [
-          {
-            "id": "michalis-grigoriou-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-old-port-tattoo-co-michalis-grigoriou-1/640/800",
-            "styleId": "traditional",
-            "caption": "Anchor and rope, calf",
-            "priceEUR": 90
-          },
-          {
-            "id": "michalis-grigoriou-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-old-port-tattoo-co-michalis-grigoriou-2/640/800",
-            "styleId": "tribal",
-            "caption": "Tribal band, upper arm",
-            "priceEUR": 110
-          }
-        ]
-      },
-      {
-        "id": "old-port-tattoo-co-foteini-anagnou",
-        "slug": "foteini-anagnou",
-        "name": "Foteini Anagnou",
-        "studioSlug": "old-port-tattoo-co",
-        "role": {
-          "en": "Resident Artist",
-          "el": "Καλλιτέχνις"
-        },
-        "bio": {
-          "en": "Foteini brings realism to Old Port's mostly traditional roster, specialising in pet portraits and small memorial pieces.",
-          "el": "Η Φωτεινή φέρνει τον ρεαλισμό στην κυρίως παραδοσιακή ομάδα του Old Port, ειδικευόμενη σε πορτραίτα κατοικίδιων και μικρά αναμνηστικά έργα."
-        },
-        "yearsExperience": 6,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-old-port-tattoo-co-foteini-anagnou/300/300",
-        "instagramHandle": "foteini.realism",
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-006.webp",
+        "instagramHandle": "giannis_doctorpeppertattoo",
         "styleIds": [
           "realism"
         ],
+        "discipline": "tattoo",
         "portfolio": [
           {
-            "id": "foteini-anagnou-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-old-port-tattoo-co-foteini-anagnou-1/640/800",
-            "styleId": "realism",
-            "caption": "Dog portrait, forearm",
-            "priceEUR": 180
+            "id": "dr-pepper-doctor-pepper-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-007.webp",
+            "kind": "tattoo",
+            "caption": "Doctor Pepper · Tattoo 01"
           },
           {
-            "id": "foteini-anagnou-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-old-port-tattoo-co-foteini-anagnou-2/640/800",
-            "styleId": "realism",
-            "caption": "Memorial hands, upper arm",
-            "priceEUR": 210
-          }
-        ]
-      }
-    ],
-    "styleIds": [
-      "traditional",
-      "tribal",
-      "realism"
-    ]
-  },
-  {
-    "id": "minotaur-ink",
-    "slug": "minotaur-ink",
-    "name": "Minotaur Ink",
-    "cityId": "heraklion",
-    "neighborhood": {
-      "en": "Old Harbour",
-      "el": "Παλιό Λιμάνι"
-    },
-    "address": "9 Sofokli Venizelou, Heraklion",
-    "description": {
-      "en": "Steps from the Venetian harbour, Minotaur splits its week between heavy blackwork commissions and a growing Japanese-style portfolio.",
-      "el": "Λίγα βήματα από το ενετικό λιμάνι, το Minotaur μοιράζει την εβδομάδα του ανάμεσα σε έντονες παραγγελίες blackwork και ένα αναπτυσσόμενο portfolio ιαπωνικού στιλ."
-    },
-    "heroImageUrl": "https://picsum.photos/seed/needl-hero-minotaur-ink/1600/1000",
-    "galleryImages": [
-      "https://picsum.photos/seed/needl-gallery-minotaur-ink-1/900/700",
-      "https://picsum.photos/seed/needl-gallery-minotaur-ink-2/900/700",
-      "https://picsum.photos/seed/needl-gallery-minotaur-ink-3/900/700",
-      "https://picsum.photos/seed/needl-gallery-minotaur-ink-4/900/700"
-    ],
-    "rating": 4.8,
-    "reviewCount": 221,
-    "priceBand": "€€",
-    "avgSessionEUR": 150,
-    "instagramHandle": "minotaur.ink",
-    "phone": "+30 2810 555 302",
-    "hours": {
-      "en": "Mon–Sat, 11:00–19:00",
-      "el": "Δευ–Σάβ, 11:00–19:00"
-    },
-    "promoted": false,
-    "artists": [
-      {
-        "id": "minotaur-ink-stelios-kontaratos",
-        "slug": "stelios-kontaratos",
-        "name": "Stelios Kontaratos",
-        "studioSlug": "minotaur-ink",
-        "role": {
-          "en": "Founder & Artist",
-          "el": "Ιδρυτής & Καλλιτέχνης"
-        },
-        "bio": {
-          "en": "Stelios draws on Minoan motifs for his geometric blackwork, reworking labyrinth and bull-horn imagery into modern pattern pieces.",
-          "el": "Ο Στέλιος αντλεί από μινωικά μοτίβα για το γεωμετρικό του blackwork, μετατρέποντας εικόνες λαβυρίνθου και ταυροκεφαλής σε σύγχρονα σχέδια."
-        },
-        "yearsExperience": 9,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-minotaur-ink-stelios-kontaratos/300/300",
-        "instagramHandle": "stelios.minotaur",
-        "styleIds": [
-          "blackwork",
-          "geometric"
-        ],
-        "portfolio": [
-          {
-            "id": "stelios-kontaratos-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-minotaur-ink-stelios-kontaratos-1/640/800",
-            "styleId": "geometric",
-            "caption": "Labyrinth pattern, back",
-            "priceEUR": 240
+            "id": "dr-pepper-doctor-pepper-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-008.webp",
+            "kind": "tattoo",
+            "caption": "Doctor Pepper · Tattoo 02"
           },
           {
-            "id": "stelios-kontaratos-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-minotaur-ink-stelios-kontaratos-2/640/800",
-            "styleId": "blackwork",
-            "caption": "Bull-horn motif, forearm",
-            "priceEUR": 170
+            "id": "dr-pepper-doctor-pepper-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-009.webp",
+            "kind": "tattoo",
+            "caption": "Doctor Pepper · Tattoo 03"
+          },
+          {
+            "id": "dr-pepper-doctor-pepper-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-010.webp",
+            "kind": "tattoo",
+            "caption": "Doctor Pepper · Tattoo 04"
+          },
+          {
+            "id": "dr-pepper-doctor-pepper-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-011.webp",
+            "kind": "tattoo",
+            "caption": "Doctor Pepper · Tattoo 05"
+          },
+          {
+            "id": "dr-pepper-doctor-pepper-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-012.webp",
+            "kind": "tattoo",
+            "caption": "Doctor Pepper · Tattoo 06"
           }
         ]
       },
       {
-        "id": "minotaur-ink-athina-vardaki",
-        "slug": "athina-vardaki",
-        "name": "Athina Vardaki",
-        "studioSlug": "minotaur-ink",
+        "id": "dr-pepper-tass",
+        "slug": "tass",
+        "name": "Tass",
+        "studioSlug": "dr-pepper-tattoo",
         "role": {
-          "en": "Resident Artist",
+          "en": "Tasos Dimopoulos",
+          "el": "Τάσος Δημόπουλος"
+        },
+        "bio": {
+          "en": "Tasos Dimopoulos works with dark realism and Japanese tattooing. His studio biography describes a long-standing dedication to the craft, with convention awards across Japanese and black-and-grey work.",
+          "el": "Ο Τάσος Δημόπουλος ασχολείται με τον σκοτεινό ρεαλισμό και το ιαπωνικό τατουάζ. Το βιογραφικό του στο στούντιο αναφέρει διακρίσεις σε conventions για ιαπωνικά και ασπρόμαυρα έργα."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-013.webp",
+        "instagramHandle": "tass_92",
+        "styleIds": [
+          "realism",
+          "japanese"
+        ],
+        "discipline": "tattoo",
+        "portfolio": [
+          {
+            "id": "dr-pepper-tass-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-014.webp",
+            "kind": "tattoo",
+            "caption": "Tass · Tattoo 01"
+          },
+          {
+            "id": "dr-pepper-tass-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-015.webp",
+            "kind": "tattoo",
+            "caption": "Tass · Tattoo 02"
+          },
+          {
+            "id": "dr-pepper-tass-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-016.webp",
+            "kind": "tattoo",
+            "caption": "Tass · Tattoo 03"
+          },
+          {
+            "id": "dr-pepper-tass-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-017.webp",
+            "kind": "tattoo",
+            "caption": "Tass · Tattoo 04"
+          },
+          {
+            "id": "dr-pepper-tass-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-018.webp",
+            "kind": "tattoo",
+            "caption": "Tass · Tattoo 05"
+          },
+          {
+            "id": "dr-pepper-tass-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-019.webp",
+            "kind": "tattoo",
+            "caption": "Tass · Tattoo 06"
+          }
+        ]
+      },
+      {
+        "id": "dr-pepper-frank",
+        "slug": "frank",
+        "name": "Frank",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Dr. Pepper team",
+          "el": "Ομάδα Dr. Pepper"
+        },
+        "bio": {
+          "en": "Originally from Padova, Italy, Frank focuses on black-and-grey realism with geometric elements. His work combines close attention to detail with a strong interest in drawing and composition.",
+          "el": "Με καταγωγή από την Πάντοβα της Ιταλίας, ο Frank εστιάζει στον ασπρόμαυρο ρεαλισμό με γεωμετρικά στοιχεία. Η δουλειά του συνδυάζει προσοχή στη λεπτομέρεια με ενδιαφέρον για το σχέδιο και τη σύνθεση."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-020.webp",
+        "instagramHandle": "frank_drpeppertattoo",
+        "styleIds": [
+          "realism",
+          "geometric"
+        ],
+        "discipline": "tattoo",
+        "portfolio": [
+          {
+            "id": "dr-pepper-frank-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-021.webp",
+            "kind": "tattoo",
+            "caption": "Frank · Tattoo 01"
+          },
+          {
+            "id": "dr-pepper-frank-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-022.webp",
+            "kind": "tattoo",
+            "caption": "Frank · Tattoo 02"
+          },
+          {
+            "id": "dr-pepper-frank-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-023.webp",
+            "kind": "tattoo",
+            "caption": "Frank · Tattoo 03"
+          },
+          {
+            "id": "dr-pepper-frank-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-024.webp",
+            "kind": "tattoo",
+            "caption": "Frank · Tattoo 04"
+          },
+          {
+            "id": "dr-pepper-frank-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-025.webp",
+            "kind": "tattoo",
+            "caption": "Frank · Tattoo 05"
+          },
+          {
+            "id": "dr-pepper-frank-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-026.webp",
+            "kind": "tattoo",
+            "caption": "Frank · Tattoo 06"
+          }
+        ]
+      },
+      {
+        "id": "dr-pepper-jerry",
+        "slug": "jerry",
+        "name": "Jerry",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Gerasimos",
+          "el": "Γεράσιμος"
+        },
+        "bio": {
+          "en": "Gerasimos brings a painter’s approach to realism, working in both black-and-grey and colour. Earthy tones and brushstroke-inspired techniques connect his tattoos to his wider painting practice.",
+          "el": "Ο Γεράσιμος προσεγγίζει τον ρεαλισμό μέσα από τη ζωγραφική, δουλεύοντας σε ασπρόμαυρο και χρώμα. Οι γήινες αποχρώσεις και οι τεχνικές που θυμίζουν πινελιές συνδέουν τα τατουάζ του με τη ζωγραφική του."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-027.webp",
+        "instagramHandle": "gerasimos_andriotis",
+        "styleIds": [
+          "realism"
+        ],
+        "discipline": "tattoo",
+        "portfolio": [
+          {
+            "id": "dr-pepper-jerry-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-028.webp",
+            "kind": "tattoo",
+            "caption": "Jerry · Tattoo 01"
+          },
+          {
+            "id": "dr-pepper-jerry-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-029.webp",
+            "kind": "tattoo",
+            "caption": "Jerry · Tattoo 02"
+          },
+          {
+            "id": "dr-pepper-jerry-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-030.webp",
+            "kind": "tattoo",
+            "caption": "Jerry · Tattoo 03"
+          },
+          {
+            "id": "dr-pepper-jerry-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-031.webp",
+            "kind": "tattoo",
+            "caption": "Jerry · Tattoo 04"
+          },
+          {
+            "id": "dr-pepper-jerry-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-032.webp",
+            "kind": "tattoo",
+            "caption": "Jerry · Tattoo 05"
+          },
+          {
+            "id": "dr-pepper-jerry-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-033.webp",
+            "kind": "tattoo",
+            "caption": "Jerry · Tattoo 06"
+          }
+        ]
+      },
+      {
+        "id": "dr-pepper-kokkas",
+        "slug": "kokkas",
+        "name": "Kokkas",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Thanasis",
+          "el": "Θανάσης"
+        },
+        "bio": {
+          "en": "Raised in Piraeus, Thanasis entered the Athens School of Fine Arts in 2016. His custom tattoo designs draw on cartoon imagery and a love of colour.",
+          "el": "Μεγαλωμένος στον Πειραιά, ο Θανάσης εισήχθη στην Ανωτάτη Σχολή Καλών Τεχνών το 2016. Τα προσωπικά του σχέδια αντλούν έμπνευση από τα cartoons και την αγάπη του για το χρώμα."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-034.webp",
+        "instagramHandle": "kokkas_tattoo",
+        "styleIds": [],
+        "discipline": "tattoo",
+        "portfolio": [
+          {
+            "id": "dr-pepper-kokkas-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-035.webp",
+            "kind": "tattoo",
+            "caption": "Kokkas · Tattoo 01"
+          },
+          {
+            "id": "dr-pepper-kokkas-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-036.webp",
+            "kind": "tattoo",
+            "caption": "Kokkas · Tattoo 02"
+          },
+          {
+            "id": "dr-pepper-kokkas-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-037.webp",
+            "kind": "tattoo",
+            "caption": "Kokkas · Tattoo 03"
+          },
+          {
+            "id": "dr-pepper-kokkas-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-038.webp",
+            "kind": "tattoo",
+            "caption": "Kokkas · Tattoo 04"
+          },
+          {
+            "id": "dr-pepper-kokkas-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-039.webp",
+            "kind": "tattoo",
+            "caption": "Kokkas · Tattoo 05"
+          },
+          {
+            "id": "dr-pepper-kokkas-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-040.webp",
+            "kind": "tattoo",
+            "caption": "Kokkas · Tattoo 06"
+          }
+        ]
+      },
+      {
+        "id": "dr-pepper-maria",
+        "slug": "maria",
+        "name": "Maria",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Resident artist",
           "el": "Καλλιτέχνις"
         },
         "bio": {
-          "en": "Athina trained under a Kyoto-based tebori master and now works both machine and hand-poke Irezumi.",
-          "el": "Η Αθηνά εκπαιδεύτηκε υπό έναν δάσκαλο tebori στο Κιότο και τώρα δουλεύει τόσο με μηχανή όσο και χειροποίητο Irezumi."
+          "en": "Maria developed her drawing through comics and painting before joining Dr. Pepper as an apprentice. Now a resident artist, she creates custom pieces with a particular interest in blackwork and darker themes.",
+          "el": "Η Μαρία καλλιέργησε το σχέδιό της μέσα από τα comics και τη ζωγραφική, πριν ξεκινήσει τη μαθητεία της στο Dr. Pepper. Σήμερα δημιουργεί προσωπικά έργα, με ιδιαίτερο ενδιαφέρον για το blackwork και τη σκοτεινή θεματολογία."
         },
-        "yearsExperience": 7,
-        "avatarUrl": "https://picsum.photos/seed/needl-avatar-minotaur-ink-athina-vardaki/300/300",
-        "instagramHandle": "athina.tebori",
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-041.webp",
+        "instagramHandle": "mariaev",
         "styleIds": [
-          "japanese",
-          "neo-traditional"
+          "blackwork"
         ],
+        "discipline": "tattoo",
         "portfolio": [
           {
-            "id": "athina-vardaki-piece-1",
-            "imageUrl": "https://picsum.photos/seed/needl-minotaur-ink-athina-vardaki-1/640/800",
-            "styleId": "japanese",
-            "caption": "Hand-poked wave panel, calf",
-            "priceEUR": 260
+            "id": "dr-pepper-maria-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-042.webp",
+            "kind": "tattoo",
+            "caption": "Maria · Tattoo 01"
           },
           {
-            "id": "athina-vardaki-piece-2",
-            "imageUrl": "https://picsum.photos/seed/needl-minotaur-ink-athina-vardaki-2/640/800",
-            "styleId": "neo-traditional",
-            "caption": "Phoenix, shoulder",
-            "priceEUR": 230
+            "id": "dr-pepper-maria-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-043.webp",
+            "kind": "tattoo",
+            "caption": "Maria · Tattoo 02"
+          },
+          {
+            "id": "dr-pepper-maria-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-044.webp",
+            "kind": "tattoo",
+            "caption": "Maria · Tattoo 03"
+          },
+          {
+            "id": "dr-pepper-maria-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-045.webp",
+            "kind": "tattoo",
+            "caption": "Maria · Tattoo 04"
+          },
+          {
+            "id": "dr-pepper-maria-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-046.webp",
+            "kind": "tattoo",
+            "caption": "Maria · Tattoo 05"
+          },
+          {
+            "id": "dr-pepper-maria-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-047.webp",
+            "kind": "tattoo",
+            "caption": "Maria · Tattoo 06"
+          }
+        ]
+      },
+      {
+        "id": "dr-pepper-ome",
+        "slug": "ome",
+        "name": "Ome",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Thodoris",
+          "el": "Θοδωρής"
+        },
+        "bio": {
+          "en": "Thodoris works in tattooing and piercing. His tattoo practice spans blackwork, dotwork, engraving-inspired designs and geometric compositions, drawing on a wider interest in painting and photography.",
+          "el": "Ο Θοδωρής ασχολείται με το τατουάζ και το piercing. Στη δουλειά του συναντώνται blackwork, dotwork, σχέδια εμπνευσμένα από τη χαρακτική και γεωμετρικές συνθέσεις, με επιρροές από τη ζωγραφική και τη φωτογραφία."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-048.webp",
+        "instagramHandle": "Ome24k",
+        "styleIds": [
+          "blackwork",
+          "dotwork",
+          "geometric"
+        ],
+        "discipline": "both",
+        "portfolio": [
+          {
+            "id": "dr-pepper-ome-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-049.webp",
+            "kind": "tattoo",
+            "caption": "Ome · Tattoo 01"
+          },
+          {
+            "id": "dr-pepper-ome-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-050.webp",
+            "kind": "tattoo",
+            "caption": "Ome · Tattoo 02"
+          },
+          {
+            "id": "dr-pepper-ome-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-051.webp",
+            "kind": "tattoo",
+            "caption": "Ome · Tattoo 03"
+          },
+          {
+            "id": "dr-pepper-ome-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-052.webp",
+            "kind": "tattoo",
+            "caption": "Ome · Tattoo 04"
+          },
+          {
+            "id": "dr-pepper-ome-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-053.webp",
+            "kind": "tattoo",
+            "caption": "Ome · Tattoo 05"
+          },
+          {
+            "id": "dr-pepper-ome-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-054.webp",
+            "kind": "tattoo",
+            "caption": "Ome · Tattoo 06"
+          }
+        ]
+      },
+      {
+        "id": "dr-pepper-fodas",
+        "slug": "fodas",
+        "name": "Fodas",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Dr. Pepper team",
+          "el": "Ομάδα Dr. Pepper"
+        },
+        "bio": {
+          "en": "Fodas specialises in New School and colour tattoos. Comics, video games and digital illustration shape his approach to original, vividly coloured designs.",
+          "el": "Ο Fodas ειδικεύεται στο New School και στα έγχρωμα τατουάζ. Τα comics, τα video games και η ψηφιακή εικονογράφηση διαμορφώνουν την προσέγγισή του σε πρωτότυπα σχέδια με έντονο χρώμα."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-055.webp",
+        "instagramHandle": "fodas_tats",
+        "styleIds": [
+          "new-school"
+        ],
+        "discipline": "tattoo",
+        "portfolio": [
+          {
+            "id": "dr-pepper-fodas-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-056.webp",
+            "kind": "tattoo",
+            "caption": "Fodas · Tattoo 01"
+          },
+          {
+            "id": "dr-pepper-fodas-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-057.webp",
+            "kind": "tattoo",
+            "caption": "Fodas · Tattoo 02"
+          },
+          {
+            "id": "dr-pepper-fodas-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-058.webp",
+            "kind": "tattoo",
+            "caption": "Fodas · Tattoo 03"
+          },
+          {
+            "id": "dr-pepper-fodas-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-059.webp",
+            "kind": "tattoo",
+            "caption": "Fodas · Tattoo 04"
+          },
+          {
+            "id": "dr-pepper-fodas-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-060.webp",
+            "kind": "tattoo",
+            "caption": "Fodas · Tattoo 05"
+          },
+          {
+            "id": "dr-pepper-fodas-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-061.webp",
+            "kind": "tattoo",
+            "caption": "Fodas · Tattoo 06"
+          }
+        ]
+      },
+      {
+        "id": "dr-pepper-manu",
+        "slug": "manu",
+        "name": "Manu",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Manos",
+          "el": "Μάνος"
+        },
+        "bio": {
+          "en": "Manos began his apprenticeship in 2010. His practice centres on Polynesian and Māori-inspired tattooing, alongside geometric and linear work, with individual designs built around each client’s story.",
+          "el": "Ο Μάνος ξεκίνησε τη μαθητεία του το 2010. Εστιάζει σε τατουάζ εμπνευσμένα από την πολυνησιακή παράδοση και τους Māori, καθώς και σε γεωμετρικά και γραμμικά έργα, με προσωπικά σχέδια για κάθε πελάτη."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-062.webp",
+        "instagramHandle": "manu_tattoos",
+        "styleIds": [
+          "tribal",
+          "geometric"
+        ],
+        "discipline": "tattoo",
+        "portfolio": []
+      },
+      {
+        "id": "dr-pepper-mr-droze",
+        "slug": "mr-droze",
+        "name": "Mr. Droze",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Konstantinos",
+          "el": "Κωνσταντίνος"
+        },
+        "bio": {
+          "en": "Originally from Patras, Konstantinos focuses on black-and-grey realism. Intricate detail and continuous drawing practice are central to his approach to tattooing.",
+          "el": "Με καταγωγή από την Πάτρα, ο Κωνσταντίνος εστιάζει στον ασπρόμαυρο ρεαλισμό. Η λεπτομέρεια και η συνεχής εξάσκηση στο σχέδιο βρίσκονται στο επίκεντρο της δουλειάς του."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-063.webp",
+        "instagramHandle": "mr_droze_tattoo",
+        "styleIds": [
+          "realism"
+        ],
+        "discipline": "tattoo",
+        "portfolio": [
+          {
+            "id": "dr-pepper-mr-droze-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-064.webp",
+            "kind": "tattoo",
+            "caption": "Mr. Droze · Tattoo 01"
+          },
+          {
+            "id": "dr-pepper-mr-droze-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-065.webp",
+            "kind": "tattoo",
+            "caption": "Mr. Droze · Tattoo 02"
+          },
+          {
+            "id": "dr-pepper-mr-droze-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-066.webp",
+            "kind": "tattoo",
+            "caption": "Mr. Droze · Tattoo 03"
+          },
+          {
+            "id": "dr-pepper-mr-droze-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-067.webp",
+            "kind": "tattoo",
+            "caption": "Mr. Droze · Tattoo 04"
+          },
+          {
+            "id": "dr-pepper-mr-droze-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-068.webp",
+            "kind": "tattoo",
+            "caption": "Mr. Droze · Tattoo 05"
+          },
+          {
+            "id": "dr-pepper-mr-droze-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-069.webp",
+            "kind": "tattoo",
+            "caption": "Mr. Droze · Tattoo 06"
+          }
+        ]
+      },
+      {
+        "id": "dr-pepper-manager",
+        "slug": "ntina",
+        "name": "Ntina",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Studio manager",
+          "el": "Υπεύθυνη στούντιο"
+        },
+        "bio": {
+          "en": "Ntina combines piercing with the day-to-day management of Dr. Pepper. With a background in professional photography, she helps coordinate the studio and guide visitors through their experience.",
+          "el": "Η Ντίνα συνδυάζει το piercing με την καθημερινή διαχείριση του Dr. Pepper. Με υπόβαθρο στην επαγγελματική φωτογραφία, συντονίζει τη λειτουργία του στούντιο και υποδέχεται τους επισκέπτες."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-070.webp",
+        "instagramHandle": "ntina_laz",
+        "styleIds": [],
+        "discipline": "piercing",
+        "portfolio": [
+          {
+            "id": "dr-pepper-manager-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-071.webp",
+            "kind": "piercing",
+            "caption": "Ntina · Piercing 01"
+          },
+          {
+            "id": "dr-pepper-manager-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-072.webp",
+            "kind": "piercing",
+            "caption": "Ntina · Piercing 02"
+          },
+          {
+            "id": "dr-pepper-manager-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-073.webp",
+            "kind": "piercing",
+            "caption": "Ntina · Piercing 03"
+          },
+          {
+            "id": "dr-pepper-manager-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-074.webp",
+            "kind": "piercing",
+            "caption": "Ntina · Piercing 04"
+          },
+          {
+            "id": "dr-pepper-manager-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-075.webp",
+            "kind": "piercing",
+            "caption": "Ntina · Piercing 05"
+          },
+          {
+            "id": "dr-pepper-manager-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-076.webp",
+            "kind": "piercing",
+            "caption": "Ntina · Piercing 06"
+          }
+        ]
+      },
+      {
+        "id": "dr-pepper-artdicted",
+        "slug": "artdicted",
+        "name": "Artdicted",
+        "studioSlug": "dr-pepper-tattoo",
+        "role": {
+          "en": "Giorgos",
+          "el": "Γιώργος"
+        },
+        "bio": {
+          "en": "Giorgos creates custom artwork on clothing, sneakers, accessories and other surfaces. His focus is handmade painting and airbrush; he is part of the studio’s creative team rather than a tattoo artist.",
+          "el": "Ο Γιώργος δημιουργεί προσωπικά έργα σε ρούχα, sneakers, αξεσουάρ και άλλες επιφάνειες. Εστιάζει στη ζωγραφική στο χέρι και στον αερογράφο, ως μέλος της δημιουργικής ομάδας του στούντιο και όχι ως tattoo artist."
+        },
+        "yearsExperience": 0,
+        "avatarUrl": "/studios/dr-pepper/dr-pepper-077.webp",
+        "instagramHandle": "artdicted.handmade",
+        "styleIds": [],
+        "discipline": "art",
+        "portfolio": [
+          {
+            "id": "dr-pepper-artdicted-1",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-078.webp",
+            "kind": "art",
+            "caption": "Artdicted · Custom artwork 01"
+          },
+          {
+            "id": "dr-pepper-artdicted-2",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-079.webp",
+            "kind": "art",
+            "caption": "Artdicted · Custom artwork 02"
+          },
+          {
+            "id": "dr-pepper-artdicted-3",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-080.webp",
+            "kind": "art",
+            "caption": "Artdicted · Custom artwork 03"
+          },
+          {
+            "id": "dr-pepper-artdicted-4",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-081.webp",
+            "kind": "art",
+            "caption": "Artdicted · Custom artwork 04"
+          },
+          {
+            "id": "dr-pepper-artdicted-5",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-082.webp",
+            "kind": "art",
+            "caption": "Artdicted · Custom artwork 05"
+          },
+          {
+            "id": "dr-pepper-artdicted-6",
+            "imageUrl": "/studios/dr-pepper/dr-pepper-083.webp",
+            "kind": "art",
+            "caption": "Artdicted · Custom artwork 06"
           }
         ]
       }
-    ],
-    "styleIds": [
-      "blackwork",
-      "geometric",
-      "japanese",
-      "neo-traditional"
     ]
   }
 ]

@@ -54,7 +54,7 @@ export function StudioView({ studio }: { studio: Studio }) {
             studio={studio}
             trigger={
               <Button size="lg" className="shrink-0 bg-red text-paper hover:bg-red-bright">
-                {t.studio.bookWith} {studio.name.split(" ")[0]}
+                {t.studio.bookWith} {studio.name}
               </Button>
             }
           />

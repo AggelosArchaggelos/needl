@@ -61,11 +61,11 @@ export function validateContent({ studios, cities, styles, news, config }) {
       if (a.reviewCount !== undefined) number(a.reviewCount, q + '.reviewCount', Infinity, true);
       localized(a.role, q + '.role'); localized(a.bio, q + '.bio'); number(a.yearsExperience, q + '.yearsExperience', Infinity, true);
       instagram(a.instagramHandle, q + '.instagramHandle'); url(a.avatarUrl, q + '.avatarUrl', true); refs(a.styleIds, q + '.styleIds');
-      for (const [k, piece] of list(a.portfolio, q + '.portfolio', !s.experimental).entries()) {
+      for (const [k, piece] of list(a.portfolio, q + '.portfolio').entries()) {
         const r = q + '.portfolio[' + k + ']'; if (!object(piece, r)) continue;
         unique(piece.id, r + '.id', pieceIds); text(piece.caption, r + '.caption'); url(piece.imageUrl, r + '.imageUrl', true); if (piece.priceEUR !== undefined) number(piece.priceEUR, r + '.priceEUR');
         if (piece.kind !== undefined && !['tattoo', 'piercing', 'art'].includes(piece.kind)) error(r + '.kind', 'Choose tattoo, piercing or art.');
-        if (piece.kind !== 'piercing' && piece.kind !== 'art' && !styleIds.has(piece.styleId)) { if (s.experimental && !piece.styleId) warn(r + '.styleId', 'Experimental image: individual work style has not been classified.'); else error(r + '.styleId', 'Tattoo work needs a configured tattoo style.'); }
+        if (piece.kind !== 'piercing' && piece.kind !== 'art' && !styleIds.has(piece.styleId)) { if (!piece.styleId) warn(r + '.styleId', 'Tattoo work has no style classified yet; it will show as plain "Tattoo".'); else error(r + '.styleId', 'Tattoo work needs a configured tattoo style.'); }
         if (['piercing', 'art'].includes(piece.kind) && piece.styleId) error(r + '.styleId', 'Piercing work should not have a tattoo style.');
       }
     }

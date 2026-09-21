@@ -55,7 +55,7 @@ export function ArtistView({ studio, artist }: { studio: Studio; artist: Artist 
           artist={artist}
           trigger={
             <Button size="lg" className="shrink-0 bg-red text-paper hover:bg-red-bright">
-              {t.artist.bookWith} {artist.name.split(" ")[0]}
+              {t.artist.bookWith} {artist.name.split(" ")[0].endsWith(".") ? artist.name : artist.name.split(" ")[0]}
             </Button>
           }
         />

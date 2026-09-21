@@ -59,6 +59,57 @@ export function BookingDialog({
 
   if (studio.experimental || artist?.discipline === "art") return <Button disabled className="border border-line-strong bg-ink-2 text-paper-dim">{locale === "el" ? "Προεπισκόπηση · χωρίς κρατήσεις" : "Preview · bookings disabled"}</Button>;
 
+  // Needl can't deliver booking requests to studios yet, so public visitors get
+  // the studio's own contact channels instead of a form that goes nowhere. The
+  // request form stays available for the local email delivery test only.
+  if (!localEmailTest) {
+    const el = locale === "el";
+    const contactName = chosenArtist?.name ?? studio.name;
+    return (
+      <Dialog open={open} onOpenChange={handleOpenChange}>
+        <DialogTrigger render={trigger} />
+        <DialogContent className="border-line-strong bg-ink-2 text-paper sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="font-display text-xl text-paper">
+              {el ? "Κλείστε ραντεβού με " : "Book with "}{contactName}
+            </DialogTitle>
+            <DialogDescription className="text-paper-dim">
+              {el
+                ? "Οι κρατήσεις μέσω Needl δεν είναι ακόμα διαθέσιμες. Επικοινωνήστε απευθείας με το στούντιο για να κλείσετε ημερομηνία."
+                : "Bookings through Needl aren't live yet. Contact the studio directly to arrange a date."}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-2 flex w-full flex-col gap-2">
+            <a
+              href={`https://instagram.com/${chosenArtist?.instagramHandle ?? studio.instagramHandle}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(buttonVariants({ variant: "outline" }), "border-line-strong text-paper hover:bg-ink-3")}
+            >
+              <InstagramIcon /> {t.booking.messageInstagram}
+            </a>
+            <a
+              href={`tel:${studio.phone.replace(/s+/g, "")}`}
+              className={cn(buttonVariants({ variant: "outline" }), "border-line-strong text-paper hover:bg-ink-3")}
+            >
+              <Phone /> {t.booking.call} {studio.phone}
+            </a>
+            {studio.websiteUrl && (
+              <a
+                href={studio.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(buttonVariants({ variant: "outline" }), "border-line-strong text-paper hover:bg-ink-3")}
+              >
+                {el ? "Επισκεφθείτε την ιστοσελίδα" : "Visit website"}
+              </a>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
+    );
+  }
+
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger render={trigger} />
