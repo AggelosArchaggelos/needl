@@ -61,7 +61,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-square w-full max-w-sm text-paper/90 md:mx-0">
+          <div className="relative mx-auto aspect-square w-full max-w-sm text-paper md:mx-0">
             <NeedleMark delay={0.2} />
           </div>
         </div>
