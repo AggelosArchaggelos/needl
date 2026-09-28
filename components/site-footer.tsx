@@ -23,6 +23,13 @@ export function SiteFooter() {
       heading: t.footer.forStudios,
       links: [{ href: "/for-studios", label: t.nav.listYourStudio }],
     },
+    {
+      heading: t.footer.legal,
+      links: [
+        { href: "/privacy", label: t.footer.privacy },
+        { href: "/terms", label: t.footer.terms },
+      ],
+    },
   ];
 
   return (

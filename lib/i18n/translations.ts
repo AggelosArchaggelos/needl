@@ -16,8 +16,106 @@ export const translations = {
       explore: "Explore",
       forStudios: "For studios",
       cities: "Cities",
+      legal: "Legal",
+      privacy: "Privacy policy",
+      terms: "Terms of service",
       copyright: "Made in Greece.",
       note: "A directory prototype — studio data shown is illustrative.",
+    },
+    legal: {
+      updated: "Last updated",
+      contactPrefix: "Questions? Email us at",
+      privacy: {
+        title: "Privacy policy",
+        intro:
+          "Needl (“we”, “us”) is a directory for finding tattoo studios and artists in Greece. This page explains what information we collect, and why.",
+        sections: [
+          {
+            heading: "What we collect",
+            body: [
+              "When you fill in the “List your studio” form, we collect the studio name, your name, email, and the phone number, city, and Instagram handle you choose to share, along with any message you write. We use it only to get in touch about listing the studio.",
+              "We don’t collect any personal information just from browsing the directory. Studios and artists you save with the heart button are stored only in your own browser — that information is never sent to us.",
+              "We use privacy-friendly, cookieless web analytics to see which pages are visited and roughly how many people visit. It doesn’t identify you personally, doesn’t use cookies, and doesn’t track you across other sites.",
+            ],
+          },
+          {
+            heading: "How we use it",
+            body: [
+              "Only to run Needl: replying to studios that want to be listed, and understanding how the directory gets used so we can improve it. We don’t sell personal information, and we don’t use it for advertising.",
+            ],
+          },
+          {
+            heading: "Who sees it",
+            body: [
+              "Needl’s own team, and the service providers that run the site on our behalf — hosting and analytics, and email delivery for sign-up messages — strictly to provide the service. We don’t share it with anyone beyond that.",
+            ],
+          },
+          {
+            heading: "How long we keep it",
+            body: [
+              "Studio sign-up messages are kept for as long as needed to follow up, then deleted.",
+            ],
+          },
+          {
+            heading: "Your rights",
+            body: [
+              "You can ask to see, correct, or delete any information you’ve sent us by emailing studios@needl.gr.",
+            ],
+          },
+          {
+            heading: "Changes",
+            body: [
+              "If this page changes in a meaningful way, we’ll update the date at the top.",
+            ],
+          },
+        ],
+      },
+      terms: {
+        title: "Terms of service",
+        intro: "These terms cover using the Needl website and app.",
+        sections: [
+          {
+            heading: "What Needl is",
+            body: [
+              "Needl is a directory for discovering tattoo studios and artists in Greece. Needl is not a booking platform: contacting a studio or artist through Needl doesn’t create a booking. Any appointment is arranged directly with the studio.",
+            ],
+          },
+          {
+            heading: "Accuracy of listings",
+            body: [
+              "We aim for accurate, up-to-date listings, but details like hours, pricing, and availability can change. Always confirm directly with the studio before relying on anything shown here.",
+            ],
+          },
+          {
+            heading: "How studios are listed",
+            body: [
+              "Studios are currently added to Needl after we reach out and confirm details with them. A studio can ask to be corrected, updated, or removed at any time by emailing studios@needl.gr.",
+            ],
+          },
+          {
+            heading: "Using the site",
+            body: [
+              "Please don’t misuse Needl — that includes scraping the site at scale, submitting false information, or attempting to disrupt the service for others.",
+            ],
+          },
+          {
+            heading: "Studios and artists aren’t Needl",
+            body: [
+              "Needl isn’t responsible for the services, work, pricing, or conduct of any studio or artist listed here. Any agreement you make is between you and that studio.",
+            ],
+          },
+          {
+            heading: "Needl is still early",
+            body: [
+              "Needl is an early-stage product. Features may change, and we may add, change, or discontinue parts of the service as it develops.",
+            ],
+          },
+          {
+            heading: "Governing law",
+            body: ["These terms are governed by the laws of Greece."],
+          },
+        ],
+      },
     },
     home: {
       eyebrow: "Tattoo studios, all of Greece",
@@ -220,8 +318,106 @@ export const translations = {
       explore: "Πλοήγηση",
       forStudios: "Για στούντιο",
       cities: "Πόλεις",
+      legal: "Νομικά",
+      privacy: "Πολιτική απορρήτου",
+      terms: "Όροι χρήσης",
       copyright: "Φτιαγμένο στην Ελλάδα.",
       note: "Πρωτότυπος κατάλογος — τα στοιχεία των στούντιο είναι ενδεικτικά.",
+    },
+    legal: {
+      updated: "Τελευταία ενημέρωση",
+      contactPrefix: "Ερωτήσεις; Στείλτε email στο",
+      privacy: {
+        title: "Πολιτική απορρήτου",
+        intro:
+          "Το Needl («εμείς») είναι ένας κατάλογος για την εύρεση studio και καλλιτεχνών τατουάζ στην Ελλάδα. Αυτή η σελίδα εξηγεί ποιες πληροφορίες συλλέγουμε και γιατί.",
+        sections: [
+          {
+            heading: "Τι συλλέγουμε",
+            body: [
+              "Όταν συμπληρώνετε τη φόρμα «Καταχωρίστε το στούντιο σας», συλλέγουμε το όνομα του στούντιο, το όνομά σας, το email σας, καθώς και το τηλέφωνο, την πόλη και το Instagram που επιλέγετε να μοιραστείτε, μαζί με όποιο μήνυμα γράψετε. Τα χρησιμοποιούμε μόνο για να επικοινωνήσουμε σχετικά με την καταχώριση.",
+              "Δεν συλλέγουμε προσωπικά στοιχεία απλώς από την περιήγηση στον κατάλογο. Τα στούντιο και οι καλλιτέχνες που αποθηκεύετε με το κουμπί καρδιάς αποθηκεύονται μόνο στον browser σας — αυτή η πληροφορία δεν φτάνει ποτέ σε εμάς.",
+              "Χρησιμοποιούμε αναλυτικά επισκεψιμότητας φιλικά προς το απόρρητο, χωρίς cookies, για να δούμε ποιες σελίδες επισκέπτονται και πόσο κόσμος περίπου. Δεν σας ταυτοποιούν προσωπικά, δεν χρησιμοποιούν cookies, και δεν σας παρακολουθούν σε άλλες σελίδες.",
+            ],
+          },
+          {
+            heading: "Πώς τα χρησιμοποιούμε",
+            body: [
+              "Μόνο για τη λειτουργία του Needl: απαντώντας σε στούντιο που θέλουν να καταχωριστούν, και κατανοώντας πώς χρησιμοποιείται ο κατάλογος ώστε να τον βελτιώνουμε. Δεν πουλάμε προσωπικά δεδομένα, και δεν τα χρησιμοποιούμε για διαφήμιση.",
+            ],
+          },
+          {
+            heading: "Ποιος τα βλέπει",
+            body: [
+              "Η ομάδα του Needl, και οι πάροχοι υπηρεσιών που τρέχουν τη σελίδα για λογαριασμό μας — φιλοξενία και αναλυτικά, και αποστολή email για μηνύματα καταχώρισης — αυστηρά για την παροχή της υπηρεσίας. Δεν τα μοιραζόμαστε με κανέναν άλλον.",
+            ],
+          },
+          {
+            heading: "Πόσο καιρό τα κρατάμε",
+            body: [
+              "Τα μηνύματα καταχώρισης στούντιο κρατούνται όσο χρειάζεται για την επικοινωνία, και μετά διαγράφονται.",
+            ],
+          },
+          {
+            heading: "Τα δικαιώματά σας",
+            body: [
+              "Μπορείτε να ζητήσετε να δείτε, να διορθώσετε ή να διαγράψετε όποια πληροφορία μας έχετε στείλει, στέλνοντας email στο studios@needl.gr.",
+            ],
+          },
+          {
+            heading: "Αλλαγές",
+            body: [
+              "Αν αυτή η σελίδα αλλάξει ουσιαστικά, θα ενημερώσουμε την ημερομηνία στην κορυφή.",
+            ],
+          },
+        ],
+      },
+      terms: {
+        title: "Όροι χρήσης",
+        intro: "Αυτοί οι όροι καλύπτουν τη χρήση της ιστοσελίδας και της εφαρμογής Needl.",
+        sections: [
+          {
+            heading: "Τι είναι το Needl",
+            body: [
+              "Το Needl είναι ένας κατάλογος για την ανακάλυψη studio και καλλιτεχνών τατουάζ στην Ελλάδα. Το Needl δεν είναι πλατφόρμα κρατήσεων: η επικοινωνία με ένα στούντιο ή καλλιτέχνη μέσω Needl δεν δημιουργεί κράτηση. Κάθε ραντεβού κανονίζεται απευθείας με το στούντιο.",
+            ],
+          },
+          {
+            heading: "Ακρίβεια καταχωρίσεων",
+            body: [
+              "Στοχεύουμε σε ακριβείς, ενημερωμένες καταχωρίσεις, αλλά στοιχεία όπως το ωράριο, οι τιμές και η διαθεσιμότητα μπορεί να αλλάξουν. Επιβεβαιώνετε πάντα απευθείας με το στούντιο πριν βασιστείτε σε ό,τι εμφανίζεται εδώ.",
+            ],
+          },
+          {
+            heading: "Πώς καταχωρίζονται τα στούντιο",
+            body: [
+              "Τα στούντιο προστίθενται στο Needl αφού επικοινωνήσουμε και επιβεβαιώσουμε τα στοιχεία μαζί τους. Ένα στούντιο μπορεί να ζητήσει διόρθωση, ενημέρωση ή αφαίρεση οποιαδήποτε στιγμή στέλνοντας email στο studios@needl.gr.",
+            ],
+          },
+          {
+            heading: "Χρήση της σελίδας",
+            body: [
+              "Παρακαλούμε μην κάνετε κατάχρηση του Needl — αυτό περιλαμβάνει μαζική συλλογή δεδομένων (scraping), υποβολή ψευδών στοιχείων, ή προσπάθεια διατάραξης της υπηρεσίας για άλλους.",
+            ],
+          },
+          {
+            heading: "Τα στούντιο και οι καλλιτέχνες δεν είναι το Needl",
+            body: [
+              "Το Needl δεν φέρει ευθύνη για τις υπηρεσίες, τη δουλειά, τις τιμές ή τη συμπεριφορά κάποιου στούντιο ή καλλιτέχνη που καταχωρείται εδώ. Κάθε συμφωνία γίνεται ανάμεσα σε εσάς και εκείνο το στούντιο.",
+            ],
+          },
+          {
+            heading: "Το Needl είναι ακόμα στην αρχή",
+            body: [
+              "Το Needl είναι προϊόν σε πρώιμο στάδιο. Οι λειτουργίες μπορεί να αλλάξουν, και ενδέχεται να προσθέσουμε, τροποποιήσουμε ή διακόψουμε μέρη της υπηρεσίας καθώς εξελίσσεται.",
+            ],
+          },
+          {
+            heading: "Εφαρμοστέο δίκαιο",
+            body: ["Αυτοί οι όροι διέπονται από το ελληνικό δίκαιο."],
+          },
+        ],
+      },
     },
     home: {
       eyebrow: "Στούντιο τατουάζ, σε όλη την Ελλάδα",
