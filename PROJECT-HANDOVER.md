@@ -6,7 +6,7 @@ Website and app must release in that order because the app consumes website cont
 
 # Needl — shared project handover
 
-Updated: 2026-09-14. Shared working context for Claude Code and Codex; this is a decision record, not a complete conversation transcript. Verify the actual files and Git history before acting. A newer explicit user instruction takes precedence.
+Updated: 2026-09-29. Shared working context for Claude Code and Codex; this is a decision record, not a complete conversation transcript. Verify the actual files and Git history before acting. A newer explicit user instruction takes precedence.
 
 ## Project and current permission
 
@@ -154,3 +154,43 @@ User found platform-default smooth scrolling too abrupt. Replaced it in website/
 ## Fix Enter cancelling result scroll (2026-09-14)
 
 User reported the slower animation disappearing. Website effect registered a global keydown cancellation listener during the same discrete Enter event that submitted the form; the bubbling submission event could cancel its scheduled animation. Restrict cancellation to navigation/scroll keys (arrows, PageUp/Down, Home/End, Space, Escape, Tab); Enter no longer cancels. Wheel/touch interruption retained. Website TypeScript passed. Browser Enter submission verified with intermediate and completed scroll screenshots, demonstrating progressive movement and final upper-middle result position. App had no global keydown listener and needed no code change. Separate local fix, no push/deploy.
+
+## Header hover motion system (2026-09-16)
+
+Website only, both pushed to main. Top nav links and the List your studio button draw a thin brass hairline outward from centre on hover/focus (commit b8b5904), replacing a plain colour-only transition. The Find an artist CTA (desktop header and mobile menu) then got a matching centre-out red-bright fill sweep (9d1108a) so the whole header reads as one motion system. Both respect prefers-reduced-motion. No app changes.
+
+## Native tab bar rebuilt on Expo Router NativeTabs (2026-09-17)
+
+App only, pushed to main. Replaced the hand-rolled expo-blur pill tab bar with Expo Router's NativeTabs (2494ac9), so native builds (iOS/Android) get the OS's own genuine Liquid Glass tab bar chrome on iOS26+ instead of an approximation, with minimizeBehavior="onScrollDown" matching Apple Music's scroll-collapse behaviour. NativeTabs has no screenOptions.header slot, so the shared brand bar moved into each screen via a new TabsHeader component. The browser preview cannot render native chrome, so it resolves a separate _layout.web.tsx with its own floating glass capsule: a frosted shell that shrinks to just the active tab on scroll-down and expands on scroll-up, with a single rounded "droplet" highlight that slides and gently bounces between tabs, as a true position:absolute overlay over page content. Every tab screen resets its own scroll position when it stops being active (native tabs keep all screens mounted). Browse's tab label shortened to "Artists" to fit the bar.
+
+Same-day follow-up (1821e7a) replaced that route-change-based scroll reset with a press-based one: both NativeTabs and the web fallback expose a tabPress event firing on every press, including re-pressing the already-active tab, which a route-change watcher cannot see. lib/tab-press-reset.ts is a small pub/sub keyed by route that each layout broadcasts into and each screen subscribes to; the reset now animates (~400ms ease-out) instead of jumping. Applied to all four tabs, including Browse — intentionally overriding its own filter-based "return to where you left off" scroll memory, per explicit instruction that every tab resets to top on press.
+
+This closes out what an earlier, out-of-date chat summary described as unfinished (centring, switch animation, Apple Music parity, web-fallback quality) — the work was actually finished, committed and pushed the same week.
+
+## Studio booking replaced with direct contact (2026-09-21)
+
+Both repos, pushed to main. The public booking form could not actually deliver requests, so both website (cce2b57) and app (071439e) now show the studio's own contact channels instead.
+
+## Browse: Type and Artists/Studios filters (2026-09-21)
+
+Both repos, pushed to main. Added a Type filter (All / Tattoo artists / Piercers) — first among the dropdowns, hides tattoo styles while browsing piercers, kept in the URL as ?type=piercing; artists who do both appear in each. Added an Artists | Studios toggle beside the city filter, kept in the URL as ?view=studios; in studio view a style match is any studio artist working in that style.
+
+## First real studio listing: Dr. Pepper Tattoo (2026-09-21)
+
+Website only, pushed to main. Replaced the ten placeholder showcase studios with Dr. Pepper Tattoo (12 artists, real media under public/studios) as the first real listing (cce2b57). Content validation no longer needs an experimental flag: unclassified tattoo work now warns instead of failing, and tests use a synthetic fixture instead of real studio data.
+
+## Blackletter N logo (2026-09-24)
+
+Both repos, pushed to main. Replaced the existing logo mark with a traced blackletter "N" on website (f04a230) and app (fb10bbb).
+
+## Cookieless analytics and legal pages (2026-09-28)
+
+Website only, pushed to main. Wired Vercel Web Analytics into the root layout (no cookies, no personal data). Added bilingual /privacy and /terms pages describing only what the site actually collects today: the studio sign-up form plus aggregate analytics; saved studios stay device-local and are never sent to Needl. Linked from the footer.
+
+## Account sign-in front-end template (2026-09-29)
+
+Website only, pushed to main. Added a front-end-only template for visitor and studio accounts: sign-in flows for both, a visitor account page reusing the existing saved-items system, and a self-serve studio dashboard for editing studio details and adding/removing team members. Everything is client-side only for now — sign-in is a mock email-link flow with no real email sent, and studio edits persist to that browser's localStorage as a per-studio draft, never touching real content or a real backend. The studio side is explicitly labelled an early, unverified preview so it doesn't read as a working login before real authentication and a real database exist.
+
+## Note on this update (2026-09-29)
+
+This block (09-16 through 09-29) was reconstructed from Git history in a fresh session after the carried-over chat summary was found to be stale and inaccurate about the app's tab bar work. Neither repo's handover file had been updated after any of these pushes despite the standing instruction to do so after meaningful work. Verification/testing status for this period is therefore only what each commit message itself states; do not assume TypeScript/tests/build/browser checks were run just because earlier entries in this file describe that discipline. Keep this file current going forward — update it in the same session as the commit, not retroactively.
