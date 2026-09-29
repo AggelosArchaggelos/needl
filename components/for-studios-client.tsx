@@ -28,6 +28,12 @@ export function ForStudiosClient() {
         <ScrollReveal>
           <StudioSignupForm />
         </ScrollReveal>
+        <p className="mt-6 text-center text-sm text-paper-dim">
+          {t.forStudios.alreadyListedPrefix}{" "}
+          <a href="/studio/login" className="text-brass-bright hover:underline">
+            {t.forStudios.signIn}
+          </a>
+        </p>
       </div>
 
       <div className="mx-auto max-w-5xl px-6 py-16">

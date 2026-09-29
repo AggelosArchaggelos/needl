@@ -227,6 +227,8 @@ export const translations = {
       eyebrow: "For studio owners",
       title: "Get discovered by people already looking",
       description: "Needl is free to join while we grow the directory. Add your studio, your artists, and their work — start receiving booking requests this week.",
+      alreadyListedPrefix: "Already listed on Needl?",
+      signIn: "Sign in to manage your studio",
       benefits: [
         {
           title: "A real portfolio, not a feed",
@@ -529,6 +531,8 @@ export const translations = {
       eyebrow: "Για ιδιοκτήτες στούντιο",
       title: "Γίνετε ορατοί σε ανθρώπους που ήδη ψάχνουν",
       description: "Η εγγραφή στο Needl είναι δωρεάν όσο μεγαλώνουμε τον κατάλογο. Προσθέστε το στούντιο σας, τους καλλιτέχνες σας και τη δουλειά τους — αρχίστε να δέχεστε αιτήματα κράτησης αυτή την εβδομάδα.",
+      alreadyListedPrefix: "Είστε ήδη καταχωρισμένοι στο Needl;",
+      signIn: "Είσοδος για διαχείριση του στούντιο σας",
       benefits: [
         {
           title: "Ένα αληθινό portfolio, όχι ένα feed",
