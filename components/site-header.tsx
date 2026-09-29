@@ -54,30 +54,32 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            href="/saved"
-            aria-label={savedLabel}
-            title={savedLabel}
-            aria-current={pathname === "/saved" ? "page" : undefined}
-            className={cn(
-              "flex size-11 shrink-0 items-center justify-center rounded-full transition-colors hover:bg-ink-3 hover:text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
-              pathname === "/saved" ? "text-red-bright" : "text-paper-dim",
-            )}
-          >
-            <Heart size={19} strokeWidth={1.5} aria-hidden="true" />
-          </Link>
-          <Link
-            href="/account"
-            aria-label={accountLabel}
-            title={accountLabel}
-            aria-current={pathname === "/account" ? "page" : undefined}
-            className={cn(
-              "flex size-11 shrink-0 items-center justify-center rounded-full transition-colors hover:bg-ink-3 hover:text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
-              pathname === "/account" ? "text-paper" : "text-paper-dim",
-            )}
-          >
-            <User size={19} strokeWidth={1.5} aria-hidden="true" />
-          </Link>
+          <div className="flex items-center gap-1">
+            <Link
+              href="/saved"
+              aria-label={savedLabel}
+              title={savedLabel}
+              aria-current={pathname === "/saved" ? "page" : undefined}
+              className={cn(
+                "flex size-11 shrink-0 items-center justify-center rounded-full transition-colors hover:bg-ink-3 hover:text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
+                pathname === "/saved" ? "text-red-bright" : "text-paper-dim",
+              )}
+            >
+              <Heart size={19} strokeWidth={1.5} aria-hidden="true" />
+            </Link>
+            <Link
+              href="/account"
+              aria-label={accountLabel}
+              title={accountLabel}
+              aria-current={pathname === "/account" ? "page" : undefined}
+              className={cn(
+                "flex size-11 shrink-0 items-center justify-center rounded-full transition-colors hover:bg-ink-3 hover:text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
+                pathname === "/account" ? "text-paper" : "text-paper-dim",
+              )}
+            >
+              <User size={19} strokeWidth={1.5} aria-hidden="true" />
+            </Link>
+          </div>
           <LanguageToggle />
           <Link
             href="/for-studios"
